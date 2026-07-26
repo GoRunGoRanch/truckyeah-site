@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- =========================================================
+       EDIT: Page title & description (shows in Google + browser tab)
+       ========================================================= -->
+  <title>TruckYeah Trader | US-Based Truck Dispatch That Speaks Your Language</title>
+  <meta name="description" content="US-based truck dispatch for owner-operators. Bilingual team (English &amp; Hindi). We find loads, negotiate rates with brokers, and handle paperwork. Transparent fees, no long contracts. Call +1 970-788-2896." />
+
+  <!-- Brand color for mobile browser UI -->
+  <meta name="theme-color" content="#1F3864" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://truckyeahtrader.com/" />
+
+  <!-- =========================================================
+       Favicons
+       EDIT: To swap, replace the files in /assets. A simple placeholder
+       SVG mark is provided. For best compatibility also create:
+         - assets/favicon.ico  (32x32) — use https://favicon.io to generate
+         - assets/apple-touch-icon.png (180x180)
+       ========================================================= -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+
+  <!-- =========================================================
+       Open Graph / social share tags
+       EDIT: assets/og-image.jpg — recommended size 1200 x 630 px
+       ========================================================= -->
+  <meta property="og:type" content="business.business" />
+  <meta property="og:title" content="TruckYeah Trader | US-Based Truck Dispatch" />
+  <meta property="og:description" content="US-based dispatch that speaks your language. Bilingual (English &amp; Hindi) team for owner-operators. Transparent fees, real people you can reach." />
+  <meta property="og:url" content="https://truckyeahtrader.com/" />
+  <meta property="og:image" content="https://truckyeahtrader.com/assets/og-image.jpg" />
+  <meta property="og:site_name" content="TruckYeah Trader" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="TruckYeah Trader | US-Based Truck Dispatch" />
+  <meta name="twitter:description" content="US-based dispatch that speaks your language. Bilingual (English &amp; Hindi) team for owner-operators." />
+  <meta name="twitter:image" content="https://truckyeahtrader.com/assets/og-image.jpg" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Deferred JavaScript -->
+  <script src="script.js" defer></script>
+
+  <!-- =========================================================
+       JSON-LD structured data (helps Google understand the business)
+       EDIT: Replace address placeholders and confirm hours.
+       availableLanguage kept as en + hi (team genuinely speaks both).
+       ========================================================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "TruckYeah Trader",
+    "description": "US-based truck dispatch service for owner-operators. Bilingual (English and Hindi) team that finds loads, negotiates rates with freight brokers, and handles back-office paperwork.",
+    "url": "https://truckyeahtrader.com/",
+    "telephone": "+1-970-788-2896",
+    "email": "dispatch@truckyeahtrader.com",
+    "priceRange": "Percentage-based dispatch fee",
+    "areaServed": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "availableLanguage": ["en", "hi"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "[YOUR STREET ADDRESS]",
+      "addressLocality": "[YOUR CITY]",
+      "addressRegion": "[YOUR STATE]",
+      "postalCode": "[YOUR ZIP]",
+      "addressCountry": "US"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "07:00",
+        "closes": "21:00"
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <!-- Skip link for keyboard / screen-reader users -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- =========================================================
+       STICKY TOP NAVIGATION
+       ========================================================= -->
+  <header class="site-header" id="top">
+    <div class="container nav-inner">
+      <a href="#top" class="brand" aria-label="TruckYeah Trader home">
+        <!-- Simple inline logo mark (a road + truck). EDIT: swap for your logo if you have one. -->
+        <svg class="brand-mark" width="34" height="34" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+          <rect width="48" height="48" rx="10" fill="#1F3864"/>
+          <path d="M6 30h22v-9h7l7 6v3h-3a4 4 0 0 1-8 0H17a4 4 0 0 1-8 0H6z" fill="#FF7A00"/>
+          <path d="M6 34h36" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="4 4" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-name">TruckYeah <span class="brand-name-accent">Trader</span></span>
+      </a>
+
+      <!-- Mobile menu toggle -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#why">Why Us</a></li>
+          <li><a href="#about">Who We Are</a></li>
+          <li><a href="#how">How It Works</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <!-- EDIT: Phone number appears in several places. If you change it, update every tel: and sms: link and the JSON-LD above. -->
+        <a class="btn btn-call nav-call" href="tel:+19707882896">
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.24 1z"/></svg>
+          Call Now
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- =========================================================
+         1. HERO
+         ========================================================= -->
+    <section class="hero" id="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Truck Dispatch for Owner-Operators</p>
+          <!-- EDIT: Main headline & tagline -->
+          <h1>US-based dispatch that <span class="hl">speaks your language.</span></h1>
+          <p class="lead">We find your loads, negotiate the best rates with brokers, and handle the paperwork &mdash; so you can keep driving and keep more of what you earn.</p>
+
+          <!-- Bilingual spoken promise (English body copy; Hindi shown once as a visual cue) -->
+          <p class="speak-hindi">
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.9 9h-3a15.7 15.7 0 0 0-1-5.2A8 8 0 0 1 18.9 11ZM12 4c.9 1.2 1.7 3.2 1.9 7h-3.8C10.3 7.2 11.1 5.2 12 4ZM4.3 13h3a15.7 15.7 0 0 0 1 5.2A8 8 0 0 1 4.3 13Zm2.8-2a8 8 0 0 1 1-4.2A15.7 15.7 0 0 0 7.1 11Zm3 2h3.8c-.2 3.8-1 5.8-1.9 7-.9-1.2-1.7-3.2-1.9-7Zm5.9 5.2a15.7 15.7 0 0 0 1-5.2h3a8 8 0 0 1-4 5.2Z"/></svg>
+            <strong>We speak Hindi &mdash; call us.</strong>
+            <span class="hindi-cue" lang="hi" aria-hidden="true">हिंदी</span>
+          </p>
+
+          <div class="hero-ctas">
+            <a class="btn btn-primary btn-lg" href="#contact">Get Dispatched</a>
+            <a class="btn btn-call btn-lg" href="tel:+19707882896">
+              <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.24 1z"/></svg>
+              Call +1 970-788-2896
+            </a>
+          </div>
+
+          <!-- Trust strip (NO stats — just plain-language reassurance) -->
+          <ul class="trust-strip" aria-label="What sets us apart">
+            <li>US-based</li>
+            <li>English &amp; Hindi</li>
+            <li>Owner-operator friendly</li>
+          </ul>
+        </div>
+
+        <!-- =========================================================
+             HERO IMAGE
+             EDIT: Replace the background image in styles.css (.hero-art)
+             with a real royalty-free highway/truck photo.
+             Suggested free sources: Unsplash, Pexels, Pixabay.
+             Recommended: a wide landscape shot ~1600px wide, optimized
+             (compressed JPG/WebP under ~200KB) saved as assets/hero.jpg,
+             then set: background-image: url("assets/hero.jpg");
+             A CSS gradient placeholder is used by default so the page
+             loads fast and works offline.
+             ========================================================= -->
+        <div class="hero-art" role="img" aria-label="A semi-truck on a US highway at sunset">
+          <div class="hero-art-badge">
+            <span class="hero-art-badge-title">Founding Drivers</span>
+            <span class="hero-art-badge-sub">Now onboarding a small first group</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         2. SERVICES
+         ========================================================= -->
+    <section class="section" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">What We Do</p>
+          <h2 id="services-title">Everything you need to keep rolling</h2>
+          <p class="section-sub">One team handling loads, rates, and paperwork &mdash; so your only job is driving.</p>
+        </header>
+
+        <div class="cards">
+          <!-- EDIT: Service cards -->
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M3 13h13V6H3v7Zm14-4h3l2 3v2h-2a2 2 0 0 1-4 0h-2V9h3Zm-9 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4Zm10 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z"/></svg>
+            </div>
+            <h3>Truck Dispatch</h3>
+            <p>We search the boards, find loads that fit your lane and equipment, negotiate the rate, book it, and take care of the paperwork. You approve every load before we book it.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Zm-1 13-3-3 1.4-1.4L11 12.2l4.6-4.6L17 9l-6 6Z"/></svg>
+            </div>
+            <h3>Rate Negotiation</h3>
+            <p>We know the lanes and we push brokers for the best rate your freight is worth. In fluent English, we make the case so you don't leave money on the table.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm8 1.5V8h4.5L14 3.5ZM8 12h8v2H8v-2Zm0 4h8v2H8v-2Z"/></svg>
+            </div>
+            <h3>Back-Office Support</h3>
+            <p>Carrier packets, rate confirmations, and follow-up so nothing falls through the cracks and you actually get paid on time. We chase the details so you don't have to.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
+            </div>
+            <h3>Daily Trades on Highway 86</h3>
+            <p>Out on Highway 86? Meet us on the road. We run daily roadside trades with drivers &mdash; a real, face-to-face way to connect with our team.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         3. WHY TRUCKYEAH  (no stats, no numbers)
+         ========================================================= -->
+    <section class="section section-alt" id="why" aria-labelledby="why-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Why TruckYeah</p>
+          <h2 id="why-title">Real people, on your side</h2>
+          <p class="section-sub">We're new &mdash; and that means every driver gets our full attention.</p>
+        </header>
+
+        <div class="value-grid">
+          <div class="value">
+            <div class="value-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.24 1z"/></svg>
+            </div>
+            <h3>US-based &amp; reachable</h3>
+            <p>A real US phone number and a real person who answers. No overseas call center, no runaround.</p>
+          </div>
+
+          <div class="value">
+            <div class="value-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.9 9h-3a15.7 15.7 0 0 0-1-5.2A8 8 0 0 1 18.9 11ZM12 4c.9 1.2 1.7 3.2 1.9 7h-3.8C10.3 7.2 11.1 5.2 12 4ZM4.3 13h3a15.7 15.7 0 0 0 1 5.2A8 8 0 0 1 4.3 13Zm2.8-2a8 8 0 0 1 1-4.2A15.7 15.7 0 0 0 7.1 11Zm3 2h3.8c-.2 3.8-1 5.8-1.9 7-.9-1.2-1.7-3.2-1.9-7Zm5.9 5.2a15.7 15.7 0 0 0 1-5.2h3a8 8 0 0 1-4 5.2Z"/></svg>
+            </div>
+            <h3>Bilingual support</h3>
+            <p>Talk to us in Hindi. We talk to brokers in fluent English. Nothing gets lost in translation &mdash; not on your rate, not on your load.</p>
+          </div>
+
+          <div class="value">
+            <div class="value-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M2 12l4-4 3 3 5-5 3 3 5-5v6l-5 5-3-3-5 5-3-3-4 4z" opacity=".0"/><path fill="currentColor" d="M17 8a5 5 0 0 0-9.6-2H6a4 4 0 0 0 0 8h11a3 3 0 0 0 0-6h-.1c.1.3.1.7.1 1z" opacity="0"/><path fill="currentColor" d="M4 11h6l-2-2 1.4-1.4L13.8 12l-4.4 4.4L8 15l2-2H4v-2Zm16 2h-6l2 2-1.4 1.4L10.2 12l4.4-4.4L16 9l-2 2h6v2Z"/></svg>
+            </div>
+            <h3>Transparent fee, no lock-in</h3>
+            <p>A simple percentage on booked loads. No hidden costs, no long contracts. Cancel anytime.</p>
+          </div>
+
+          <div class="value">
+            <div class="value-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="m9 11 3 3 8-8 2 2-10 10-5-5 2-2Zm-7 5 3 3 2-2-3-3-2 2Z"/></svg>
+            </div>
+            <h3>Fast, personal response</h3>
+            <p>Because we're just launching, you're not a ticket number. Call or text and get a real answer, fast.</p>
+          </div>
+        </div>
+
+        <!-- Repeat the bilingual promise here -->
+        <p class="speak-hindi speak-hindi--center">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.9 9h-3a15.7 15.7 0 0 0-1-5.2A8 8 0 0 1 18.9 11ZM12 4c.9 1.2 1.7 3.2 1.9 7h-3.8C10.3 7.2 11.1 5.2 12 4ZM4.3 13h3a15.7 15.7 0 0 0 1 5.2A8 8 0 0 1 4.3 13Zm2.8-2a8 8 0 0 1 1-4.2A15.7 15.7 0 0 0 7.1 11Zm3 2h3.8c-.2 3.8-1 5.8-1.9 7-.9-1.2-1.7-3.2-1.9-7Zm5.9 5.2a15.7 15.7 0 0 0 1-5.2h3a8 8 0 0 1-4 5.2Z"/></svg>
+          <strong>We speak Hindi &mdash; call us.</strong>
+          <span class="hindi-cue" lang="hi" aria-hidden="true">हिंदी</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         4. FOUNDING DRIVERS OFFER
+         ========================================================= -->
+    <section class="founding" id="founding" aria-labelledby="founding-title">
+      <div class="container founding-inner">
+        <div class="founding-copy">
+          <p class="eyebrow eyebrow--light">Launch Offer</p>
+          <h2 id="founding-title">We're just launching &mdash; and we want you in first.</h2>
+          <p>We're taking on a small group of <strong>founding drivers</strong> who get intro pricing and our full, personal attention while we grow. Fewer drivers means faster answers and a dispatcher who actually knows your name and your truck.</p>
+          <!-- EDIT: Replace with your real founding offer, e.g. "5% intro rate for the first 10 drivers." -->
+          <p class="founding-detail">[YOUR FOUNDING OFFER &mdash; e.g. 5% intro rate for the first 10 drivers]</p>
+          <a class="btn btn-primary btn-lg" href="#contact">Become a Founding Driver</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         5. WHO WE ARE (About)
+         ========================================================= -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Who We Are</p>
+          <h2 id="about-title">A small bilingual team &mdash; and you can reach us</h2>
+          <p class="section-sub">No corporate wall. Just real people who pick up the phone.</p>
+        </header>
+
+        <!-- EDIT: Replace [TEAM MEMBER NAME] and the descriptions with your real team.
+             Keep it warm and specific. Do NOT add fake credentials or numbers. -->
+        <div class="team">
+          <article class="team-card">
+            <div class="team-avatar" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="40" height="40"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-4.4 0-8 2.7-8 6v2h16v-2c0-3.3-3.6-6-8-6Z"/></svg>
+            </div>
+            <h3>[TEAM MEMBER NAME]</h3>
+            <p class="team-role">Broker Dispatcher &mdash; English</p>
+            <p>Works US freight brokers directly in fluent English, negotiating your rates and booking your loads. Knows how brokers think and how to get you the number you deserve.</p>
+          </article>
+
+          <article class="team-card">
+            <div class="team-avatar" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="40" height="40"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-4.4 0-8 2.7-8 6v2h16v-2c0-3.3-3.6-6-8-6Z"/></svg>
+            </div>
+            <h3>[TEAM MEMBER NAME]</h3>
+            <p class="team-role">Driver Support &mdash; Hindi</p>
+            <p>Supports drivers in Hindi (and Punjabi) &mdash; walking you through sign-up, answering questions, and making sure you always know what's happening with your loads.</p>
+          </article>
+        </div>
+
+        <p class="about-note">
+          We started TruckYeah Trader because owner-operators &mdash; especially Hindi- and Punjabi-speaking drivers &mdash; deserve a dispatcher who talks to <em>them</em> in their language and talks to <em>brokers</em> in fluent English. That's the whole idea. <strong>Call or text us and talk to a real person.</strong>
+        </p>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         6. HOW IT WORKS
+         ========================================================= -->
+    <section class="section section-alt" id="how" aria-labelledby="how-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">How It Works</p>
+          <h2 id="how-title">Getting started is simple</h2>
+          <p class="section-sub">You approve every load. We handle everything around it.</p>
+        </header>
+
+        <ol class="steps">
+          <li class="step">
+            <span class="step-num" aria-hidden="true">1</span>
+            <h3>Call or text us</h3>
+            <p>Reach out in English or Hindi. Tell us your truck type and where you run.</p>
+          </li>
+          <li class="step">
+            <span class="step-num" aria-hidden="true">2</span>
+            <h3>Quick sign-up</h3>
+            <p>We send a short, plain-language dispatcher agreement and get your carrier packet ready.</p>
+          </li>
+          <li class="step">
+            <span class="step-num" aria-hidden="true">3</span>
+            <h3>We find &amp; book</h3>
+            <p>We search loads, negotiate the rate, and book only the loads you approve.</p>
+          </li>
+          <li class="step">
+            <span class="step-num" aria-hidden="true">4</span>
+            <h3>You drive, we handle the rest</h3>
+            <p>Paperwork, rate cons, and follow-up so you get paid. You just drive.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         7. PRICING / FEES
+         ========================================================= -->
+    <section class="section" id="pricing" aria-labelledby="pricing-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Pricing</p>
+          <h2 id="pricing-title">Simple, transparent fees</h2>
+          <p class="section-sub">You always know what you're paying &mdash; and what you're getting.</p>
+        </header>
+
+        <div class="pricing-card">
+          <div class="pricing-main">
+            <!-- EDIT: Replace [YOUR FEE %] with your real percentage, e.g. "7%" -->
+            <p class="pricing-figure">[YOUR FEE %]</p>
+            <p class="pricing-label">percentage-based fee on booked loads</p>
+          </div>
+          <ul class="pricing-list">
+            <li>No hidden costs &mdash; the fee is the fee</li>
+            <li>No long contracts &mdash; cancel anytime</li>
+            <li>You approve every load before we book it</li>
+            <li>Founding drivers get intro pricing (ask us)</li>
+          </ul>
+          <a class="btn btn-primary btn-lg" href="#contact">Ask About Your Rate</a>
+        </div>
+
+        <p class="pricing-note">
+          How the money flows: the broker pays the carrier, and we act as your agent &mdash; not the other way around. Our fee is a percentage of the loads we book for you.
+        </p>
+
+        <!-- =========================================================
+             COMPLIANCE DISCLAIMER — owner, please read.
+             Confirm your dispatch model and fee arrangement comply with
+             current FMCSA rules and applicable state law before you launch.
+             The content on this page is for general information only and is
+             NOT legal, financial, or compliance advice. When in doubt,
+             consult a qualified transportation attorney or compliance pro.
+             ========================================================= -->
+      </div>
+    </section>
+
+    <!-- =========================================================
+         8. FAQ (accessible native accordion)
+         ========================================================= -->
+    <section class="section section-alt" id="faq" aria-labelledby="faq-title">
+      <div class="container container-narrow">
+        <header class="section-head">
+          <p class="eyebrow">FAQ</p>
+          <h2 id="faq-title">Questions drivers ask us</h2>
+        </header>
+
+        <div class="faq">
+          <!-- EDIT: Edit answers freely. Anything marked [PLACEHOLDER] must be confirmed by you. -->
+          <details>
+            <summary>Do I need my own MC authority?</summary>
+            <div class="faq-body"><p>In most cases, yes &mdash; we dispatch for carriers who have their own MC/DOT authority. Not sure about your situation? Call us and we'll talk it through. [CONFIRM: your exact authority requirements.]</p></div>
+          </details>
+
+          <details>
+            <summary>What's your fee?</summary>
+            <div class="faq-body"><p>A simple percentage on the loads we book for you &mdash; no hidden costs and no long contracts. Founding drivers get intro pricing. [YOUR FEE % &mdash; confirm before publishing.]</p></div>
+          </details>
+
+          <details>
+            <summary>How fast can you get me a load?</summary>
+            <div class="faq-body"><p>Once you're signed up and your packet is ready, we start searching right away. Timing depends on your lane, equipment, and the market &mdash; call us and we'll give you a straight answer for your situation.</p></div>
+          </details>
+
+          <details>
+            <summary>Do you speak Hindi?</summary>
+            <div class="faq-body"><p>Yes. You can talk to us in Hindi (and Punjabi), and we negotiate with brokers in fluent English. That's the core of what we do &mdash; <a href="tel:+19707882896">call us</a>.</p></div>
+          </details>
+
+          <details>
+            <summary>What areas do you cover?</summary>
+            <div class="faq-body"><p>We dispatch across the US. [CONFIRM: any specific lanes, regions, or equipment you specialize in.]</p></div>
+          </details>
+
+          <details>
+            <summary>How do I get paid?</summary>
+            <div class="faq-body"><p>The broker pays you (the carrier) for the load. We handle the rate confirmation and paperwork and follow up so payment doesn't get stuck. [CONFIRM: whether you work with any factoring partners.]</p></div>
+          </details>
+
+          <details>
+            <summary>Are you a new company?</summary>
+            <div class="faq-body"><p>Yes &mdash; and honestly, that's good news if you get in early. As a founding driver you get intro pricing and our full personal attention. Fewer drivers means faster answers and a dispatcher who actually knows you and your truck.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         9. CONTACT / GET DISPATCHED
+         ========================================================= -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-inner">
+        <div class="contact-copy">
+          <p class="eyebrow">Get Dispatched</p>
+          <h2 id="contact-title">Let's get you rolling</h2>
+          <p>Call or text and talk to a real person &mdash; in English or Hindi. Or send the form and we'll reach out.</p>
+
+          <ul class="contact-list">
+            <li>
+              <span class="contact-label">Call or text</span>
+              <a class="contact-link" href="tel:+19707882896">+1 970-788-2896</a>
+              <a class="btn btn-call btn-sm contact-sms" href="sms:+19707882896">Text us</a>
+            </li>
+            <li>
+              <span class="contact-label">Email</span>
+              <!-- EDIT: Replace with your real email address (also update JSON-LD + footer). -->
+              <a class="contact-link" href="mailto:dispatch@truckyeahtrader.com">dispatch@truckyeahtrader.com</a>
+            </li>
+            <li>
+              <span class="contact-label">Hours</span>
+              <!-- EDIT: Replace with your real hours (also update footer + JSON-LD). -->
+              <span class="contact-value">Mon&ndash;Sat, 7am&ndash;9pm CT</span>
+            </li>
+          </ul>
+
+          <p class="speak-hindi">
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.9 9h-3a15.7 15.7 0 0 0-1-5.2A8 8 0 0 1 18.9 11ZM12 4c.9 1.2 1.7 3.2 1.9 7h-3.8C10.3 7.2 11.1 5.2 12 4ZM4.3 13h3a15.7 15.7 0 0 0 1 5.2A8 8 0 0 1 4.3 13Zm2.8-2a8 8 0 0 1 1-4.2A15.7 15.7 0 0 0 7.1 11Zm3 2h3.8c-.2 3.8-1 5.8-1.9 7-.9-1.2-1.7-3.2-1.9-7Zm5.9 5.2a15.7 15.7 0 0 0 1-5.2h3a8 8 0 0 1-4 5.2Z"/></svg>
+            <strong>We speak Hindi &mdash; call us.</strong>
+            <span class="hindi-cue" lang="hi" aria-hidden="true">हिंदी</span>
+          </p>
+        </div>
+
+        <!-- =========================================================
+             LEAD FORM
+             EDIT: Paste your Formspree endpoint into the action attribute
+             below (replace [YOUR_FORMSPREE_ENDPOINT]). See README for the
+             free setup steps. Until you do, the form will show an error on
+             submit — that's expected.
+             ========================================================= -->
+        <form class="lead-form" id="lead-form"
+              action="[YOUR_FORMSPREE_ENDPOINT]"
+              method="POST"
+              novalidate>
+          <h3 class="form-title">Get dispatched</h3>
+
+          <div class="field">
+            <label for="name">Name <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="name" name="name" autocomplete="name" required />
+            <p class="field-error" data-error-for="name" hidden>Please enter your name.</p>
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone <span class="req" aria-hidden="true">*</span></label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" required />
+            <p class="field-error" data-error-for="phone" hidden>Please enter a valid phone number.</p>
+          </div>
+
+          <div class="field">
+            <label for="language">Preferred language</label>
+            <select id="language" name="language">
+              <option value="English">English</option>
+              <option value="Hindi">Hindi</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="truck">Truck type</label>
+            <select id="truck" name="truck_type">
+              <option value="Dry Van">Dry Van</option>
+              <option value="Reefer">Reefer</option>
+              <option value="Flatbed">Flatbed</option>
+              <option value="Power Only">Power Only</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="authority">Do you have your own MC authority?</label>
+            <select id="authority" name="mc_authority">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tell us your lanes, questions, or anything else."></textarea>
+          </div>
+
+          <!-- Honeypot field for spam bots (hidden from humans) -->
+          <div class="field field-hp" aria-hidden="true">
+            <label for="company">Company (leave blank)</label>
+            <input type="text" id="company" name="_gotcha" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg btn-block">Send &amp; Get Dispatched</button>
+
+          <!-- Live status region for success / error messages -->
+          <p class="form-status" id="form-status" role="status" aria-live="polite" hidden></p>
+
+          <p class="form-fineprint">Prefer to talk? <a href="tel:+19707882896">Call</a> or <a href="sms:+19707882896">text +1 970-788-2896</a>.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       10. FOOTER
+       ========================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-name">TruckYeah <span class="brand-name-accent">Trader</span></span>
+        <p class="footer-tag">US-based dispatch &bull; English &amp; Hindi</p>
+      </div>
+
+      <ul class="footer-contact">
+        <li><a href="tel:+19707882896">+1 970-788-2896</a></li>
+        <!-- EDIT: email + hours -->
+        <li><a href="mailto:dispatch@truckyeahtrader.com">dispatch@truckyeahtrader.com</a></li>
+        <li>Mon&ndash;Sat, 7am&ndash;9pm CT</li>
+      </ul>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+
+    <div class="container footer-bottom">
+      <p class="copyright">&copy; <span id="year">2026</span> TruckYeah Trader. All rights reserved.</p>
+      <!-- Legal / compliance small print -->
+      <p class="disclaimer">
+        TruckYeah Trader provides truck dispatch services and acts as the carrier's agent. Information on this site is for general purposes only and is not legal, financial, or compliance advice. Carriers are responsible for maintaining their own operating authority and complying with all FMCSA and applicable state and federal regulations.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

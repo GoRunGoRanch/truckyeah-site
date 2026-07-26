@@ -1,0 +1,19 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Local env / secrets (not used by this static site, but just in case)
+.env
+.env.local
+.env.*.local
+
+# Vercel
+.vercel
