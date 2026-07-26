@@ -92,10 +92,10 @@
 
     var action = form.getAttribute("action");
 
-    // If the Formspree endpoint hasn't been set yet, guide the owner instead of failing silently.
-    if (!action || action.indexOf("[YOUR_FORMSPREE_ENDPOINT]") !== -1 || action.indexOf("formspree.io") === -1) {
+    // If the form endpoint hasn't been configured yet, guide the owner instead of failing silently.
+    if (!action || action.indexOf("[YOUR_") !== -1 || action.indexOf("http") !== 0) {
       setStatus(
-        "Form not connected yet. Owner: paste your Formspree endpoint into the form's action attribute (see README). Meanwhile, call or text +1 970-788-2896.",
+        "Form not connected yet. Owner: set the form's action to your FormSubmit or Formspree endpoint (see README). Meanwhile, call or text +1 970-788-2896.",
         "error"
       );
       return;

@@ -535,16 +535,30 @@
         </div>
 
         <!-- =========================================================
-             LEAD FORM
-             EDIT: Paste your Formspree endpoint into the action attribute
-             (replace [YOUR_FORMSPREE_ENDPOINT]). See README. Until then,
-             the form shows a friendly "not connected yet" message.
+             LEAD FORM  (powered by FormSubmit — no account needed)
+             HOW IT WORKS:
+               Leads are emailed to the address in the action URL below.
+               The FIRST time the form is submitted, FormSubmit sends a
+               one-time activation link to that inbox — open it and click
+               "Activate Form" once, and every submission after that lands
+               in your email automatically.
+             EDIT (where leads go):
+               Change the email at the end of the action URL below to any
+               inbox you can check. It's currently dispatch@truckyeahtraders.com.
+               If that mailbox isn't set up yet, use one you can open now
+               (e.g. your Gmail) so you can click the activation link.
+             (Prefer Formspree instead? See the README for how to swap.)
              ========================================================= -->
         <form class="lead-form" id="lead-form"
-              action="[YOUR_FORMSPREE_ENDPOINT]"
+              action="https://formsubmit.co/ajax/dispatch@truckyeahtraders.com"
               method="POST"
               novalidate>
           <h3 class="form-title">Get dispatched</h3>
+
+          <!-- FormSubmit settings (hidden). Safe to leave as-is. -->
+          <input type="hidden" name="_subject" value="New TruckYeah Traders lead" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
 
           <div class="field">
             <label for="name">Name <span class="req" aria-hidden="true">*</span></label>
@@ -590,10 +604,10 @@
             <textarea id="message" name="message" rows="4" placeholder="Tell us your lanes, questions, or anything else."></textarea>
           </div>
 
-          <!-- Honeypot spam trap (hidden from humans) -->
+          <!-- Honeypot spam trap (hidden from humans; FormSubmit auto-drops these) -->
           <div class="field field-hp" aria-hidden="true">
             <label for="company">Company (leave blank)</label>
-            <input type="text" id="company" name="_gotcha" tabindex="-1" autocomplete="off" />
+            <input type="text" id="company" name="_honey" tabindex="-1" autocomplete="off" />
           </div>
 
           <button type="submit" class="btn btn-primary btn-lg btn-block">Send &amp; Get Dispatched</button>

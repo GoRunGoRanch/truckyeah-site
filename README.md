@@ -51,24 +51,28 @@ Open `index.html` in any text editor (even Notepad / TextEdit) and replace these
 
 ---
 
-## 2. 📨 Set up the contact form (free Formspree)
+## 2. 📨 Turn on the contact form (no signup needed)
 
-The form needs a free service to email you submissions (a static site can't email on its own).
+A static site can't email you on its own, so the form uses a free service called **FormSubmit** to email leads to you. **There's no account to create** — it's already wired up. You just need to activate it once.
 
-1. Go to **https://formspree.io** and create a free account.
-2. Click **+ New Form**. Name it (e.g. "TruckYeah Leads") and set the email where you want leads sent.
-3. Formspree gives you an endpoint URL like: `https://formspree.io/f/abcdwxyz`
-4. Open `index.html`, find this line (search for `YOUR_FORMSPREE`):
-   ```html
-   action="[YOUR_FORMSPREE_ENDPOINT]"
-   ```
-   Replace it with your URL:
-   ```html
-   action="https://formspree.io/f/abcdwxyz"
-   ```
-5. Save, re-upload `index.html` (see Section 3), and send yourself a test submission. Formspree may ask you to confirm your email the first time.
+**Where leads go right now:** `dispatch@truckyeahtraders.com`
 
-That's it — the form already submits without reloading the page and shows a success/error message. A hidden anti-spam field is included.
+### Activate it (one time, ~1 minute)
+1. Put the site online (Vercel or GoDaddy), open it, and **submit the contact form once** yourself (any test info is fine).
+2. FormSubmit will email an **activation link** to `dispatch@truckyeahtraders.com`. Open that email and click **"Activate Form."**
+3. Done. From now on, every form submission is emailed straight to that inbox — no page reload, with a success message for the driver.
+
+> ⚠️ You must be able to **receive email** at `dispatch@truckyeahtraders.com` to click the activation link. If that mailbox isn't set up yet, see below to point leads at an inbox you can open today.
+
+### Change where leads are sent
+Open `index.html`, search for `formsubmit.co`, and edit the email at the end of this line:
+```html
+action="https://formsubmit.co/ajax/dispatch@truckyeahtraders.com"
+```
+Swap in any inbox you check (e.g. your Gmail), save, re-upload/redeploy, then re-activate (step 1–2 above) for the new address.
+
+### Prefer Formspree instead?
+If you'd rather use Formspree: create a free form at **https://formspree.io**, copy your endpoint (looks like `https://formspree.io/f/abcdwxyz`), and replace the whole `action="..."` value with it. The rest of the form keeps working as-is (you can delete the three hidden `_subject` / `_template` / `_captcha` inputs — those are FormSubmit-only).
 
 ---
 
