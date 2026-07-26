@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://truckyeahtrader.com/sitemap.xml
+Sitemap: https://truckyeahtraders.com/sitemap.xml

@@ -85,7 +85,7 @@ That's it — the form already submits without reloading the page and shows a su
 6. Click **Upload** and select **all** the files from this `truckyeah-site` folder — including the `assets` folder's contents.
    - Easiest way: on your computer, **zip** the *contents* of `truckyeah-site` (select the files, right-click → Compress). Upload the `.zip` into `public_html`, then right-click it in File Manager → **Extract**. Delete the zip afterward.
    - ⚠️ Make sure `index.html` ends up **directly inside `public_html`**, not inside a sub-folder. The `assets` folder should sit next to it.
-7. Visit **https://truckyeahtrader.com** — your site should load. (Give DNS a few minutes if it's a new domain.)
+7. Visit **https://truckyeahtraders.com** — your site should load. (Give DNS a few minutes if it's a new domain.)
 
 ### Option B — FTP (if you prefer)
 
