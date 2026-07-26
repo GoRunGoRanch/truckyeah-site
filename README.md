@@ -40,7 +40,7 @@ Open `index.html` in any text editor (even Notepad / TextEdit) and replace these
 | `[YOUR FOUNDING OFFER ...]` | `index.html` — Founding Drivers section | Your real intro offer, e.g. `5% intro rate for the first 10 drivers`. |
 | `[TEAM MEMBER NAME]` (×2) | `index.html` — Who We Are | Real first names/roles of your two dispatchers. |
 | `[YOUR FEE %]` (×2) | `index.html` — Pricing card **and** FAQ | Your real percentage, e.g. `7%`. |
-| `dispatch@truckyeahtrader.com` | `index.html` — Contact, Footer, JSON-LD | Your real email (3 spots). |
+| `dispatch@truckyeahtraders.com` | `index.html` — Contact, Footer, JSON-LD | Your real email (3 spots). |
 | Hours | `index.html` — Contact, Footer, JSON-LD | Currently set to **Open 24/7** to match the logo. If that ever changes, update all 3 spots. |
 | `[YOUR STREET ADDRESS]`, `[YOUR CITY]`, `[YOUR STATE]`, `[YOUR ZIP]` | `index.html` — JSON-LD block in `<head>` | Your business address (helps local SEO). |
 | `[CONFIRM: ...]` notes in FAQ | `index.html` — FAQ | Confirm the answer, then delete the `[CONFIRM ...]` note. |
