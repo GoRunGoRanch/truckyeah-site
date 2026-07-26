@@ -17,12 +17,14 @@ truckyeah-site/
 ├── sitemap.xml         ← lists your page for search engines
 ├── README.md           ← this file
 └── assets/
-    ├── favicon.svg      ← the little tab icon (placeholder — swap for your logo)
-    ├── favicon.ico      ← (YOU ADD — see step 4)
-    ├── apple-touch-icon.png ← (YOU ADD — see step 4)
-    ├── og-image.jpg     ← (YOU ADD — social-share image, 1200×630)
-    └── hero.jpg         ← (OPTIONAL — your highway/truck photo)
+    ├── logo-full.jpg        ← your full logo (shown in the hero)
+    ├── logo-mark.png        ← truck emblem cropped from your logo (nav + icons)
+    ├── favicon.ico          ← tab icon (generated from your logo emblem)
+    ├── apple-touch-icon.png ← iOS home-screen icon (from your logo emblem)
+    └── og-image.jpg         ← social-share image, 1200×630 (from your logo)
 ```
+
+All the image assets are already generated from the TruckYeah Traders logo you provided — nothing to add. To change them later, replace the file of the same name in `assets/` (see Section 4).
 
 Tip: In `index.html`, anything you'll likely want to change is marked with a comment like `<!-- EDIT: ... -->`. Search the file for **EDIT** to jump between them.
 
@@ -39,7 +41,7 @@ Open `index.html` in any text editor (even Notepad / TextEdit) and replace these
 | `[TEAM MEMBER NAME]` (×2) | `index.html` — Who We Are | Real first names/roles of your two dispatchers. |
 | `[YOUR FEE %]` (×2) | `index.html` — Pricing card **and** FAQ | Your real percentage, e.g. `7%`. |
 | `dispatch@truckyeahtrader.com` | `index.html` — Contact, Footer, JSON-LD | Your real email (3 spots). |
-| `Mon–Sat, 7am–9pm CT` | `index.html` — Contact, Footer, JSON-LD | Your real hours (3 spots). |
+| Hours | `index.html` — Contact, Footer, JSON-LD | Currently set to **Open 24/7** to match the logo. If that ever changes, update all 3 spots. |
 | `[YOUR STREET ADDRESS]`, `[YOUR CITY]`, `[YOUR STATE]`, `[YOUR ZIP]` | `index.html` — JSON-LD block in `<head>` | Your business address (helps local SEO). |
 | `[CONFIRM: ...]` notes in FAQ | `index.html` — FAQ | Confirm the answer, then delete the `[CONFIRM ...]` note. |
 
@@ -98,25 +100,16 @@ That's it — the form already submits without reloading the page and shows a su
 
 ## 4. 🖼️ Swapping images, logo, and icons
 
-**Hero image (the big banner):**
-By default the hero uses a clean CSS gradient so the page loads fast. To use a real photo:
-1. Find a free, royalty-free highway/truck photo (try **Unsplash**, **Pexels**, or **Pixabay** — all free for commercial use).
-2. Save it optimized (compressed JPG, under ~200 KB, ~1600px wide) as `assets/hero.jpg`.
-3. Open `styles.css`, find `.hero-art` and add this line inside it:
-   ```css
-   background-image: url("assets/hero.jpg");
-   background-size: cover;
-   background-position: center;
-   ```
-   (You can remove the placeholder gradient lines if you like.)
+**Hero logo (the big image on the right):**
+The hero shows your full logo, `assets/logo-full.jpg`. To use a different image, just replace that file with a new one of the same name (an optimized JPG, ideally under ~250 KB).
 
 **Logo / business name:**
-The name "TruckYeah **Trader**" is plain text in the top-left and footer (search `brand-name` in `index.html`). If you have a real logo, replace the small inline SVG in the header (search `brand-mark`) with an `<img src="assets/logo.svg" ...>`.
+The name "TruckYeah **Traders**" is plain text in the top-left and footer (search `brand-name` in `index.html`). The little truck emblem next to it is `assets/logo-mark.png` (cropped from your logo). Swap that file to change the mark.
 
-**Icons (favicon, apple icon, social image):**
-- **favicon.ico** — go to **https://favicon.io**, upload your logo, download the pack, and put `favicon.ico` and `apple-touch-icon.png` into `assets/`.
-- **og-image.jpg** — the picture shown when your link is shared on WhatsApp/Facebook/etc. Make one **1200×630 px**, save as `assets/og-image.jpg`. (Your name + tagline on your brand navy background works great.)
-- Until you add these, the site still works — browsers just use the SVG icon and skip the share image.
+**Icons & social image (already generated from your logo):**
+- `assets/favicon.ico` (browser tab) and `assets/apple-touch-icon.png` (iOS home screen) were made from your logo's truck emblem.
+- `assets/og-image.jpg` (1200×630) is the picture shown when your link is shared on WhatsApp/Facebook/etc.
+- To change any of them, replace the file of the same name. If you'd rather regenerate a crisp favicon set from scratch, upload your logo at **https://favicon.io** and drop the downloaded `favicon.ico` / `apple-touch-icon.png` into `assets/`.
 
 **Stats & testimonials:**
 There are **none** on this site, on purpose (you're new — see the honesty rule above). Don't add fake ones. When you genuinely have happy drivers later and their permission, you can add a simple quotes section then.

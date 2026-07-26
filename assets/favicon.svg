@@ -1,6 +1,0 @@
-<!-- Placeholder favicon for TruckYeah Trader. Swap for your own logo mark if you have one. -->
-<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
-  <rect width="48" height="48" rx="10" fill="#1F3864"/>
-  <path d="M6 30h22v-9h7l7 6v3h-3a4 4 0 0 1-8 0H17a4 4 0 0 1-8 0H6z" fill="#FF7A00"/>
-  <path d="M6 34h36" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="4 4" stroke-linecap="round"/>
-</svg>

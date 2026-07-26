@@ -7,67 +7,50 @@
   <!-- =========================================================
        EDIT: Page title & description (shows in Google + browser tab)
        ========================================================= -->
-  <title>TruckYeah Trader | US-Based Truck Dispatch That Speaks Your Language</title>
-  <meta name="description" content="US-based truck dispatch for owner-operators. Bilingual team (English &amp; Hindi). We find loads, negotiate rates with brokers, and handle paperwork. Transparent fees, no long contracts. Call +1 970-788-2896." />
+  <title>TruckYeah Traders | US-Based Bilingual Truck Dispatch &amp; Driver Community</title>
+  <meta name="description" content="US-based truck dispatch for owner-operators. Bilingual team (English &amp; Hindi). We find loads, negotiate rates with brokers, and handle paperwork. Plus TruckYeah Traders — a community for drivers building financial knowledge. Call +1 970-788-2896." />
 
-  <!-- Brand color for mobile browser UI -->
-  <meta name="theme-color" content="#1F3864" />
+  <!-- Brand color for mobile browser UI (near-black to match the dark theme) -->
+  <meta name="theme-color" content="#0b0d11" />
 
-  <!-- Canonical URL -->
   <link rel="canonical" href="https://truckyeahtrader.com/" />
 
   <!-- =========================================================
-       Favicons
-       EDIT: To swap, replace the files in /assets. A simple placeholder
-       SVG mark is provided. For best compatibility also create:
-         - assets/favicon.ico  (32x32) — use https://favicon.io to generate
-         - assets/apple-touch-icon.png (180x180)
+       Favicons (generated from your logo emblem — swap files in /assets to change)
        ========================================================= -->
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
 
-  <!-- =========================================================
-       Open Graph / social share tags
-       EDIT: assets/og-image.jpg — recommended size 1200 x 630 px
-       ========================================================= -->
+  <!-- Open Graph / social share (assets/og-image.jpg is 1200x630) -->
   <meta property="og:type" content="business.business" />
-  <meta property="og:title" content="TruckYeah Trader | US-Based Truck Dispatch" />
-  <meta property="og:description" content="US-based dispatch that speaks your language. Bilingual (English &amp; Hindi) team for owner-operators. Transparent fees, real people you can reach." />
+  <meta property="og:title" content="TruckYeah Traders | US-Based Truck Dispatch" />
+  <meta property="og:description" content="US-based dispatch that speaks your language. Bilingual (English &amp; Hindi) team for owner-operators, plus a driver community." />
   <meta property="og:url" content="https://truckyeahtrader.com/" />
   <meta property="og:image" content="https://truckyeahtrader.com/assets/og-image.jpg" />
-  <meta property="og:site_name" content="TruckYeah Trader" />
-
+  <meta property="og:site_name" content="TruckYeah Traders" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="TruckYeah Trader | US-Based Truck Dispatch" />
+  <meta name="twitter:title" content="TruckYeah Traders | US-Based Truck Dispatch" />
   <meta name="twitter:description" content="US-based dispatch that speaks your language. Bilingual (English &amp; Hindi) team for owner-operators." />
   <meta name="twitter:image" content="https://truckyeahtrader.com/assets/og-image.jpg" />
 
-  <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css" />
-
-  <!-- Deferred JavaScript -->
   <script src="script.js" defer></script>
 
   <!-- =========================================================
-       JSON-LD structured data (helps Google understand the business)
+       JSON-LD structured data (dispatch service).
        EDIT: Replace address placeholders and confirm hours.
-       availableLanguage kept as en + hi (team genuinely speaks both).
        ========================================================= -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "name": "TruckYeah Trader",
+    "name": "TruckYeah Traders",
     "description": "US-based truck dispatch service for owner-operators. Bilingual (English and Hindi) team that finds loads, negotiates rates with freight brokers, and handles back-office paperwork.",
     "url": "https://truckyeahtrader.com/",
     "telephone": "+1-970-788-2896",
     "email": "dispatch@truckyeahtrader.com",
     "priceRange": "Percentage-based dispatch fee",
-    "areaServed": {
-      "@type": "Country",
-      "name": "United States"
-    },
+    "areaServed": { "@type": "Country", "name": "United States" },
     "availableLanguage": ["en", "hi"],
     "address": {
       "@type": "PostalAddress",
@@ -80,9 +63,9 @@
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        "opens": "07:00",
-        "closes": "21:00"
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
       }
     ]
   }
@@ -90,7 +73,6 @@
 </head>
 
 <body>
-  <!-- Skip link for keyboard / screen-reader users -->
   <a class="skip-link" href="#main">Skip to main content</a>
 
   <!-- =========================================================
@@ -98,17 +80,12 @@
        ========================================================= -->
   <header class="site-header" id="top">
     <div class="container nav-inner">
-      <a href="#top" class="brand" aria-label="TruckYeah Trader home">
-        <!-- Simple inline logo mark (a road + truck). EDIT: swap for your logo if you have one. -->
-        <svg class="brand-mark" width="34" height="34" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
-          <rect width="48" height="48" rx="10" fill="#1F3864"/>
-          <path d="M6 30h22v-9h7l7 6v3h-3a4 4 0 0 1-8 0H17a4 4 0 0 1-8 0H6z" fill="#FF7A00"/>
-          <path d="M6 34h36" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="4 4" stroke-linecap="round"/>
-        </svg>
-        <span class="brand-name">TruckYeah <span class="brand-name-accent">Trader</span></span>
+      <a href="#top" class="brand" aria-label="TruckYeah Traders home">
+        <!-- Logo emblem (generated from your uploaded logo). EDIT: swap assets/logo-mark.png to change. -->
+        <img class="brand-mark" src="assets/logo-mark.png" width="42" height="42" alt="TruckYeah Traders logo" />
+        <span class="brand-name">TruckYeah <span class="brand-name-accent">Traders</span></span>
       </a>
 
-      <!-- Mobile menu toggle -->
       <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
         <span class="nav-toggle-bar"></span>
         <span class="nav-toggle-bar"></span>
@@ -117,15 +94,13 @@
 
       <nav id="primary-nav" class="primary-nav" aria-label="Primary">
         <ul>
-          <li><a href="#services">Services</a></li>
+          <li><a href="#services">Dispatch</a></li>
           <li><a href="#why">Why Us</a></li>
-          <li><a href="#about">Who We Are</a></li>
-          <li><a href="#how">How It Works</a></li>
+          <li><a href="#community">Community</a></li>
           <li><a href="#pricing">Pricing</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <!-- EDIT: Phone number appears in several places. If you change it, update every tel: and sms: link and the JSON-LD above. -->
         <a class="btn btn-call nav-call" href="tel:+19707882896">
           <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.24 1z"/></svg>
           Call Now
@@ -142,12 +117,10 @@
     <section class="hero" id="hero">
       <div class="container hero-inner">
         <div class="hero-copy">
-          <p class="eyebrow">Truck Dispatch for Owner-Operators</p>
-          <!-- EDIT: Main headline & tagline -->
-          <h1>US-based dispatch that <span class="hl">speaks your language.</span></h1>
+          <p class="eyebrow">US-Based Truck Dispatch for Owner-Operators</p>
+          <h1>Dispatch that <span class="hl">speaks your language.</span></h1>
           <p class="lead">We find your loads, negotiate the best rates with brokers, and handle the paperwork &mdash; so you can keep driving and keep more of what you earn.</p>
 
-          <!-- Bilingual spoken promise (English body copy; Hindi shown once as a visual cue) -->
           <p class="speak-hindi">
             <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.9 9h-3a15.7 15.7 0 0 0-1-5.2A8 8 0 0 1 18.9 11ZM12 4c.9 1.2 1.7 3.2 1.9 7h-3.8C10.3 7.2 11.1 5.2 12 4ZM4.3 13h3a15.7 15.7 0 0 0 1 5.2A8 8 0 0 1 4.3 13Zm2.8-2a8 8 0 0 1 1-4.2A15.7 15.7 0 0 0 7.1 11Zm3 2h3.8c-.2 3.8-1 5.8-1.9 7-.9-1.2-1.7-3.2-1.9-7Zm5.9 5.2a15.7 15.7 0 0 0 1-5.2h3a8 8 0 0 1-4 5.2Z"/></svg>
             <strong>We speak Hindi &mdash; call us.</strong>
@@ -162,7 +135,6 @@
             </a>
           </div>
 
-          <!-- Trust strip (NO stats — just plain-language reassurance) -->
           <ul class="trust-strip" aria-label="What sets us apart">
             <li>US-based</li>
             <li>English &amp; Hindi</li>
@@ -170,39 +142,27 @@
           </ul>
         </div>
 
-        <!-- =========================================================
-             HERO IMAGE
-             EDIT: Replace the background image in styles.css (.hero-art)
-             with a real royalty-free highway/truck photo.
-             Suggested free sources: Unsplash, Pexels, Pixabay.
-             Recommended: a wide landscape shot ~1600px wide, optimized
-             (compressed JPG/WebP under ~200KB) saved as assets/hero.jpg,
-             then set: background-image: url("assets/hero.jpg");
-             A CSS gradient placeholder is used by default so the page
-             loads fast and works offline.
-             ========================================================= -->
-        <div class="hero-art" role="img" aria-label="A semi-truck on a US highway at sunset">
-          <div class="hero-art-badge">
-            <span class="hero-art-badge-title">Founding Drivers</span>
-            <span class="hero-art-badge-sub">Now onboarding a small first group</span>
-          </div>
+        <!-- Brand logo lockup (your uploaded logo, optimized). -->
+        <div class="hero-art">
+          <img src="assets/logo-full.jpg" width="950" height="950"
+               alt="TruckYeah Traders Dispatch Services"
+               class="hero-logo" />
         </div>
       </div>
     </section>
 
     <!-- =========================================================
-         2. SERVICES
+         2. SERVICES (Dispatch)
          ========================================================= -->
     <section class="section" id="services" aria-labelledby="services-title">
       <div class="container">
         <header class="section-head">
-          <p class="eyebrow">What We Do</p>
+          <p class="eyebrow">Truck Dispatch</p>
           <h2 id="services-title">Everything you need to keep rolling</h2>
           <p class="section-sub">One team handling loads, rates, and paperwork &mdash; so your only job is driving.</p>
         </header>
 
         <div class="cards">
-          <!-- EDIT: Service cards -->
           <article class="card">
             <div class="card-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M3 13h13V6H3v7Zm14-4h3l2 3v2h-2a2 2 0 0 1-4 0h-2V9h3Zm-9 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4Zm10 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z"/></svg>
@@ -268,7 +228,7 @@
 
           <div class="value">
             <div class="value-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M2 12l4-4 3 3 5-5 3 3 5-5v6l-5 5-3-3-5 5-3-3-4 4z" opacity=".0"/><path fill="currentColor" d="M17 8a5 5 0 0 0-9.6-2H6a4 4 0 0 0 0 8h11a3 3 0 0 0 0-6h-.1c.1.3.1.7.1 1z" opacity="0"/><path fill="currentColor" d="M4 11h6l-2-2 1.4-1.4L13.8 12l-4.4 4.4L8 15l2-2H4v-2Zm16 2h-6l2 2-1.4 1.4L10.2 12l4.4-4.4L16 9l-2 2h6v2Z"/></svg>
+              <svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M4 11h6l-2-2 1.4-1.4L13.8 12l-4.4 4.4L8 15l2-2H4v-2Zm16 2h-6l2 2-1.4 1.4L10.2 12l4.4-4.4L16 9l-2 2h6v2Z"/></svg>
             </div>
             <h3>Transparent fee, no lock-in</h3>
             <p>A simple percentage on booked loads. No hidden costs, no long contracts. Cancel anytime.</p>
@@ -283,7 +243,6 @@
           </div>
         </div>
 
-        <!-- Repeat the bilingual promise here -->
         <p class="speak-hindi speak-hindi--center">
           <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.9 9h-3a15.7 15.7 0 0 0-1-5.2A8 8 0 0 1 18.9 11ZM12 4c.9 1.2 1.7 3.2 1.9 7h-3.8C10.3 7.2 11.1 5.2 12 4ZM4.3 13h3a15.7 15.7 0 0 0 1 5.2A8 8 0 0 1 4.3 13Zm2.8-2a8 8 0 0 1 1-4.2A15.7 15.7 0 0 0 7.1 11Zm3 2h3.8c-.2 3.8-1 5.8-1.9 7-.9-1.2-1.7-3.2-1.9-7Zm5.9 5.2a15.7 15.7 0 0 0 1-5.2h3a8 8 0 0 1-4 5.2Z"/></svg>
           <strong>We speak Hindi &mdash; call us.</strong>
@@ -319,8 +278,7 @@
           <p class="section-sub">No corporate wall. Just real people who pick up the phone.</p>
         </header>
 
-        <!-- EDIT: Replace [TEAM MEMBER NAME] and the descriptions with your real team.
-             Keep it warm and specific. Do NOT add fake credentials or numbers. -->
+        <!-- EDIT: Replace [TEAM MEMBER NAME] and descriptions with your real team. No fake credentials or numbers. -->
         <div class="team">
           <article class="team-card">
             <div class="team-avatar" aria-hidden="true">
@@ -342,7 +300,7 @@
         </div>
 
         <p class="about-note">
-          We started TruckYeah Trader because owner-operators &mdash; especially Hindi- and Punjabi-speaking drivers &mdash; deserve a dispatcher who talks to <em>them</em> in their language and talks to <em>brokers</em> in fluent English. That's the whole idea. <strong>Call or text us and talk to a real person.</strong>
+          We started TruckYeah because owner-operators &mdash; especially Hindi- and Punjabi-speaking drivers &mdash; deserve a dispatcher who talks to <em>them</em> in their language and talks to <em>brokers</em> in fluent English. That's the whole idea. <strong>Call or text us and talk to a real person.</strong>
         </p>
       </div>
     </section>
@@ -417,15 +375,77 @@
              COMPLIANCE DISCLAIMER — owner, please read.
              Confirm your dispatch model and fee arrangement comply with
              current FMCSA rules and applicable state law before you launch.
-             The content on this page is for general information only and is
-             NOT legal, financial, or compliance advice. When in doubt,
-             consult a qualified transportation attorney or compliance pro.
+             This page is general information only, NOT legal, financial, or
+             compliance advice. Consult a qualified transportation attorney
+             if unsure.
              ========================================================= -->
       </div>
     </section>
 
     <!-- =========================================================
-         8. FAQ (accessible native accordion)
+         8. TRUCKYEAH TRADERS COMMUNITY
+         ---------------------------------------------------------
+         IMPORTANT (owner, read this):
+         This section is intentionally framed as a COMMUNITY / EDUCATION
+         group only. It must NOT: promise profits or returns, sell trade
+         "signals", give personalized investment advice, manage anyone's
+         money, or imply guaranteed results. Doing any of those can trigger
+         SEC / state securities regulation. Keep it community + education.
+         If you ever want to charge for it or offer specific trading advice,
+         talk to a securities attorney first. Not legal advice.
+         ========================================================= -->
+    <section class="community" id="community" aria-labelledby="community-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow eyebrow--light">TruckYeah Traders</p>
+          <h2 id="community-title">Drive by day. Build by night.</h2>
+          <p class="section-sub section-sub--light">A community for owner-operators who want to build something beyond the next load &mdash; drivers learning the markets, together.</p>
+        </header>
+
+        <div class="community-grid">
+          <div class="community-copy">
+            <p>The road can be lonely, and building a future off the truck can feel out of reach. <strong>TruckYeah Traders</strong> is our community for drivers who want to learn the basics of the markets and grow their financial knowledge &mdash; the camaraderie of the CB radio, pointed at building freedom.</p>
+            <p>It's drivers helping drivers. No gurus, no pressure, no promises &mdash; just a place to learn, share, and stay motivated.</p>
+            <a class="btn btn-primary btn-lg" href="#contact">Ask About the Community</a>
+          </div>
+
+          <ul class="community-points">
+            <li>
+              <span class="cpoint-ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M16 11a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm-8 0a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm0 2c-2.7 0-8 1.3-8 4v3h8v-3c0-1 .4-1.9 1-2.6A11 11 0 0 0 8 13Zm8 0a11 11 0 0 0-1 .4c.6.7 1 1.6 1 2.6v3h8v-3c0-2.7-5.3-4-8-4Z"/></svg>
+              </span>
+              <div><h3>A real community</h3><p>A group of drivers to connect with &mdash; not a sales funnel.</p></div>
+            </li>
+            <li>
+              <span class="cpoint-ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 3 1 8l11 5 9-4.1V17h2V8L12 3ZM5 13.2V17c0 1.7 3.1 3 7 3s7-1.3 7-3v-3.8l-7 3.2-7-3.4Z"/></svg>
+              </span>
+              <div><h3>Learn the basics together</h3><p>Plain-language education and open discussion. Learn at your own pace.</p></div>
+            </li>
+            <li>
+              <span class="cpoint-ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
+              </span>
+              <div><h3>Meet on the road</h3><p>Say hi at our daily Highway 86 trades and driver meetups.</p></div>
+            </li>
+            <li>
+              <span class="cpoint-ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 1 3 5v6c0 5 3.8 9.4 9 11 5.2-1.6 9-6 9-11V5l-9-4Zm0 10.9h7c-.5 4-3.3 7.4-7 8.6V12H5V6.3l7-3.1V12Z"/></svg>
+              </span>
+              <div><h3>Zero pressure</h3><p>No signals for sale, no upsells, no promises of profit.</p></div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- VISIBLE, REQUIRED DISCLAIMER — do not remove -->
+        <p class="community-disclaimer">
+          <strong>Important:</strong> TruckYeah Traders is a community for education and camaraderie only. It is <strong>not</strong> financial, investment, or trading advice. We do not manage money, sell trade signals, act as a broker or advisor, or guarantee any results. Trading and investing involve risk, including the possible loss of money. Always do your own research or consult a licensed professional.
+        </p>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         9. FAQ (accessible native accordion)
          ========================================================= -->
     <section class="section section-alt" id="faq" aria-labelledby="faq-title">
       <div class="container container-narrow">
@@ -435,7 +455,7 @@
         </header>
 
         <div class="faq">
-          <!-- EDIT: Edit answers freely. Anything marked [PLACEHOLDER] must be confirmed by you. -->
+          <!-- EDIT: Edit answers freely. Anything marked [PLACEHOLDER]/[CONFIRM] must be confirmed by you. -->
           <details>
             <summary>Do I need my own MC authority?</summary>
             <div class="faq-body"><p>In most cases, yes &mdash; we dispatch for carriers who have their own MC/DOT authority. Not sure about your situation? Call us and we'll talk it through. [CONFIRM: your exact authority requirements.]</p></div>
@@ -467,6 +487,11 @@
           </details>
 
           <details>
+            <summary>What is TruckYeah Traders (the community)?</summary>
+            <div class="faq-body"><p>It's our free community for drivers who want to learn about the markets and build financial knowledge together. It's education and camaraderie only &mdash; not investment advice, and we never sell signals or promise profits. Ask us how to join.</p></div>
+          </details>
+
+          <details>
             <summary>Are you a new company?</summary>
             <div class="faq-body"><p>Yes &mdash; and honestly, that's good news if you get in early. As a founding driver you get intro pricing and our full personal attention. Fewer drivers means faster answers and a dispatcher who actually knows you and your truck.</p></div>
           </details>
@@ -475,7 +500,7 @@
     </section>
 
     <!-- =========================================================
-         9. CONTACT / GET DISPATCHED
+         10. CONTACT / GET DISPATCHED
          ========================================================= -->
     <section class="section contact" id="contact" aria-labelledby="contact-title">
       <div class="container contact-inner">
@@ -492,13 +517,13 @@
             </li>
             <li>
               <span class="contact-label">Email</span>
-              <!-- EDIT: Replace with your real email address (also update JSON-LD + footer). -->
+              <!-- EDIT: Replace with your real email (also update JSON-LD + footer). -->
               <a class="contact-link" href="mailto:dispatch@truckyeahtrader.com">dispatch@truckyeahtrader.com</a>
             </li>
             <li>
               <span class="contact-label">Hours</span>
-              <!-- EDIT: Replace with your real hours (also update footer + JSON-LD). -->
-              <span class="contact-value">Mon&ndash;Sat, 7am&ndash;9pm CT</span>
+              <!-- EDIT: Hours (also update footer + JSON-LD if you change these). -->
+              <span class="contact-value">Open 24/7 &mdash; call or text anytime</span>
             </li>
           </ul>
 
@@ -512,9 +537,8 @@
         <!-- =========================================================
              LEAD FORM
              EDIT: Paste your Formspree endpoint into the action attribute
-             below (replace [YOUR_FORMSPREE_ENDPOINT]). See README for the
-             free setup steps. Until you do, the form will show an error on
-             submit — that's expected.
+             (replace [YOUR_FORMSPREE_ENDPOINT]). See README. Until then,
+             the form shows a friendly "not connected yet" message.
              ========================================================= -->
         <form class="lead-form" id="lead-form"
               action="[YOUR_FORMSPREE_ENDPOINT]"
@@ -566,7 +590,7 @@
             <textarea id="message" name="message" rows="4" placeholder="Tell us your lanes, questions, or anything else."></textarea>
           </div>
 
-          <!-- Honeypot field for spam bots (hidden from humans) -->
+          <!-- Honeypot spam trap (hidden from humans) -->
           <div class="field field-hp" aria-hidden="true">
             <label for="company">Company (leave blank)</label>
             <input type="text" id="company" name="_gotcha" tabindex="-1" autocomplete="off" />
@@ -574,9 +598,7 @@
 
           <button type="submit" class="btn btn-primary btn-lg btn-block">Send &amp; Get Dispatched</button>
 
-          <!-- Live status region for success / error messages -->
           <p class="form-status" id="form-status" role="status" aria-live="polite" hidden></p>
-
           <p class="form-fineprint">Prefer to talk? <a href="tel:+19707882896">Call</a> or <a href="sms:+19707882896">text +1 970-788-2896</a>.</p>
         </form>
       </div>
@@ -584,12 +606,13 @@
   </main>
 
   <!-- =========================================================
-       10. FOOTER
+       11. FOOTER
        ========================================================= -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <span class="brand-name">TruckYeah <span class="brand-name-accent">Trader</span></span>
+        <img class="brand-mark" src="assets/logo-mark.png" width="40" height="40" alt="" />
+        <span class="brand-name">TruckYeah <span class="brand-name-accent">Traders</span></span>
         <p class="footer-tag">US-based dispatch &bull; English &amp; Hindi</p>
       </div>
 
@@ -597,11 +620,12 @@
         <li><a href="tel:+19707882896">+1 970-788-2896</a></li>
         <!-- EDIT: email + hours -->
         <li><a href="mailto:dispatch@truckyeahtrader.com">dispatch@truckyeahtrader.com</a></li>
-        <li>Mon&ndash;Sat, 7am&ndash;9pm CT</li>
+        <li>Open 24/7</li>
       </ul>
 
       <nav class="footer-nav" aria-label="Footer">
-        <a href="#services">Services</a>
+        <a href="#services">Dispatch</a>
+        <a href="#community">Community</a>
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
@@ -609,10 +633,9 @@
     </div>
 
     <div class="container footer-bottom">
-      <p class="copyright">&copy; <span id="year">2026</span> TruckYeah Trader. All rights reserved.</p>
-      <!-- Legal / compliance small print -->
+      <p class="copyright">&copy; <span id="year">2026</span> TruckYeah Traders. All rights reserved.</p>
       <p class="disclaimer">
-        TruckYeah Trader provides truck dispatch services and acts as the carrier's agent. Information on this site is for general purposes only and is not legal, financial, or compliance advice. Carriers are responsible for maintaining their own operating authority and complying with all FMCSA and applicable state and federal regulations.
+        TruckYeah Traders provides truck dispatch services and acts as the carrier's agent. Information on this site is for general purposes only and is not legal, financial, investment, or compliance advice. Carriers are responsible for maintaining their own operating authority and complying with all FMCSA and applicable state and federal regulations. The TruckYeah Traders community is for education and camaraderie only; it does not provide investment advice, sell trade signals, manage money, or guarantee results. Trading and investing involve risk, including loss of capital.
       </p>
     </div>
   </footer>
