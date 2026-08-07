@@ -5,69 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- =========================================================
-       EDIT: Page title & description (shows in Google + browser tab)
+       EDIT: Page title & description
        ========================================================= -->
-  <title>TruckYeah Traders | US-Based Bilingual Truck Dispatch &amp; Driver Community</title>
-  <meta name="description" content="US-based truck dispatch for owner-operators. Bilingual team (English &amp; Hindi). We find loads, negotiate rates with brokers, and handle paperwork. Plus TruckYeah Traders — a community for drivers building financial knowledge. Call +1 970-788-2896." />
+  <title>TruckYeah Traders — Develop the skills so you don't blow your account</title>
+  <meta name="description" content="A practice simulator that trains position sizing, patience, and anti-tilt discipline on simulated tape. For truckers and working people who trade in their downtime. No signals, no predictions, no performance claims — educational only." />
 
-  <!-- Brand color for mobile browser UI (near-black to match the dark theme) -->
   <meta name="theme-color" content="#0b0d11" />
-
   <link rel="canonical" href="https://truckyeahtraders.com/" />
 
-  <!-- =========================================================
-       Favicons (generated from your logo emblem — swap files in /assets to change)
-       ========================================================= -->
+  <!-- Favicons (reused from the existing logo emblem) -->
   <link rel="icon" href="assets/favicon.ico" sizes="any" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
 
-  <!-- Open Graph / social share (assets/og-image.jpg is 1200x630) -->
-  <meta property="og:type" content="business.business" />
-  <meta property="og:title" content="TruckYeah Traders | US-Based Truck Dispatch" />
-  <meta property="og:description" content="US-based dispatch that speaks your language. Bilingual (English &amp; Hindi) team for owner-operators, plus a driver community." />
+  <!-- Open Graph / social share (reused 1200x630 logo image) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="TruckYeah Traders — Train the discipline, don't blow your account" />
+  <meta property="og:description" content="A simulated practice tool that trains sizing, patience, and anti-tilt discipline. No signals. Educational only." />
   <meta property="og:url" content="https://truckyeahtraders.com/" />
   <meta property="og:image" content="https://truckyeahtraders.com/assets/og-image.jpg" />
   <meta property="og:site_name" content="TruckYeah Traders" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="TruckYeah Traders | US-Based Truck Dispatch" />
-  <meta name="twitter:description" content="US-based dispatch that speaks your language. Bilingual (English &amp; Hindi) team for owner-operators." />
+  <meta name="twitter:title" content="TruckYeah Traders — Train the discipline, don't blow your account" />
+  <meta name="twitter:description" content="A simulated practice tool that trains sizing, patience, and anti-tilt discipline. No signals. Educational only." />
   <meta name="twitter:image" content="https://truckyeahtraders.com/assets/og-image.jpg" />
 
   <link rel="stylesheet" href="styles.css" />
   <script src="script.js" defer></script>
 
   <!-- =========================================================
-       JSON-LD structured data (dispatch service).
-       EDIT: Replace address placeholders and confirm hours.
+       JSON-LD (educational practice app — NO ratings, NO price claims,
+       NO performance claims by design).
        ========================================================= -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "TruckYeah Traders",
-    "description": "US-based truck dispatch service for owner-operators. Bilingual (English and Hindi) team that finds loads, negotiates rates with freight brokers, and handles back-office paperwork.",
+    "@type": "SoftwareApplication",
+    "name": "TruckYeah Traders — Trading Discipline Simulator",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Web browser",
     "url": "https://truckyeahtraders.com/",
-    "telephone": "+1-970-788-2896",
-    "email": "dispatch@truckyeahtraders.com",
-    "priceRange": "Percentage-based dispatch fee",
-    "areaServed": { "@type": "Country", "name": "United States" },
-    "availableLanguage": ["en", "hi"],
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "[YOUR STREET ADDRESS]",
-      "addressLocality": "[YOUR CITY]",
-      "addressRegion": "[YOUR STATE]",
-      "postalCode": "[YOUR ZIP]",
-      "addressCountry": "US"
-    },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-        "opens": "00:00",
-        "closes": "23:59"
-      }
-    ]
+    "description": "A practice simulator that trains position sizing, patience, and anti-tilt discipline on simulated market tape. Educational only — not financial advice, no signals, no performance claims."
   }
   </script>
 </head>
@@ -81,7 +58,6 @@
   <header class="site-header" id="top">
     <div class="container nav-inner">
       <a href="#top" class="brand" aria-label="TruckYeah Traders home">
-        <!-- Logo emblem (generated from your uploaded logo). EDIT: swap assets/logo-mark.png to change. -->
         <img class="brand-mark" src="assets/logo-mark.png" width="42" height="42" alt="TruckYeah Traders logo" />
         <span class="brand-name">TruckYeah <span class="brand-name-accent">Traders</span></span>
       </a>
@@ -94,17 +70,14 @@
 
       <nav id="primary-nav" class="primary-nav" aria-label="Primary">
         <ul>
-          <li><a href="#services">Dispatch</a></li>
-          <li><a href="#why">Why Us</a></li>
-          <li><a href="#community">Community</a></li>
+          <li><a href="#why">Why Discipline</a></li>
+          <li><a href="#how">What It Trains</a></li>
+          <li><a href="#train">Try It</a></li>
           <li><a href="#pricing">Pricing</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <a class="btn btn-call nav-call" href="tel:+19707882896">
-          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.24 1z"/></svg>
-          Call Now
-        </a>
+        <a class="btn btn-call nav-call" href="#train">Try Free</a>
       </nav>
     </div>
   </header>
@@ -117,446 +90,384 @@
     <section class="hero" id="hero">
       <div class="container hero-inner">
         <div class="hero-copy">
-          <p class="eyebrow">US-Based Truck Dispatch for Owner-Operators</p>
-          <h1>Dispatch that <span class="hl">speaks your language.</span></h1>
-          <p class="lead">We find your loads, negotiate the best rates with brokers, and handle the paperwork &mdash; so you can keep driving and keep more of what you earn.</p>
+          <p class="eyebrow">For truckers &amp; working people who trade in their downtime</p>
+          <h1>Develop the skills so you <span class="hl">don't blow your account.</span></h1>
+          <p class="lead">Nobody blows an account for lack of signals. They blow it from <strong>tilt</strong> and <strong>oversizing</strong>. This is a practice tool that trains the fix &mdash; sizing, patience, and anti-tilt discipline &mdash; on simulated tape, before it costs you real money.</p>
 
           <p class="speak-hindi">
-            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.9 9h-3a15.7 15.7 0 0 0-1-5.2A8 8 0 0 1 18.9 11ZM12 4c.9 1.2 1.7 3.2 1.9 7h-3.8C10.3 7.2 11.1 5.2 12 4ZM4.3 13h3a15.7 15.7 0 0 0 1 5.2A8 8 0 0 1 4.3 13Zm2.8-2a8 8 0 0 1 1-4.2A15.7 15.7 0 0 0 7.1 11Zm3 2h3.8c-.2 3.8-1 5.8-1.9 7-.9-1.2-1.7-3.2-1.9-7Zm5.9 5.2a15.7 15.7 0 0 0 1-5.2h3a8 8 0 0 1-4 5.2Z"/></svg>
-            <strong>We speak Hindi &mdash; call us.</strong>
-            <span class="hindi-cue" lang="hi" aria-hidden="true">हिंदी</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 1 3 5v6c0 5 3.8 9.4 9 11 5.2-1.6 9-6 9-11V5l-9-4Zm0 10.9h7c-.5 4-3.3 7.4-7 8.6V12H5V6.3l7-3.1V12Z"/></svg>
+            <strong>No signals. No predictions. Just reps.</strong>
           </p>
 
           <div class="hero-ctas">
-            <a class="btn btn-primary btn-lg" href="#contact">Get Dispatched</a>
-            <a class="btn btn-call btn-lg" href="tel:+19707882896">
-              <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.24 1z"/></svg>
-              Call +1 970-788-2896
-            </a>
+            <a class="btn btn-primary btn-lg" href="#train">Try the free drill</a>
+            <a class="btn btn-call btn-lg" href="#how">How it works</a>
           </div>
 
-          <ul class="trust-strip" aria-label="What sets us apart">
-            <li>US-based</li>
-            <li>English &amp; Hindi</li>
-            <li>Owner-operator friendly</li>
+          <ul class="trust-strip" aria-label="What this is">
+            <li>Simulated practice</li>
+            <li>No signals</li>
+            <li>Educational only</li>
           </ul>
         </div>
 
-        <!-- Brand logo lockup (your uploaded logo, optimized). -->
         <div class="hero-art">
-          <img src="assets/logo-full.jpg" width="950" height="950"
-               alt="TruckYeah Traders Dispatch Services"
+          <!-- Claim-free truck/candlestick emblem (NOT the dispatch lockup, which carries "MAX PROFITS" text). -->
+          <img src="assets/logo-hero.jpg" width="735" height="540"
+               alt="TruckYeah Traders"
                class="hero-logo" />
+        </div>
+      </div>
+
+      <!-- Persistent disclaimer line (appears near the top of the page) -->
+      <div class="container">
+        <p class="disclaimer-strip">Educational practice only. Fully simulated &mdash; not real money, not financial advice, and not a signal or prediction service. Trading involves risk, including the loss of capital.</p>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         2. WHY DISCIPLINE  (was "Why Us")
+         ========================================================= -->
+    <section class="section section-alt" id="why" aria-labelledby="why-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Why Discipline</p>
+          <h2 id="why-title">The problem isn't your entries. It's what you do after a loss.</h2>
+          <p class="section-sub">Most accounts don't die from bad picks. They die from the behavior that follows a red streak.</p>
+        </header>
+
+        <div class="value-grid">
+          <div class="value">
+            <div class="value-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+            </div>
+            <h3>Tilt is the account killer</h3>
+            <p>The revenge trade after a loss &mdash; bigger size, worse entry, no plan. One tilt session can erase weeks.</p>
+          </div>
+
+          <div class="value">
+            <div class="value-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M3 3h2v16h16v2H3V3Zm14 4 4 4-4 4v-3h-6v3l-4-4 4-4v3h6V7Z"/></svg>
+            </div>
+            <h3>Oversizing turns a dip into a blow-up</h3>
+            <p>A normal drawdown only ends your account if your size is too big to survive it. Sizing is a skill, not a guess.</p>
+          </div>
+
+          <div class="value">
+            <div class="value-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 11h-2V7h2v6Zm0 4h-2v-2h2v2Z"/></svg>
+            </div>
+            <h3>Signals don't fix behavior</h3>
+            <p>You can buy someone else's picks forever and still blow up. The leak is in what <em>you</em> do &mdash; and behavior only changes with reps.</p>
+          </div>
+
+          <div class="value">
+            <div class="value-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9h-2a7 7 0 1 1-7-7V3Zm2 0v7h7a7 7 0 0 0-7-7Z"/></svg>
+            </div>
+            <h3>You can't practice discipline live</h3>
+            <p>With real money on the line, you can't safely rehearse the hard moments. So rehearse them here &mdash; then take the habit to your real account.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- =========================================================
-         2. SERVICES (Dispatch)
+         3. WHAT IT TRAINS  (was "Services")
+         Features the simulator's REAL mechanics — described honestly
+         as tool behavior, never as a promise of profit.
          ========================================================= -->
-    <section class="section" id="services" aria-labelledby="services-title">
+    <section class="section" id="how" aria-labelledby="how-title">
       <div class="container">
         <header class="section-head">
-          <p class="eyebrow">Truck Dispatch</p>
-          <h2 id="services-title">Everything you need to keep rolling</h2>
-          <p class="section-sub">One team handling loads, rates, and paperwork &mdash; so your only job is driving.</p>
+          <p class="eyebrow">What It Trains</p>
+          <h2 id="how-title">Reps that build the habits most traders skip</h2>
+          <p class="section-sub">Real mechanics inside the simulator &mdash; each one drills a specific way accounts blow up.</p>
         </header>
 
         <div class="cards">
           <article class="card">
             <div class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M3 13h13V6H3v7Zm14-4h3l2 3v2h-2a2 2 0 0 1-4 0h-2V9h3Zm-9 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4Zm10 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z"/></svg>
+              <svg viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 5v5l4 2-.9 1.7L11 13V7h2Z"/></svg>
             </div>
-            <h3>Truck Dispatch</h3>
-            <p>We search the boards, find loads that fit your lane and equipment, negotiate the rate, book it, and take care of the paperwork. You approve every load before we book it.</p>
+            <h3>Anti-tilt cooldown</h3>
+            <p>A forced pause after a loss so you can't fire off a revenge trade. You practice waiting instead of chasing.</p>
           </article>
 
           <article class="card">
             <div class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Zm-1 13-3-3 1.4-1.4L11 12.2l4.6-4.6L17 9l-6 6Z"/></svg>
+              <svg viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm5 11H7v-2h10v2Z"/></svg>
             </div>
-            <h3>Rate Negotiation</h3>
-            <p>We know the lanes and we push brokers for the best rate your freight is worth. In fluent English, we make the case so you don't leave money on the table.</p>
+            <h3>-3R circuit breaker</h3>
+            <p>Down three risk-units on the day, the session stops you. You learn what a real daily stop feels like &mdash; and to respect it.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M6 4h12v6l-4 4v6h-4v-6L6 10V4Z"/></svg>
+            </div>
+            <h3>Size cap after a loss</h3>
+            <p>After a red trade, your next size is capped automatically &mdash; so a bad run can't snowball into a blow-up.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M3 17l6-6 4 4 8-8-1.4-1.4L13 12l-4-4-7 7 1 2Z"/></svg>
+            </div>
+            <h3>Shakeout &amp; re-entry drills</h3>
+            <p>Practice holding through noise and re-entering with a plan &mdash; instead of getting flushed out at the worst spot.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M4 20V4h2v9l4-4 4 4 6-6v9H4Z"/></svg>
+            </div>
+            <h3>Kelly sizing curve</h3>
+            <p>See how bet size vs. edge actually behaves &mdash; why "bet big to win big" quietly ruins accounts, and how to size sanely.</p>
           </article>
 
           <article class="card">
             <div class="card-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm8 1.5V8h4.5L14 3.5ZM8 12h8v2H8v-2Zm0 4h8v2H8v-2Z"/></svg>
             </div>
-            <h3>Back-Office Support</h3>
-            <p>Carrier packets, rate confirmations, and follow-up so nothing falls through the cracks and you actually get paid on time. We chase the details so you don't have to.</p>
+            <h3>Journal + leak chart</h3>
+            <p>Every trade is logged, and a leak chart shows where you actually bleed &mdash; the mistakes you repeat without noticing.</p>
           </article>
+        </div>
 
-          <article class="card">
-            <div class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
-            </div>
-            <h3>Daily Trades on Highway 86</h3>
-            <p>Out on Highway 86? Meet us on the road. We run daily roadside trades with drivers &mdash; a real, face-to-face way to connect with our team.</p>
-          </article>
+        <div class="how-centering">
+          <div class="how-centering-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 4a6 6 0 1 1 0 12 6 6 0 0 1 0-12Zm0 3a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg>
+          </div>
+          <div>
+            <h3>3-minute centering</h3>
+            <p>A short reset routine before you trade &mdash; get out of reaction mode and into your process. Uses a neutral built-in visual; no personal photos required.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- =========================================================
-         3. WHY TRUCKYEAH  (no stats, no numbers)
+         4. TRY IT — EMBEDDED SIMULATOR (free demo / lead magnet)
+         ---------------------------------------------------------
+         The iframe below embeds the live simulator hosted on Vercel.
+         EDIT (sim URL): change SIM_SRC below if the simulator moves.
+         REQUIREMENTS for the embed to render publicly:
+           1) The simulator's Vercel "Deployment Protection" must be OFF
+              (confirmed off as of build — verify in the preview).
+           2) The simulator must use its NEUTRAL default centering image
+              (no personal photos), since this demo is public.
+         The simulator's trading logic is a finished app — do NOT rebuild it.
          ========================================================= -->
-    <section class="section section-alt" id="why" aria-labelledby="why-title">
+    <section class="section section-alt" id="train" aria-labelledby="train-title">
       <div class="container">
         <header class="section-head">
-          <p class="eyebrow">Why TruckYeah</p>
-          <h2 id="why-title">Real people, on your side</h2>
-          <p class="section-sub">We're new &mdash; and that means every driver gets our full attention.</p>
+          <p class="eyebrow">Try It</p>
+          <h2 id="train-title">Run a drill right now &mdash; free</h2>
+          <p class="section-sub">This is the real tool, live in your browser. No signup for the demo.</p>
         </header>
 
-        <div class="value-grid">
-          <div class="value">
-            <div class="value-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.24 1z"/></svg>
-            </div>
-            <h3>US-based &amp; reachable</h3>
-            <p>A real US phone number and a real person who answers. No overseas call center, no runaround.</p>
-          </div>
-
-          <div class="value">
-            <div class="value-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.9 9h-3a15.7 15.7 0 0 0-1-5.2A8 8 0 0 1 18.9 11ZM12 4c.9 1.2 1.7 3.2 1.9 7h-3.8C10.3 7.2 11.1 5.2 12 4ZM4.3 13h3a15.7 15.7 0 0 0 1 5.2A8 8 0 0 1 4.3 13Zm2.8-2a8 8 0 0 1 1-4.2A15.7 15.7 0 0 0 7.1 11Zm3 2h3.8c-.2 3.8-1 5.8-1.9 7-.9-1.2-1.7-3.2-1.9-7Zm5.9 5.2a15.7 15.7 0 0 0 1-5.2h3a8 8 0 0 1-4 5.2Z"/></svg>
-            </div>
-            <h3>Bilingual support</h3>
-            <p>Talk to us in Hindi. We talk to brokers in fluent English. Nothing gets lost in translation &mdash; not on your rate, not on your load.</p>
-          </div>
-
-          <div class="value">
-            <div class="value-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M4 11h6l-2-2 1.4-1.4L13.8 12l-4.4 4.4L8 15l2-2H4v-2Zm16 2h-6l2 2-1.4 1.4L10.2 12l4.4-4.4L16 9l-2 2h6v2Z"/></svg>
-            </div>
-            <h3>Transparent fee, no lock-in</h3>
-            <p>A simple percentage on booked loads. No hidden costs, no long contracts. Cancel anytime.</p>
-          </div>
-
-          <div class="value">
-            <div class="value-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="m9 11 3 3 8-8 2 2-10 10-5-5 2-2Zm-7 5 3 3 2-2-3-3-2 2Z"/></svg>
-            </div>
-            <h3>Fast, personal response</h3>
-            <p>Because we're just launching, you're not a ticket number. Call or text and get a real answer, fast.</p>
-          </div>
+        <div class="sim-embed">
+          <iframe
+            title="TruckYeah Traders Trading Discipline Simulator (demo)"
+            src="https://mu-reversal-sim.vercel.app/"
+            loading="lazy"
+            referrerpolicy="no-referrer"
+            sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+          ></iframe>
         </div>
 
-        <p class="speak-hindi speak-hindi--center">
-          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.9 9h-3a15.7 15.7 0 0 0-1-5.2A8 8 0 0 1 18.9 11ZM12 4c.9 1.2 1.7 3.2 1.9 7h-3.8C10.3 7.2 11.1 5.2 12 4ZM4.3 13h3a15.7 15.7 0 0 0 1 5.2A8 8 0 0 1 4.3 13Zm2.8-2a8 8 0 0 1 1-4.2A15.7 15.7 0 0 0 7.1 11Zm3 2h3.8c-.2 3.8-1 5.8-1.9 7-.9-1.2-1.7-3.2-1.9-7Zm5.9 5.2a15.7 15.7 0 0 0 1-5.2h3a8 8 0 0 1-4 5.2Z"/></svg>
-          <strong>We speak Hindi &mdash; call us.</strong>
-          <span class="hindi-cue" lang="hi" aria-hidden="true">हिंदी</span>
-        </p>
+        <p class="disclaimer-strip disclaimer-strip--center">Simulated data for practice. Educational only &mdash; not financial advice, not a signal service. Trading involves risk of loss. Trade only when parked and off-duty &mdash; never while driving.</p>
+
+        <p class="sim-cta">Want the full training pack &mdash; all drills, the Kelly curve, and the journal + leak chart? <a href="#pricing">See pricing &rarr;</a></p>
       </div>
     </section>
 
     <!-- =========================================================
-         4. FOUNDING DRIVERS OFFER
+         5. LAUNCH OFFER  (was "Founding Drivers")
+         Honest launch-pricing framing — NO income/performance claims.
          ========================================================= -->
-    <section class="founding" id="founding" aria-labelledby="founding-title">
+    <section class="founding" id="launch" aria-labelledby="launch-title">
       <div class="container founding-inner">
         <div class="founding-copy">
-          <p class="eyebrow eyebrow--light">Launch Offer</p>
-          <h2 id="founding-title">We're just launching &mdash; and we want you in first.</h2>
-          <p>We're taking on a small group of <strong>founding drivers</strong> who get intro pricing and our full, personal attention while we grow. Fewer drivers means faster answers and a dispatcher who actually knows your name and your truck.</p>
-          <!-- EDIT: Your founding offer. -->
-          <p class="founding-detail">5% intro rate &mdash; for the first 10 founding drivers</p>
-          <a class="btn btn-primary btn-lg" href="#contact">Become a Founding Driver</a>
+          <p class="eyebrow eyebrow--light">Launch</p>
+          <h2 id="launch-title">Early-access pricing while we launch</h2>
+          <p>We're just getting started, so early users lock in the launch price before it goes up. You also get first say in which drills we build next.</p>
+          <!-- EDIT: launch offer details (keep it about price/access only — never returns). -->
+          <p class="founding-detail">[LAUNCH OFFER &mdash; e.g. founding price for the first 50 users]</p>
+          <a class="btn btn-primary btn-lg" href="#pricing">Get access</a>
         </div>
       </div>
     </section>
 
     <!-- =========================================================
-         5. WHO WE ARE (About)
-         ========================================================= -->
-    <section class="section" id="about" aria-labelledby="about-title">
-      <div class="container">
-        <header class="section-head">
-          <p class="eyebrow">Who We Are</p>
-          <h2 id="about-title">A small bilingual team &mdash; and you can reach us</h2>
-          <p class="section-sub">Two brothers running our overnight desk. No corporate wall &mdash; just real people who pick up the phone.</p>
-        </header>
-
-        <!-- EDIT: Your team. Keep it real — no fake credentials or numbers. -->
-        <div class="team">
-          <article class="team-card">
-            <div class="team-avatar" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="40" height="40"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-4.4 0-8 2.7-8 6v2h16v-2c0-3.3-3.6-6-8-6Z"/></svg>
-            </div>
-            <h3>Prashant Sood</h3>
-            <p class="team-role">Overnight Dispatch &mdash; English</p>
-            <p>Prashant runs our overnight desk in fluent English, working US freight brokers directly to keep your truck loaded through the night. A natural communicator with a competitive sportsman's edge, he negotiates hard and keeps every call clear and calm. An avid investor himself, he reads a rate sheet the way he reads a game &mdash; and fights for the number your freight deserves.</p>
-          </article>
-
-          <article class="team-card">
-            <div class="team-avatar" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="40" height="40"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-4.4 0-8 2.7-8 6v2h16v-2c0-3.3-3.6-6-8-6Z"/></svg>
-            </div>
-            <h3>Dhanvesh Sood</h3>
-            <p class="team-role">Overnight Driver Support &mdash; Hindi</p>
-            <p>Dhanvesh, Prashant's brother, runs the overnight desk in Hindi and Punjabi right alongside him. He's the one who always picks up and always helps &mdash; walking you through sign-up, answering questions at 2 a.m., and making sure you never feel out of the loop. Patient, dependable, and genuinely in your corner.</p>
-          </article>
-        </div>
-
-        <p class="about-note">
-          We started TruckYeah because owner-operators &mdash; especially Hindi- and Punjabi-speaking drivers &mdash; deserve a dispatcher who talks to <em>them</em> in their language and talks to <em>brokers</em> in fluent English. That's the whole idea. <strong>Call or text us and talk to a real person.</strong>
-        </p>
-      </div>
-    </section>
-
-    <!-- =========================================================
-         6. HOW IT WORKS
-         ========================================================= -->
-    <section class="section section-alt" id="how" aria-labelledby="how-title">
-      <div class="container">
-        <header class="section-head">
-          <p class="eyebrow">How It Works</p>
-          <h2 id="how-title">Getting started is simple</h2>
-          <p class="section-sub">You approve every load. We handle everything around it.</p>
-        </header>
-
-        <ol class="steps">
-          <li class="step">
-            <span class="step-num" aria-hidden="true">1</span>
-            <h3>Call or text us</h3>
-            <p>Reach out in English or Hindi. Tell us your truck type and where you run.</p>
-          </li>
-          <li class="step">
-            <span class="step-num" aria-hidden="true">2</span>
-            <h3>Quick sign-up</h3>
-            <p>We send a short, plain-language dispatcher agreement and get your carrier packet ready.</p>
-          </li>
-          <li class="step">
-            <span class="step-num" aria-hidden="true">3</span>
-            <h3>We find &amp; book</h3>
-            <p>We search loads, negotiate the rate, and book only the loads you approve.</p>
-          </li>
-          <li class="step">
-            <span class="step-num" aria-hidden="true">4</span>
-            <h3>You drive, we handle the rest</h3>
-            <p>Paperwork, rate cons, and follow-up so you get paid. You just drive.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- =========================================================
-         7. PRICING / FEES
+         6. PRICING / UNLOCK
+         ---------------------------------------------------------
+         Payment is handled by a HOSTED checkout (Gumroad / Lemon
+         Squeezy). The Buy button links OUT to it — this site never
+         collects card numbers or builds a payment form.
+         EDIT: set CHECKOUT_URL (the buy button href) and the price.
          ========================================================= -->
     <section class="section" id="pricing" aria-labelledby="pricing-title">
       <div class="container">
         <header class="section-head">
           <p class="eyebrow">Pricing</p>
-          <h2 id="pricing-title">Simple, transparent fees</h2>
-          <p class="section-sub">You always know what you're paying &mdash; and what you're getting.</p>
+          <h2 id="pricing-title">One tool. One price. No subscription.</h2>
+          <p class="section-sub">Try the demo above for free. Unlock the full training pack once and keep it.</p>
         </header>
 
         <div class="pricing-card">
           <div class="pricing-main">
-            <!-- EDIT: Fee figure + label. Founding intro is 5%; standard is 10% (see list). -->
-            <p class="pricing-figure">5%</p>
-            <p class="pricing-label">founding-driver intro rate &mdash; first 10 drivers</p>
+            <!-- EDIT: Replace [SET PRICE] with your price, e.g. "$29". -->
+            <p class="pricing-figure">[SET PRICE]</p>
+            <p class="pricing-label">one-time &mdash; no subscription</p>
           </div>
           <ul class="pricing-list">
-            <li>No hidden costs &mdash; the fee is the fee</li>
-            <li>No long contracts &mdash; cancel anytime</li>
-            <li>You approve every load before we book it</li>
-            <li>Standard rate 10% once the founding group is full</li>
+            <li>All discipline drills &mdash; unlocked</li>
+            <li>Kelly sizing curve + journal &amp; leak chart</li>
+            <li>Saved progress across sessions</li>
+            <li>Free updates as we add drills</li>
           </ul>
-          <a class="btn btn-primary btn-lg" href="#contact">Ask About Your Rate</a>
+          <!-- EDIT: paste your Gumroad / Lemon Squeezy product URL below. -->
+          <a class="btn btn-primary btn-lg" href="[CHECKOUT_URL]" target="_blank" rel="noopener">Unlock full access</a>
         </div>
 
         <p class="pricing-note">
-          How the money flows: the broker pays the carrier, and we act as your agent &mdash; not the other way around. Our fee is a percentage of the loads we book for you.
+          Payment is handled securely by our checkout provider (Gumroad / Lemon Squeezy) &mdash; we never see or store your card. After you buy, you'll get your unlock code and access instructions by email.
         </p>
 
         <!-- =========================================================
-             COMPLIANCE DISCLAIMER — owner, please read.
-             Confirm your dispatch model and fee arrangement comply with
-             current FMCSA rules and applicable state law before you launch.
-             This page is general information only, NOT legal, financial, or
-             compliance advice. Consult a qualified transportation attorney
-             if unsure.
+             HONOR-SYSTEM UNLOCK (MVP)
+             This is client-side only — it just remembers, in this
+             browser, that you entered a valid code, and reveals the
+             access panel. It is NOT real security (a determined user
+             can bypass it). That's acceptable for the MVP lead flow.
+             REAL gating comes in v2 via Supabase auth (used on our
+             other project). EDIT the valid codes in script.js
+             (VALID_UNLOCK_CODES) and the access link below.
+             ========================================================= -->
+        <div class="unlock" id="unlock">
+          <div class="unlock-locked" data-unlock-locked>
+            <h3>Already bought? Enter your unlock code</h3>
+            <form id="unlock-form" class="unlock-form" novalidate>
+              <label class="sr-only" for="unlock-code">Unlock code</label>
+              <input type="text" id="unlock-code" name="unlock-code" placeholder="e.g. TYT-XXXXXX" autocomplete="off" />
+              <button type="submit" class="btn btn-primary">Unlock</button>
+            </form>
+            <p class="unlock-msg" id="unlock-msg" role="status" aria-live="polite" hidden></p>
+          </div>
+
+          <div class="unlock-open" data-unlock-open hidden>
+            <h3>You're in &mdash; access unlocked on this device.</h3>
+            <p>Open the full training pack and pick up where you left off.</p>
+            <!-- EDIT: link to the full/members build (defaults to the simulator). -->
+            <a class="btn btn-primary btn-lg" href="https://mu-reversal-sim.vercel.app/" target="_blank" rel="noopener">Open the full simulator</a>
+            <p class="unlock-reset"><button type="button" id="unlock-reset" class="linkbtn">Not you? Clear access on this device</button></p>
+          </div>
+        </div>
+
+        <!-- =========================================================
+             COMPLIANCE NOTE — owner, please read.
+             This product is educational practice software. Do NOT add
+             income claims, backtested-return figures, testimonials, or
+             "quit your job and trade" messaging anywhere. If you ever
+             offer anything that could be read as investment advice or a
+             managed service, talk to a securities attorney first.
+             Not legal advice.
              ========================================================= -->
       </div>
     </section>
 
     <!-- =========================================================
-         8. TRUCKYEAH TRADERS COMMUNITY
-         ---------------------------------------------------------
-         IMPORTANT (owner, read this):
-         This section is intentionally framed as a COMMUNITY / EDUCATION
-         group only. It must NOT: promise profits or returns, sell trade
-         "signals", give personalized investment advice, manage anyone's
-         money, or imply guaranteed results. Doing any of those can trigger
-         SEC / state securities regulation. Keep it community + education.
-         If you ever want to charge for it or offer specific trading advice,
-         talk to a securities attorney first. Not legal advice.
-         ========================================================= -->
-    <section class="community" id="community" aria-labelledby="community-title">
-      <div class="container">
-        <header class="section-head">
-          <p class="eyebrow eyebrow--light">TruckYeah Traders</p>
-          <h2 id="community-title">Drive by day. Build by night.</h2>
-          <p class="section-sub section-sub--light">A community for owner-operators who want to build something beyond the next load &mdash; drivers learning the markets, together.</p>
-        </header>
-
-        <div class="community-grid">
-          <div class="community-copy">
-            <p>The road can be lonely, and building a future off the truck can feel out of reach. <strong>TruckYeah Traders</strong> is our community for drivers who want to learn the basics of the markets and grow their financial knowledge &mdash; the camaraderie of the CB radio, pointed at building freedom.</p>
-            <p>It's drivers helping drivers. No gurus, no pressure, no promises &mdash; just a place to learn, share, and stay motivated.</p>
-            <a class="btn btn-primary btn-lg" href="#contact">Ask About the Community</a>
-          </div>
-
-          <ul class="community-points">
-            <li>
-              <span class="cpoint-ic" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M16 11a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm-8 0a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm0 2c-2.7 0-8 1.3-8 4v3h8v-3c0-1 .4-1.9 1-2.6A11 11 0 0 0 8 13Zm8 0a11 11 0 0 0-1 .4c.6.7 1 1.6 1 2.6v3h8v-3c0-2.7-5.3-4-8-4Z"/></svg>
-              </span>
-              <div><h3>A real community</h3><p>A group of drivers to connect with &mdash; not a sales funnel.</p></div>
-            </li>
-            <li>
-              <span class="cpoint-ic" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 3 1 8l11 5 9-4.1V17h2V8L12 3ZM5 13.2V17c0 1.7 3.1 3 7 3s7-1.3 7-3v-3.8l-7 3.2-7-3.4Z"/></svg>
-              </span>
-              <div><h3>Learn the basics together</h3><p>Plain-language education and open discussion. Learn at your own pace.</p></div>
-            </li>
-            <li>
-              <span class="cpoint-ic" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
-              </span>
-              <div><h3>Meet on the road</h3><p>Say hi at our daily Highway 86 trades and driver meetups.</p></div>
-            </li>
-            <li>
-              <span class="cpoint-ic" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 1 3 5v6c0 5 3.8 9.4 9 11 5.2-1.6 9-6 9-11V5l-9-4Zm0 10.9h7c-.5 4-3.3 7.4-7 8.6V12H5V6.3l7-3.1V12Z"/></svg>
-              </span>
-              <div><h3>Zero pressure</h3><p>No signals for sale, no upsells, no promises of profit.</p></div>
-            </li>
-          </ul>
-        </div>
-
-        <!-- VISIBLE, REQUIRED DISCLAIMER — do not remove -->
-        <p class="community-disclaimer">
-          <strong>Important:</strong> TruckYeah Traders is a community for education and camaraderie only. It is <strong>not</strong> financial, investment, or trading advice. We do not manage money, sell trade signals, act as a broker or advisor, or guarantee any results. Trading and investing involve risk, including the possible loss of money. Always do your own research or consult a licensed professional.
-        </p>
-      </div>
-    </section>
-
-    <!-- =========================================================
-         9. FAQ (accessible native accordion)
+         7. FAQ
          ========================================================= -->
     <section class="section section-alt" id="faq" aria-labelledby="faq-title">
       <div class="container container-narrow">
         <header class="section-head">
           <p class="eyebrow">FAQ</p>
-          <h2 id="faq-title">Questions drivers ask us</h2>
+          <h2 id="faq-title">Straight answers</h2>
         </header>
 
         <div class="faq">
-          <!-- EDIT: Edit any answer freely. -->
           <details>
-            <summary>Do I need my own MC authority?</summary>
-            <div class="faq-body"><p>Most of the drivers we dispatch run under their own MC/DOT authority. If you're not sure where you stand, give us a call and we'll walk you through it.</p></div>
+            <summary>Is this signals or predictions?</summary>
+            <div class="faq-body"><p>No. We never tell you what to buy or sell. It's a practice tool for building discipline &mdash; sizing, patience, and not tilting. What you trade in your real account is entirely up to you.</p></div>
           </details>
 
           <details>
-            <summary>What's your fee?</summary>
-            <div class="faq-body"><p>Founding drivers get a <strong>5% intro rate</strong> (first 10 drivers); the standard rate is 10% after that. Either way &mdash; no hidden costs, no long contracts, cancel anytime.</p></div>
+            <summary>Will this make me money or guarantee profits?</summary>
+            <div class="faq-body"><p>No &mdash; and anyone who promises that is lying to you. Trading involves real risk, including losing money. This trains skills and habits; it does not predict markets or guarantee any result.</p></div>
           </details>
 
           <details>
-            <summary>How fast can you get me a load?</summary>
-            <div class="faq-body"><p>Once you're signed up and your packet is ready, we start searching right away. Timing depends on your lane, equipment, and the market &mdash; call us and we'll give you a straight answer for your situation.</p></div>
+            <summary>Do I need experience to use it?</summary>
+            <div class="faq-body"><p>No. It's built for the habits most people skip when they start &mdash; sane sizing, waiting for your spot, and stopping when you're supposed to. Beginners and experienced traders both drill the same fundamentals.</p></div>
           </details>
 
           <details>
-            <summary>Do you speak Hindi?</summary>
-            <div class="faq-body"><p>Yes. You can talk to us in Hindi (and Punjabi), and we negotiate with brokers in fluent English. That's the core of what we do &mdash; <a href="tel:+19707882896">call us</a>.</p></div>
+            <summary>Is it real money?</summary>
+            <div class="faq-body"><p>No. Everything is simulated &mdash; that's the whole point. You get to rehearse the hard moments (losing streaks, the urge to revenge-trade) with zero risk, then take the habit to your real account.</p></div>
           </details>
 
           <details>
-            <summary>What areas do you cover?</summary>
-            <div class="faq-body"><p>We dispatch across the US. Tell us your lanes and equipment when you call, and we'll let you know exactly how we can help.</p></div>
+            <summary>What do I actually practice?</summary>
+            <div class="faq-body"><p>Position sizing, patience, and anti-tilt discipline &mdash; through real mechanics: the anti-tilt cooldown, the -3R circuit breaker, size caps after a loss, shakeout &amp; re-entry drills, the Kelly sizing curve, a trade journal with a leak chart, and a 3-minute centering reset.</p></div>
           </details>
 
           <details>
-            <summary>How do I get paid?</summary>
-            <div class="faq-body"><p>The broker pays you (the carrier) for the load. We handle the rate confirmation and paperwork and follow up so payment doesn't get stuck. Ask us about factoring options when you call.</p></div>
+            <summary>What's the difference between the free demo and the paid version?</summary>
+            <div class="faq-body"><p>The demo above lets you run drills right now. The one-time unlock adds all the drills, the Kelly curve, the journal &amp; leak chart, and saved progress. <em>(MVP note: access is a simple unlock code for now; secure accounts are coming.)</em></p></div>
           </details>
 
           <details>
-            <summary>What is TruckYeah Traders (the community)?</summary>
-            <div class="faq-body"><p>It's our free community for drivers who want to learn about the markets and build financial knowledge together. It's education and camaraderie only &mdash; not investment advice, and we never sell signals or promise profits. Ask us how to join.</p></div>
+            <summary>Can I use it on my phone?</summary>
+            <div class="faq-body"><p>Yes &mdash; it works on mobile, so you can drill during downtime. Please only trade or practice when you're parked and off-duty. Never while driving.</p></div>
           </details>
 
           <details>
-            <summary>Are you a new company?</summary>
-            <div class="faq-body"><p>Yes &mdash; and honestly, that's good news if you get in early. As a founding driver you get intro pricing and our full personal attention. Fewer drivers means faster answers and a dispatcher who actually knows you and your truck.</p></div>
+            <summary>Refunds?</summary>
+            <div class="faq-body"><p>Refunds are handled through our checkout provider. [CONFIRM your refund policy here, or email us and we'll help.]</p></div>
           </details>
         </div>
       </div>
     </section>
 
     <!-- =========================================================
-         10. CONTACT / GET DISPATCHED
+         8. CONTACT (keeps the FormSubmit form)
          ========================================================= -->
     <section class="section contact" id="contact" aria-labelledby="contact-title">
       <div class="container contact-inner">
         <div class="contact-copy">
-          <p class="eyebrow">Get Dispatched</p>
-          <h2 id="contact-title">Let's get you rolling</h2>
-          <p>Call or text and talk to a real person &mdash; in English or Hindi. Or send the form and we'll reach out.</p>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Questions? Reach out.</h2>
+          <p>Stuck on the simulator, need your unlock code re-sent, or want to suggest a drill? Send a note and we'll get back to you.</p>
 
           <ul class="contact-list">
             <li>
-              <span class="contact-label">Call or text</span>
-              <a class="contact-link" href="tel:+19707882896">+1 970-788-2896</a>
-              <a class="btn btn-call btn-sm contact-sms" href="sms:+19707882896">Text us</a>
-            </li>
-            <li>
               <span class="contact-label">Email</span>
-              <!-- EDIT: Replace with your real email (also update JSON-LD + footer). -->
-              <a class="contact-link" href="mailto:dispatch@truckyeahtraders.com">dispatch@truckyeahtraders.com</a>
-            </li>
-            <li>
-              <span class="contact-label">Hours</span>
-              <!-- EDIT: Hours (also update footer + JSON-LD if you change these). -->
-              <span class="contact-value">Open 24/7 &mdash; call or text anytime</span>
+              <!-- EDIT: Replace with your real email (also update FormSubmit action + footer). -->
+              <a class="contact-link" href="mailto:hello@truckyeahtraders.com">hello@truckyeahtraders.com</a>
             </li>
           </ul>
 
           <p class="speak-hindi">
-            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.9 9h-3a15.7 15.7 0 0 0-1-5.2A8 8 0 0 1 18.9 11ZM12 4c.9 1.2 1.7 3.2 1.9 7h-3.8C10.3 7.2 11.1 5.2 12 4ZM4.3 13h3a15.7 15.7 0 0 0 1 5.2A8 8 0 0 1 4.3 13Zm2.8-2a8 8 0 0 1 1-4.2A15.7 15.7 0 0 0 7.1 11Zm3 2h3.8c-.2 3.8-1 5.8-1.9 7-.9-1.2-1.7-3.2-1.9-7Zm5.9 5.2a15.7 15.7 0 0 0 1-5.2h3a8 8 0 0 1-4 5.2Z"/></svg>
-            <strong>We speak Hindi &mdash; call us.</strong>
-            <span class="hindi-cue" lang="hi" aria-hidden="true">हिंदी</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 1 3 5v6c0 5 3.8 9.4 9 11 5.2-1.6 9-6 9-11V5l-9-4Zm0 10.9h7c-.5 4-3.3 7.4-7 8.6V12H5V6.3l7-3.1V12Z"/></svg>
+            <strong>Educational tool. No signals, ever.</strong>
           </p>
         </div>
 
         <!-- =========================================================
-             LEAD FORM  (powered by FormSubmit — no account needed)
-             HOW IT WORKS:
-               Leads are emailed to the address in the action URL below.
-               The FIRST time the form is submitted, FormSubmit sends a
-               one-time activation link to that inbox — open it and click
-               "Activate Form" once, and every submission after that lands
-               in your email automatically.
-             EDIT (where leads go):
-               Change the email at the end of the action URL below to any
-               inbox you can check. It's currently dispatch@truckyeahtraders.com.
-               If that mailbox isn't set up yet, use one you can open now
-               (e.g. your Gmail) so you can click the activation link.
-             (Prefer Formspree instead? See the README for how to swap.)
+             LEAD FORM (FormSubmit — no account needed; kept from before)
+             EDIT: change the email at the end of the action URL to your inbox.
+             First submission triggers a one-time activation email — click it once.
              ========================================================= -->
         <form class="lead-form" id="lead-form"
-              action="https://formsubmit.co/ajax/dispatch@truckyeahtraders.com"
+              action="https://formsubmit.co/ajax/hello@truckyeahtraders.com"
               method="POST"
               novalidate>
-          <h3 class="form-title">Get dispatched</h3>
+          <h3 class="form-title">Send us a message</h3>
 
-          <!-- FormSubmit settings (hidden). Safe to leave as-is. -->
-          <input type="hidden" name="_subject" value="New TruckYeah Traders lead" />
+          <input type="hidden" name="_subject" value="New TruckYeah Traders message" />
           <input type="hidden" name="_template" value="table" />
           <input type="hidden" name="_captcha" value="false" />
 
@@ -567,79 +478,59 @@
           </div>
 
           <div class="field">
-            <label for="phone">Phone <span class="req" aria-hidden="true">*</span></label>
-            <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" required />
-            <p class="field-error" data-error-for="phone" hidden>Please enter a valid phone number.</p>
+            <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" required />
+            <p class="field-error" data-error-for="email" hidden>Please enter a valid email.</p>
           </div>
 
           <div class="field">
-            <label for="language">Preferred language</label>
-            <select id="language" name="language">
-              <option value="English">English</option>
-              <option value="Hindi">Hindi</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <label for="truck">Truck type</label>
-            <select id="truck" name="truck_type">
-              <option value="Dry Van">Dry Van</option>
-              <option value="Reefer">Reefer</option>
-              <option value="Flatbed">Flatbed</option>
-              <option value="Power Only">Power Only</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <label for="authority">Do you have your own MC authority?</label>
-            <select id="authority" name="mc_authority">
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
+            <label for="topic">Topic</label>
+            <select id="topic" name="topic">
+              <option value="Getting started">Getting started</option>
+              <option value="Unlock / access help">Unlock / access help</option>
+              <option value="Suggest a drill">Suggest a drill</option>
+              <option value="Something else">Something else</option>
             </select>
           </div>
 
           <div class="field">
             <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" placeholder="Tell us your lanes, questions, or anything else."></textarea>
+            <textarea id="message" name="message" rows="4" placeholder="How can we help?"></textarea>
           </div>
 
-          <!-- Honeypot spam trap (hidden from humans; FormSubmit auto-drops these) -->
+          <!-- Honeypot spam trap -->
           <div class="field field-hp" aria-hidden="true">
             <label for="company">Company (leave blank)</label>
             <input type="text" id="company" name="_honey" tabindex="-1" autocomplete="off" />
           </div>
 
-          <button type="submit" class="btn btn-primary btn-lg btn-block">Send &amp; Get Dispatched</button>
+          <button type="submit" class="btn btn-primary btn-lg btn-block">Send message</button>
 
           <p class="form-status" id="form-status" role="status" aria-live="polite" hidden></p>
-          <p class="form-fineprint">Prefer to talk? <a href="tel:+19707882896">Call</a> or <a href="sms:+19707882896">text +1 970-788-2896</a>.</p>
         </form>
       </div>
     </section>
   </main>
 
   <!-- =========================================================
-       11. FOOTER
+       FOOTER
        ========================================================= -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
         <img class="brand-mark" src="assets/logo-mark.png" width="40" height="40" alt="" />
         <span class="brand-name">TruckYeah <span class="brand-name-accent">Traders</span></span>
-        <p class="footer-tag">US-based dispatch &bull; English &amp; Hindi</p>
+        <p class="footer-tag">Train the discipline. Keep your account.</p>
       </div>
 
       <ul class="footer-contact">
-        <li><a href="tel:+19707882896">+1 970-788-2896</a></li>
-        <!-- EDIT: email + hours -->
-        <li><a href="mailto:dispatch@truckyeahtraders.com">dispatch@truckyeahtraders.com</a></li>
-        <li>Open 24/7</li>
+        <li><a href="mailto:hello@truckyeahtraders.com">hello@truckyeahtraders.com</a></li>
+        <li><a href="#train">Try the simulator</a></li>
       </ul>
 
       <nav class="footer-nav" aria-label="Footer">
-        <a href="#services">Dispatch</a>
-        <a href="#community">Community</a>
+        <a href="#why">Why Discipline</a>
+        <a href="#how">What It Trains</a>
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
@@ -649,7 +540,7 @@
     <div class="container footer-bottom">
       <p class="copyright">&copy; <span id="year">2026</span> TruckYeah Traders. All rights reserved.</p>
       <p class="disclaimer">
-        TruckYeah Traders provides truck dispatch services and acts as the carrier's agent. Information on this site is for general purposes only and is not legal, financial, investment, or compliance advice. Carriers are responsible for maintaining their own operating authority and complying with all FMCSA and applicable state and federal regulations. The TruckYeah Traders community is for education and camaraderie only; it does not provide investment advice, sell trade signals, manage money, or guarantee results. Trading and investing involve risk, including loss of capital.
+        TruckYeah Traders is educational practice software. Everything in the simulator is simulated &mdash; it is not real money, not a brokerage, and not a signal, prediction, or advisory service. Nothing on this site is financial, investment, or trading advice. We make no income or performance claims of any kind. Trading and investing involve substantial risk, including the loss of your entire capital; most people who trade lose money. Practice only when parked and off-duty &mdash; never while driving. Do your own research and consult a licensed professional before risking real money.
       </p>
     </div>
   </footer>

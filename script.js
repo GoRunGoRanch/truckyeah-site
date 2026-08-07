@@ -71,11 +71,11 @@
     if (!name.value.trim()) { showError("name", true); ok = false; }
     else { showError("name", false); }
 
-    // Phone: require at least 7 digits (loose, forgiving check)
-    var phone = form.querySelector("#phone");
-    var digits = (phone.value.match(/\d/g) || []).length;
-    if (digits < 7) { showError("phone", true); ok = false; }
-    else { showError("phone", false); }
+    // Email: simple, forgiving format check
+    var email = form.querySelector("#email");
+    var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
+    if (!emailOk) { showError("email", true); ok = false; }
+    else { showError("email", false); }
 
     return ok;
   }
@@ -95,7 +95,7 @@
     // If the form endpoint hasn't been configured yet, guide the owner instead of failing silently.
     if (!action || action.indexOf("[YOUR_") !== -1 || action.indexOf("http") !== 0) {
       setStatus(
-        "Form not connected yet. Owner: set the form's action to your FormSubmit or Formspree endpoint (see README). Meanwhile, call or text +1 970-788-2896.",
+        "Form not connected yet. Owner: set the form's action to your FormSubmit or Formspree endpoint (see README). Meanwhile, email hello@truckyeahtraders.com.",
         "error"
       );
       return;
@@ -117,7 +117,7 @@
         if (response.ok) {
           form.reset();
           setStatus(
-            "Thanks! We got your details and will reach out soon. Need us now? Call or text +1 970-788-2896.",
+            "Thanks! We got your message and will get back to you soon.",
             "success"
           );
         } else {
@@ -125,14 +125,14 @@
             var msg =
               body && body.errors && body.errors.length
                 ? body.errors.map(function (err) { return err.message; }).join(", ")
-                : "Something went wrong. Please call or text +1 970-788-2896.";
+                : "Something went wrong. Please email hello@truckyeahtraders.com.";
             setStatus(msg, "error");
           });
         }
       })
       .catch(function () {
         setStatus(
-          "Network error — please try again, or call/text +1 970-788-2896.",
+          "Network error — please try again, or email hello@truckyeahtraders.com.",
           "error"
         );
       })
@@ -143,7 +143,7 @@
   });
 
   // Clear a field's error as soon as the user starts fixing it
-  ["name", "phone"].forEach(function (id) {
+  ["name", "email"].forEach(function (id) {
     var el = form.querySelector("#" + id);
     if (el) {
       el.addEventListener("input", function () {
@@ -151,4 +151,74 @@
       });
     }
   });
+})();
+
+/* =========================================================
+   HONOR-SYSTEM UNLOCK (MVP)
+   ---------------------------------------------------------
+   This is NOT real security. It only remembers, in this browser's
+   localStorage, that a valid-looking code was entered, and reveals the
+   "access unlocked" panel. A determined user can bypass it trivially.
+   That's an accepted trade-off for the MVP lead flow — real gating comes
+   in v2 via Supabase auth (used on our other project).
+
+   EDIT: put the codes you hand out after purchase in VALID_UNLOCK_CODES.
+   Keep this list short; rotate it when needed. (Because it ships in the
+   page source, treat these as convenience codes, not secrets.)
+   ========================================================= */
+(function () {
+  "use strict";
+
+  var VALID_UNLOCK_CODES = ["TYT-FOUNDER", "TYT-LAUNCH"]; // EDIT ME
+  var STORAGE_KEY = "tyt_unlocked";
+
+  var wrap = document.getElementById("unlock");
+  if (!wrap) return;
+
+  var lockedEl = wrap.querySelector("[data-unlock-locked]");
+  var openEl = wrap.querySelector("[data-unlock-open]");
+  var form = document.getElementById("unlock-form");
+  var input = document.getElementById("unlock-code");
+  var msg = document.getElementById("unlock-msg");
+  var resetBtn = document.getElementById("unlock-reset");
+
+  function isUnlocked() {
+    try { return localStorage.getItem(STORAGE_KEY) === "1"; } catch (e) { return false; }
+  }
+  function setUnlocked(v) {
+    try { v ? localStorage.setItem(STORAGE_KEY, "1") : localStorage.removeItem(STORAGE_KEY); } catch (e) {}
+  }
+  function render() {
+    var open = isUnlocked();
+    if (lockedEl) lockedEl.hidden = open;
+    if (openEl) openEl.hidden = !open;
+  }
+
+  render();
+
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var code = (input.value || "").trim().toUpperCase();
+      var ok = VALID_UNLOCK_CODES.map(function (c) { return c.toUpperCase(); }).indexOf(code) !== -1;
+      if (ok) {
+        setUnlocked(true);
+        render();
+      } else if (msg) {
+        msg.hidden = false;
+        msg.textContent = "That code didn't match. Check the email from your purchase, or contact us.";
+        msg.classList.remove("is-success");
+        msg.classList.add("is-error");
+      }
+    });
+  }
+
+  if (resetBtn) {
+    resetBtn.addEventListener("click", function () {
+      setUnlocked(false);
+      if (input) input.value = "";
+      if (msg) msg.hidden = true;
+      render();
+    });
+  }
 })();
