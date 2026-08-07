@@ -291,75 +291,70 @@
     <section class="founding" id="launch" aria-labelledby="launch-title">
       <div class="container founding-inner">
         <div class="founding-copy">
-          <p class="eyebrow eyebrow--light">Launch</p>
-          <h2 id="launch-title">Early-access pricing while we launch</h2>
-          <p>We're just getting started, so early users lock in the launch price before it goes up. You also get first say in which drills we build next.</p>
-          <!-- EDIT: launch offer details (keep it about price/access only — never returns). -->
-          <p class="founding-detail">[LAUNCH OFFER &mdash; e.g. founding price for the first 50 users]</p>
-          <a class="btn btn-primary btn-lg" href="#pricing">Get access</a>
+          <p class="eyebrow eyebrow--light">Founding Access</p>
+          <h2 id="launch-title">Free while we launch &mdash; join as a founding member</h2>
+          <p>The full tool is free right now for founding members. Join the list to unlock it, and help shape which drills we build next.</p>
+          <p class="founding-detail">Founding members keep their access when we add paid tiers later.</p>
+          <a class="btn btn-primary btn-lg" href="#join">Join free</a>
         </div>
       </div>
     </section>
 
     <!-- =========================================================
-         6. PRICING / UNLOCK
+         6. FOUNDING ACCESS / UNLOCK
          ---------------------------------------------------------
-         Payment is handled by a HOSTED checkout (Gumroad / Lemon
-         Squeezy). The Buy button links OUT to it — this site never
-         collects card numbers or builds a payment form.
-         EDIT: set CHECKOUT_URL (the buy button href) and the price.
+         LAUNCH MODEL: the full tool is FREE for founding members —
+         unlocked by joining the email list (#join). No checkout yet.
+         LATER, to switch on paid: put a price back in .pricing-figure and
+         restore a hosted-checkout button (Gumroad / Lemon Squeezy) in
+         place of the "Join free to unlock" button. Parked values for then:
+           [SET PRICE]     e.g. $29 one-time
+           [CHECKOUT_URL]  your Gumroad / Lemon Squeezy product URL
+         This site never collects card numbers.
          ========================================================= -->
     <section class="section" id="pricing" aria-labelledby="pricing-title">
       <div class="container">
         <header class="section-head">
-          <p class="eyebrow">Pricing</p>
-          <h2 id="pricing-title">One tool. One price. No subscription.</h2>
-          <p class="section-sub">Try the demo above for free. Unlock the full training pack once and keep it.</p>
+          <p class="eyebrow">Founding Access</p>
+          <h2 id="pricing-title">Free while we launch</h2>
+          <p class="section-sub">The full training pack is free for founding members. Join the list to unlock it &mdash; and keep your access when paid tiers arrive.</p>
         </header>
 
         <div class="pricing-card">
           <div class="pricing-main">
-            <!-- EDIT: Replace [SET PRICE] with your price, e.g. "$29". -->
-            <p class="pricing-figure">[SET PRICE]</p>
-            <p class="pricing-label">one-time &mdash; no subscription</p>
+            <p class="pricing-figure">Free</p>
+            <p class="pricing-label">founding access &middot; during launch</p>
           </div>
           <ul class="pricing-list">
             <li>All discipline drills &mdash; unlocked</li>
             <li>Kelly sizing curve + journal &amp; leak chart</li>
             <li>Saved progress across sessions</li>
-            <li>Free updates as we add drills</li>
+            <li>Founding members grandfathered when paid tiers launch</li>
           </ul>
-          <!-- EDIT: paste your Gumroad / Lemon Squeezy product URL below. -->
-          <a class="btn btn-primary btn-lg" href="[CHECKOUT_URL]" target="_blank" rel="noopener">Unlock full access</a>
+          <a class="btn btn-primary btn-lg" href="#join">Join free to unlock</a>
         </div>
 
         <p class="pricing-note">
-          Payment is handled securely by our checkout provider (Gumroad / Lemon Squeezy) &mdash; we never see or store your card. After you buy, you'll get your unlock code and access instructions by email.
+          No payment, no card &mdash; founding access is free while we launch. Join with your email and the full simulator unlocks below. When we add paid tiers later, founding members keep their access. <em>(Card checkout will be wired in here then.)</em>
         </p>
 
         <!-- =========================================================
-             HONOR-SYSTEM UNLOCK (MVP)
-             This is client-side only — it just remembers, in this
-             browser, that you entered a valid code, and reveals the
-             access panel. It is NOT real security (a determined user
-             can bypass it). That's acceptable for the MVP lead flow.
-             REAL gating comes in v2 via Supabase auth (used on our
-             other project). EDIT the valid codes in script.js
-             (VALID_UNLOCK_CODES) and the access link below.
+             UNLOCK (MVP) — revealed after the visitor joins the list.
+             subscribe.js calls window.tytUnlock() on a successful signup,
+             which flips this to the "open" panel and remembers it in this
+             browser (localStorage). NOT real security (client-side only) —
+             fine for free founding access. REAL gating comes in v2 via
+             Supabase auth. The access link defaults to the simulator.
              ========================================================= -->
         <div class="unlock" id="unlock">
           <div class="unlock-locked" data-unlock-locked>
-            <h3>Already bought? Enter your unlock code</h3>
-            <form id="unlock-form" class="unlock-form" novalidate>
-              <label class="sr-only" for="unlock-code">Unlock code</label>
-              <input type="text" id="unlock-code" name="unlock-code" placeholder="e.g. TYT-XXXXXX" autocomplete="off" />
-              <button type="submit" class="btn btn-primary">Unlock</button>
-            </form>
-            <p class="unlock-msg" id="unlock-msg" role="status" aria-live="polite" hidden></p>
+            <h3>Join the list to unlock the full simulator</h3>
+            <p>Founding access is free. Add your email and it unlocks here instantly.</p>
+            <a class="btn btn-primary btn-lg" href="#join">Join free to unlock</a>
           </div>
 
           <div class="unlock-open" data-unlock-open hidden>
-            <h3>You're in &mdash; access unlocked on this device.</h3>
+            <h3>You're in &mdash; full access unlocked on this device.</h3>
             <p>Open the full training pack and pick up where you left off.</p>
             <!-- EDIT: link to the full/members build (defaults to the simulator). -->
             <a class="btn btn-primary btn-lg" href="https://mu-reversal-sim.vercel.app/" target="_blank" rel="noopener">Open the full simulator</a>
@@ -416,8 +411,8 @@
           </details>
 
           <details>
-            <summary>What's the difference between the free demo and the paid version?</summary>
-            <div class="faq-body"><p>The demo above lets you run drills right now. The one-time unlock adds all the drills, the Kelly curve, the journal &amp; leak chart, and saved progress. <em>(MVP note: access is a simple unlock code for now; secure accounts are coming.)</em></p></div>
+            <summary>What does it cost?</summary>
+            <div class="faq-body"><p>Right now it's <strong>free for founding members</strong> &mdash; join the list and the full tool (all drills, the Kelly curve, the journal &amp; leak chart, saved progress) unlocks for you. We'll add paid tiers later, and founding members keep their access. <em>(Access is a simple per-device unlock for now; secure accounts are coming.)</em></p></div>
           </details>
 
           <details>
@@ -427,7 +422,7 @@
 
           <details>
             <summary>Refunds?</summary>
-            <div class="faq-body"><p>Refunds are handled through our checkout provider. [CONFIRM your refund policy here, or email us and we'll help.]</p></div>
+            <div class="faq-body"><p>It's free during launch, so there's nothing to refund. When we add paid tiers later, we'll post a clear refund policy handled through our checkout provider.</p></div>
           </details>
         </div>
       </div>
@@ -442,9 +437,9 @@
     <section class="section join" id="join" aria-labelledby="join-title">
       <div class="container container-narrow">
         <header class="section-head">
-          <p class="eyebrow eyebrow--light">Free</p>
-          <h2 id="join-title">Get a free discipline drill every week</h2>
-          <p class="section-sub">Short, no-hype notes on sizing, patience, and not tilting &mdash; for truckers who trade in their downtime. Unsubscribe anytime.</p>
+          <p class="eyebrow eyebrow--light">Free Founding Access</p>
+          <h2 id="join-title">Join free &mdash; unlock the full simulator</h2>
+          <p class="section-sub">Founding members get the full tool free, plus a short weekly discipline drill on sizing, patience, and not tilting. No spam, unsubscribe anytime.</p>
         </header>
 
         <form id="subscribe-form" class="subscribe-form" novalidate>
@@ -462,6 +457,12 @@
           <p class="subscribe-status" id="subscribe-status" role="status" aria-live="polite" hidden></p>
           <p class="subscribe-fine">No spam, no signals &mdash; educational only. We never sell your email.</p>
         </form>
+
+        <!-- Revealed after a successful signup (subscribe.js -> window.tytUnlock -> render). -->
+        <div class="join-unlocked" id="join-unlocked" hidden>
+          <p class="join-unlocked-msg">You're a founding member &mdash; full access unlocked on this device.</p>
+          <a class="btn btn-primary btn-lg" href="https://mu-reversal-sim.vercel.app/" target="_blank" rel="noopener">Open the full simulator</a>
+        </div>
       </div>
     </section>
 

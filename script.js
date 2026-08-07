@@ -154,32 +154,20 @@
 })();
 
 /* =========================================================
-   HONOR-SYSTEM UNLOCK (MVP)
+   UNLOCK (MVP) — free founding access, unlocked by joining the list.
    ---------------------------------------------------------
-   This is NOT real security. It only remembers, in this browser's
-   localStorage, that a valid-looking code was entered, and reveals the
-   "access unlocked" panel. A determined user can bypass it trivially.
-   That's an accepted trade-off for the MVP lead flow — real gating comes
-   in v2 via Supabase auth (used on our other project).
-
-   EDIT: put the codes you hand out after purchase in VALID_UNLOCK_CODES.
-   Keep this list short; rotate it when needed. (Because it ships in the
-   page source, treat these as convenience codes, not secrets.)
+   subscribe.js calls window.tytUnlock() after a successful signup. That
+   remembers, in this browser's localStorage, that access is unlocked, and
+   reveals the "open" panels (pricing #unlock + the #join-unlocked button).
+   This is NOT real security — client-side only, trivially bypassable. Fine
+   for free founding access. REAL gating comes in v2 via Supabase auth.
    ========================================================= */
 (function () {
   "use strict";
 
-  var VALID_UNLOCK_CODES = ["TYT-FOUNDER", "TYT-LAUNCH"]; // EDIT ME
   var STORAGE_KEY = "tyt_unlocked";
-
   var wrap = document.getElementById("unlock");
-  if (!wrap) return;
-
-  var lockedEl = wrap.querySelector("[data-unlock-locked]");
-  var openEl = wrap.querySelector("[data-unlock-open]");
-  var form = document.getElementById("unlock-form");
-  var input = document.getElementById("unlock-code");
-  var msg = document.getElementById("unlock-msg");
+  var joinUnlocked = document.getElementById("join-unlocked");
   var resetBtn = document.getElementById("unlock-reset");
 
   function isUnlocked() {
@@ -190,34 +178,23 @@
   }
   function render() {
     var open = isUnlocked();
-    if (lockedEl) lockedEl.hidden = open;
-    if (openEl) openEl.hidden = !open;
+    if (wrap) {
+      var lockedEl = wrap.querySelector("[data-unlock-locked]");
+      var openEl = wrap.querySelector("[data-unlock-open]");
+      if (lockedEl) lockedEl.hidden = open;
+      if (openEl) openEl.hidden = !open;
+    }
+    if (joinUnlocked) joinUnlocked.hidden = !open;
   }
+
+  // Public hook: subscribe.js calls this on a successful signup.
+  window.tytUnlock = function () { setUnlocked(true); render(); };
 
   render();
-
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      var code = (input.value || "").trim().toUpperCase();
-      var ok = VALID_UNLOCK_CODES.map(function (c) { return c.toUpperCase(); }).indexOf(code) !== -1;
-      if (ok) {
-        setUnlocked(true);
-        render();
-      } else if (msg) {
-        msg.hidden = false;
-        msg.textContent = "That code didn't match. Check the email from your purchase, or contact us.";
-        msg.classList.remove("is-success");
-        msg.classList.add("is-error");
-      }
-    });
-  }
 
   if (resetBtn) {
     resetBtn.addEventListener("click", function () {
       setUnlocked(false);
-      if (input) input.value = "";
-      if (msg) msg.hidden = true;
       render();
     });
   }

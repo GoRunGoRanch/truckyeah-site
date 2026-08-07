@@ -85,12 +85,17 @@
       })
     })
       .then(function (res) {
-        if (res.ok) {
+        // 201 = newly added, 409 = already on the list. Both are founding members,
+        // so both unlock the full tool on this device.
+        if (res.ok || res.status === 409) {
           form.reset();
-          setStatus("You're in — thanks! Watch your inbox for the first drill.", "success");
-        } else if (res.status === 409) {
-          form.reset();
-          setStatus("You're already on the list — thanks!", "success");
+          if (typeof window.tytUnlock === "function") window.tytUnlock();
+          setStatus(
+            res.ok
+              ? "You're in — full access unlocked below. Watch your inbox for the first drill."
+              : "You're already on the list — full access unlocked below.",
+            "success"
+          );
         } else {
           setStatus("Couldn't sign you up right now. Please try again in a bit.", "error");
         }
