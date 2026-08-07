@@ -94,6 +94,19 @@ Vercel redeploys `main` to `truckyeahtraders.com`. **No DNS changes are needed**
 
 ---
 
+## 6. 📇 Email opt-in list (Supabase) — steps 1–2 of the funnel
+
+The "Get a free discipline drill every week" section captures **consenting** subscribers into Supabase. It's opt-in only (email + a ticked consent box) — no scraping, no unsolicited mail.
+
+**Set it up (~10 min):**
+1. **Create a NEW Supabase project** at supabase.com. Do **not** reuse the Guru Seva Meds (medical) project — this list is publicly insertable and must not share a database with health data.
+2. In the project: **SQL Editor → New query**, paste the contents of `supabase/migrations/0001_subscribers.sql`, and click **Run**. This creates the `subscribers` table with **insert-only** Row-Level Security (the public can add themselves; the list can't be read with the public key).
+3. In **Project Settings → API**, copy the **Project URL** and the **`anon` public key**.
+4. Open `subscribe.js` and paste them into `SUPABASE_URL` and `SUPABASE_ANON_KEY`. ⚠️ Use the **anon** key only — never the `service_role` key in the website; it bypasses security.
+5. Redeploy/refresh, submit the form, and confirm a row appears in **Table Editor → subscribers** in Supabase.
+
+**Why this is safe/legal:** every row is a person who typed their email and ticked consent. That's the difference between a list you own and a spam complaint. You read/manage the list inside Supabase Studio; the site can only add to it.
+
 ## Reminders
 
 - Keep HTTPS on (Vercel issues it automatically).

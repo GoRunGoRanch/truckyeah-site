@@ -31,6 +31,7 @@
 
   <link rel="stylesheet" href="styles.css" />
   <script src="script.js" defer></script>
+  <script src="subscribe.js" defer></script>
 
   <!-- =========================================================
        JSON-LD (educational practice app — NO ratings, NO price claims,
@@ -429,6 +430,38 @@
             <div class="faq-body"><p>Refunds are handled through our checkout provider. [CONFIRM your refund policy here, or email us and we'll help.]</p></div>
           </details>
         </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         JOIN THE LIST — opt-in email capture (Supabase)
+         Consent-based: the email + the ticked checkbox = permission to mail.
+         Stored in Supabase (insert-only via the anon key; the list itself is
+         not publicly readable). Wire-up: subscribe.js + supabase/migrations.
+         ========================================================= -->
+    <section class="section join" id="join" aria-labelledby="join-title">
+      <div class="container container-narrow">
+        <header class="section-head">
+          <p class="eyebrow eyebrow--light">Free</p>
+          <h2 id="join-title">Get a free discipline drill every week</h2>
+          <p class="section-sub">Short, no-hype notes on sizing, patience, and not tilting &mdash; for truckers who trade in their downtime. Unsubscribe anytime.</p>
+        </header>
+
+        <form id="subscribe-form" class="subscribe-form" novalidate>
+          <div class="subscribe-row">
+            <label class="sr-only" for="sub-email">Email address</label>
+            <input type="email" id="sub-email" name="email" placeholder="you@example.com" autocomplete="email" required />
+            <button type="submit" class="btn btn-primary">Join free</button>
+          </div>
+
+          <label class="subscribe-consent">
+            <input type="checkbox" id="sub-consent" required />
+            <span>I agree to receive emails from TruckYeah Traders and can unsubscribe anytime.</span>
+          </label>
+
+          <p class="subscribe-status" id="subscribe-status" role="status" aria-live="polite" hidden></p>
+          <p class="subscribe-fine">No spam, no signals &mdash; educational only. We never sell your email.</p>
+        </form>
       </div>
     </section>
 
