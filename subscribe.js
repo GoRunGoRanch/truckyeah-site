@@ -67,15 +67,16 @@
     btn.textContent = "Joining…";
     setStatus("", null);
 
-    // POST with on_conflict=email + ignore-duplicates so re-signups don't error.
-    // return=minimal means no row is read back (anon has no SELECT permission).
-    fetch(SUPABASE_URL.replace(/\/$/, "") + "/rest/v1/subscribers?on_conflict=email", {
+    // Plain insert. return=minimal means no row is read back (anon can't SELECT).
+    // A repeat email hits the unique constraint and returns 409 — we treat that
+    // as "already subscribed" (a friendly success), so re-signups never error.
+    fetch(SUPABASE_URL.replace(/\/$/, "") + "/rest/v1/subscribers", {
       method: "POST",
       headers: {
         "apikey": SUPABASE_ANON_KEY,
         "Authorization": "Bearer " + SUPABASE_ANON_KEY,
         "Content-Type": "application/json",
-        "Prefer": "resolution=ignore-duplicates,return=minimal"
+        "Prefer": "return=minimal"
       },
       body: JSON.stringify({
         email: email,
@@ -87,6 +88,9 @@
         if (res.ok) {
           form.reset();
           setStatus("You're in — thanks! Watch your inbox for the first drill.", "success");
+        } else if (res.status === 409) {
+          form.reset();
+          setStatus("You're already on the list — thanks!", "success");
         } else {
           setStatus("Couldn't sign you up right now. Please try again in a bit.", "error");
         }
