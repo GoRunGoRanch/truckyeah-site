@@ -14,8 +14,8 @@
   "use strict";
 
   // ---- EDIT THESE TWO VALUES ----
-  var SUPABASE_URL = "[YOUR_SUPABASE_URL]";        // e.g. https://abcdefgh.supabase.co
-  var SUPABASE_ANON_KEY = "[YOUR_SUPABASE_ANON_KEY]"; // the public "anon" key
+  var SUPABASE_URL = "https://gggoeybvfktydgvykpdh.supabase.co";
+  var SUPABASE_ANON_KEY = "sb_publishable_RJTbR38NANDNEHeeomtmDA_M6OSdfCw"; // public "publishable" key (safe in front-end)
   // --------------------------------
 
   var SOURCE = "trading-site-join"; // label so you know where a lead came from
