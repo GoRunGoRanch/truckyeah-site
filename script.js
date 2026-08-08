@@ -95,7 +95,7 @@
     // If the form endpoint hasn't been configured yet, guide the owner instead of failing silently.
     if (!action || action.indexOf("[YOUR_") !== -1 || action.indexOf("http") !== 0) {
       setStatus(
-        "Form not connected yet. Owner: set the form's action to your FormSubmit or Formspree endpoint (see README). Meanwhile, email hello@truckyeahtraders.com.",
+        "Form not connected yet. Owner: set the form's action to your FormSubmit or Formspree endpoint (see README). Meanwhile, email dispatch@truckyeahtraders.com.",
         "error"
       );
       return;
@@ -125,14 +125,14 @@
             var msg =
               body && body.errors && body.errors.length
                 ? body.errors.map(function (err) { return err.message; }).join(", ")
-                : "Something went wrong. Please email hello@truckyeahtraders.com.";
+                : "Something went wrong. Please email dispatch@truckyeahtraders.com.";
             setStatus(msg, "error");
           });
         }
       })
       .catch(function () {
         setStatus(
-          "Network error — please try again, or email hello@truckyeahtraders.com.",
+          "Network error — please try again, or email dispatch@truckyeahtraders.com.",
           "error"
         );
       })
