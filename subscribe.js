@@ -20,6 +20,10 @@
 
   var SOURCE = "trading-site-join"; // label so you know where a lead came from
 
+  // Make.com webhook → Brevo (adds the contact, fires the welcome email).
+  // Public endpoint (ships in the front-end) — that's fine; it only accepts a signup ping.
+  var MAKE_HOOK = "https://hook.us2.make.com/lvrd496ma4zedvbg0f26vgrflk2u6vrn";
+
   var form = document.getElementById("subscribe-form");
   if (!form) return;
 
@@ -88,6 +92,15 @@
         // 201 = newly added, 409 = already on the list. Both are founding members,
         // so both unlock the full tool on this device.
         if (res.ok || res.status === 409) {
+          // Best-effort: ping Make → Brevo so the welcome email fires. Fire-and-forget (no-cors).
+          try {
+            fetch(MAKE_HOOK, {
+              method: "POST",
+              mode: "no-cors",
+              headers: { "Content-Type": "application/x-www-form-urlencoded" },
+              body: "email=" + encodeURIComponent(email) + "&source=" + encodeURIComponent(SOURCE)
+            });
+          } catch (e) {}
           form.reset();
           if (typeof window.tytUnlock === "function") window.tytUnlock();
           setStatus(
