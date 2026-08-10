@@ -32,8 +32,12 @@
   <link rel="stylesheet" href="styles.css" />
   <script src="script.js" defer></script>
   <script src="subscribe.js" defer></script>
-  <!-- Vercel Web Analytics (privacy-friendly, cookieless). Enable Web Analytics in the Vercel project dashboard for this to collect data. -->
-  <script defer src="/_vercel/insights/script.js"></script>
+  
+  <!-- Vercel Web Analytics (privacy-friendly, cookieless) -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 
   <!-- =========================================================
        JSON-LD (educational practice app — NO ratings, NO price claims,
