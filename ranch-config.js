@@ -57,8 +57,8 @@
         physical: true,
         available: false,
         refundable: false,
-        blurb: "Protected niche, standard urn system, photo plaque, installation, and memorial page.",
-        includes: ["Protected individual niche", "Standard urn system & photo plaque", "Installation + memorial page"]
+        blurb: "Protected niche with a cream-marble face, standard urn system, photo plaque, installation, and memorial page.",
+        includes: ["Protected individual niche", "Cream-marble front & photo plaque", "Standard urn system", "Installation + memorial page"]
       },
       {
         code: "PREMIUM_NICHE",
@@ -67,7 +67,7 @@
         physical: true,
         available: false,
         refundable: false,
-        blurb: "The standard package with preferred eye-level placement.",
+        blurb: "The standard cream-marble package with preferred eye-level placement.",
         includes: ["Everything in Standard", "Preferred eye-level placement"]
       },
       {
