@@ -128,11 +128,21 @@
     var want = params.get('pkg');
     if(want && byCode[want]) sel.value = want;
 
+    var allByCode = {};
+    (window.RANCH ? RANCH.packages : []).forEach(function(p){ allByCode[p.code]=p; });
+    var reservingFor = params.get('for');
+
     function refresh(){
       var p = byCode[sel.value];
       if(!p){ priceEl.textContent=''; blurbEl.textContent=''; return; }
       priceEl.textContent = '$'+Number(p.price).toLocaleString('en-US');
-      blurbEl.textContent = p.blurb + (p.refundable ? ' This deposit is fully refundable.' : '');
+      var txt = p.blurb + (p.refundable ? ' This deposit is fully refundable.' : '');
+      if(sel.value==='FOUNDING_RESERVATION' && reservingFor && allByCode[reservingFor]){
+        txt = 'Reserving your place toward the ' + allByCode[reservingFor].name +
+              ' ($' + Number(allByCode[reservingFor].price).toLocaleString('en-US') + '). ' + txt +
+              ' It is applied to that niche once placements open. No ashes are accepted at this stage.';
+      }
+      blurbEl.textContent = txt;
     }
     sel.addEventListener('change', refresh); refresh();
 

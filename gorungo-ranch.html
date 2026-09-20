@@ -327,17 +327,27 @@
       var money = function(n){ return '$' + Number(n).toLocaleString('en-US'); };
       RANCH.packages.forEach(function(p){
         var orderable = p.available && (!p.physical || RANCH.physicalEnabled);
+        // Full pricing is shown for physical niches now; you reserve a place
+        // (refundable) until placements open after county approval.
+        var reserveMode = p.physical && !RANCH.physicalEnabled;
         var el = document.createElement('div');
         el.className = 'tier' + (orderable ? '' : ' soon');
         var pill = orderable
           ? '<span class="pill now">Available now</span>'
-          : '<span class="pill soon">Pending approval</span>';
+          : (reserveMode ? '<span class="pill soon">Reserve now · opens after approval</span>'
+                         : '<span class="pill soon">Pending approval</span>');
         var sub = p.refundable ? 'Fully refundable deposit'
-                 : (p.physical ? 'Opens after county &amp; welfare approvals' : 'One-time');
+                 : (p.physical ? 'Full price · reserve for $250 today' : 'One-time');
         var lis = (p.includes||[]).map(function(i){return '<li>'+i+'</li>';}).join('');
-        var cta = orderable
-          ? '<a class="btn btn-primary" href="gorungo-ranch-start.html?pkg='+encodeURIComponent(p.code)+'">Start a Memorial</a>'
-          : '<button class="btn btn-ghost" disabled title="Requires county, insurance, and legal approval" style="cursor:not-allowed;opacity:.7">Not yet available</button>';
+        var cta;
+        if (orderable) {
+          cta = '<a class="btn btn-primary" href="gorungo-ranch-start.html?pkg='+encodeURIComponent(p.code)+'">Start a Memorial</a>';
+        } else if (reserveMode) {
+          cta = '<p style="font-size:.85rem;color:var(--muted);margin:0 0 12px">Your <strong>$250 deposit is fully refundable</strong> and applied to this niche once placements open. No ashes are accepted yet.</p>' +
+                '<a class="btn btn-wood" href="gorungo-ranch-start.html?pkg=FOUNDING_RESERVATION&for='+encodeURIComponent(p.code)+'">Reserve your place — $250</a>';
+        } else {
+          cta = '<button class="btn btn-ghost" disabled title="Requires county, insurance, and legal approval" style="cursor:not-allowed;opacity:.7">Not yet available</button>';
+        }
         el.innerHTML = pill +
           '<h3>'+p.name+'</h3>' +
           '<div class="price">'+money(p.price)+'<small>'+sub+'</small></div>' +
