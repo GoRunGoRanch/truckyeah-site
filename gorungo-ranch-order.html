@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Memorial | GoRunGo Ranch</title>
+  <meta name="theme-color" content="#4b6b3a" />
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
+  <meta name="robots" content="noindex" />
+  <script defer src="/_vercel/insights/script.js"></script>
+  <style>
+    :root{--cream:#f7f2e8;--marble:#fffdf8;--ink:#2b2b2f;--body:#443f39;--muted:#7a7168;--wood:#8a5a2b;--prairie:#4b6b3a;--prairie-d:#3a5530;--gold:#c9a227;--line:#e6ddcb;--radius:16px;--shadow:0 10px 30px rgba(60,45,20,.10);--font:'Georgia',serif;--sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+    *,*::before,*::after{box-sizing:border-box}
+    body{margin:0;font-family:var(--sans);color:var(--body);background:var(--cream);line-height:1.6}
+    a{color:var(--prairie-d)}
+    h1,h2{font-family:var(--font);color:var(--ink);margin:0 0 .3em}
+    .wrap{width:100%;max-width:720px;margin:0 auto;padding:0 22px}
+    header.site{background:var(--marble);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;min-height:62px}
+    .brand{display:flex;flex-direction:column;line-height:1.05;text-decoration:none}
+    .brand b{font-family:var(--font);font-size:1.2rem;color:var(--ink)} .brand span{font-size:.7rem;color:var(--wood);font-weight:700}
+    .back{color:var(--muted);font-size:.88rem;text-decoration:none}
+    .card{background:var(--marble);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:26px;margin:26px 0}
+    .banner{background:#e9f3e0;border:1px solid #cfe3bd;color:#33502a;border-radius:12px;padding:14px 16px;margin-bottom:18px;font-weight:600}
+    .idbox{font-family:ui-monospace,Menlo,monospace;background:#f1ece0;border:1px dashed var(--line);border-radius:10px;padding:10px 14px;display:inline-block;color:var(--ink)}
+    .row{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+    .row:last-child{border-bottom:0}
+    .k{color:var(--muted)} .v{font-weight:600;color:var(--ink);text-align:right}
+    .badge{display:inline-block;padding:4px 12px;border-radius:999px;font-weight:700;font-size:.85rem}
+    .paid{background:#e5efdc;color:var(--prairie-d)} .pending{background:#fbeecb;color:#7a5b12} .other{background:#eee;color:#555}
+    .timeline{list-style:none;padding:0;margin:14px 0 0}
+    .timeline li{position:relative;padding:0 0 16px 26px;border-left:2px solid var(--line);margin-left:6px}
+    .timeline li::before{content:"";position:absolute;left:-7px;top:2px;width:12px;height:12px;border-radius:50%;background:var(--line)}
+    .timeline li.done::before{background:var(--prairie)} .timeline li.current::before{background:var(--gold);box-shadow:0 0 0 4px rgba(201,162,39,.25)}
+    .timeline li.done, .timeline li.current{color:var(--ink);font-weight:600}
+    .muted{color:var(--muted);font-size:.9rem}
+    .err{background:#fdecea;color:#8a2b22;border:1px solid #f2c4bd;border-radius:12px;padding:16px}
+    .warn{background:#fff4e5;border:1px solid #f0d29a;border-left:5px solid var(--wood);border-radius:12px;padding:14px 16px;color:#5a4423;margin-top:18px;font-size:.92rem}
+  </style>
+</head>
+<body>
+  <header class="site"><div class="wrap nav">
+    <a class="brand" href="gorungo-ranch.html"><b>GoRunGo Ranch</b><span>A Truck Yeah Traders project</span></a>
+    <a class="back" href="gorungo-ranch.html">&larr; Ranch home</a>
+  </div></header>
+
+  <main class="wrap">
+    <div id="loading" class="card"><p class="muted">Loading your memorial…</p></div>
+    <div id="content" style="display:none"></div>
+  </main>
+
+  <script>
+  (function(){
+    var STEPS = [
+      ["DRAFT","Draft started"],["PHOTO_SUBMITTED","Photo submitted"],["AGREEMENT_ACCEPTED","Agreement accepted"],
+      ["PAYMENT_PENDING","Awaiting payment"],["PAID","Payment received"],["INTAKE_REVIEW","Intake under review"],
+      ["INTAKE_APPROVED","Intake approved"],["KIT_SENT","Shipping kit sent"],["REMAINS_IN_TRANSIT","In transit"],
+      ["REMAINS_RECEIVED","Safely received"],["PROOF_APPROVED","Proof approved"],["NICHE_READY","Niche prepared"],
+      ["INSTALLED","Placed in the memorial"],["FAMILY_NOTIFIED","Complete — family notified"]
+    ];
+    var params = new URLSearchParams(location.search);
+    var id = params.get('id'), t = params.get('t'), paid = params.get('paid');
+    var loading = document.getElementById('loading'), content = document.getElementById('content');
+
+    function esc(s){ return (s==null?'':String(s)).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+    function money(n,c){ return n==null?'':'$'+Number(n).toLocaleString('en-US')+' '+(c||'USD').toUpperCase(); }
+    function badge(s){ var cls = s==='PAID'?'paid':(s==='PENDING'?'pending':'other'); return '<span class="badge '+cls+'">'+esc(s)+'</span>'; }
+
+    if(!id || !t){
+      loading.style.display='none';
+      content.style.display='block';
+      content.innerHTML='<div class="card"><div class="err">This link is missing its access code. Please use the private link from your confirmation.</div></div>';
+      return;
+    }
+
+    fetch('/api/order-status?id='+encodeURIComponent(id)+'&t='+encodeURIComponent(t))
+      .then(function(r){ return r.json().then(function(j){ return {ok:r.ok, j:j}; }); })
+      .then(function(res){
+        loading.style.display='none'; content.style.display='block';
+        if(!res.ok){ content.innerHTML='<div class="card"><div class="err">'+esc(res.j.error||'We could not find this memorial.')+'</div></div>'; return; }
+        var d = res.j;
+        var curIdx = STEPS.findIndex(function(s){return s[0]===d.status;});
+        var tl = STEPS.map(function(s,i){
+          var cls = i<curIdx?'done':(i===curIdx?'current':'');
+          return '<li class="'+cls+'">'+esc(s[1])+'</li>';
+        }).join('');
+        var orders = (d.orders||[]).map(function(o){
+          return '<div class="row"><span class="k">'+esc(o.package_code.replace(/_/g,' '))+'</span><span class="v">'+money(o.amount,o.currency)+' &middot; '+badge(o.payment_status)+'</span></div>';
+        }).join('') || '<p class="muted">No orders yet.</p>';
+
+        content.innerHTML =
+          (paid ? '<div class="banner">Thank you — your payment was received. A confirmation is on its way to your email.</div>' : '') +
+          '<div class="card">' +
+            '<h1>In memory of '+esc(d.pet_name||'your companion')+'</h1>' +
+            '<p class="muted">'+esc(d.species||'')+'</p>' +
+            '<p>Your memorial ID: <span class="idbox">'+esc(d.memorial_id)+'</span></p>' +
+            '<p class="muted">Bookmark this page — it’s your private link. Current status: <strong>'+esc(d.status_label||d.status)+'</strong></p>' +
+          '</div>' +
+          '<div class="card"><h2>Your order</h2>'+orders+'</div>' +
+          '<div class="card"><h2>Progress</h2><ul class="timeline">'+tl+'</ul>' +
+            '<div class="warn"><strong>Do not mail any cremated remains yet.</strong> If your memorial later includes physical placement, we will send written intake approval and shipping steps first. No remains are accepted before approvals are complete.</div>' +
+          '</div>';
+      })
+      .catch(function(){
+        loading.style.display='none'; content.style.display='block';
+        content.innerHTML='<div class="card"><div class="err">Something went wrong loading your memorial. Please try again shortly.</div></div>';
+      });
+  })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GoRunGo Ranch | Pet Memorials Supporting Lifelong Cow Care</title>
+  <meta name="description" content="GoRunGo Ranch — a pet-remembrance program at the Truck Yeah Traders farm. Honor a beloved animal with a lasting memorial that helps fund food, shelter, veterinary care, and a future indoor sanctuary for the cows." />
+  <meta name="theme-color" content="#4b6b3a" />
+  <link rel="canonical" href="https://truckyeahtraders.com/gorungo-ranch.html" />
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="GoRunGo Ranch — pet memories supporting lifelong cow care" />
+  <meta property="og:description" content="Let your beloved animal's memory become a living act of compassion. A Truck Yeah Traders project." />
+  <meta property="og:url" content="https://truckyeahtraders.com/gorungo-ranch.html" />
+  <meta property="og:image" content="https://truckyeahtraders.com/assets/ranch/hero-rainbow-farmhouse.jpg" />
+
+  <script defer src="/_vercel/insights/script.js"></script>
+  <style>
+    :root{
+      --cream:#f7f2e8; --marble:#fffdf8; --ink:#2b2b2f; --body:#443f39; --muted:#7a7168;
+      --wood:#8a5a2b; --wood-d:#6f461f; --prairie:#4b6b3a; --prairie-d:#3a5530; --gold:#c9a227; --line:#e6ddcb;
+      --radius:16px; --shadow:0 10px 30px rgba(60,45,20,.10);
+      --font:'Georgia','Times New Roman',serif; --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    body{margin:0;font-family:var(--sans);color:var(--body);background:var(--cream);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
+    img{max-width:100%;height:auto;display:block}
+    a{color:var(--prairie-d)}
+    h1,h2,h3{font-family:var(--font);color:var(--ink);line-height:1.18;margin:0 0 .4em;font-weight:700;letter-spacing:-.005em}
+    h1{font-size:clamp(2.2rem,5vw,3.4rem)}
+    h2{font-size:clamp(1.7rem,3.4vw,2.4rem)}
+    h3{font-size:1.28rem}
+    .wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 22px}
+    .narrow{max-width:760px}
+    .section{padding:clamp(48px,7vw,84px) 0}
+    .eyebrow{font-family:var(--sans);text-transform:uppercase;letter-spacing:.14em;font-size:.8rem;font-weight:700;color:var(--wood)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font-family:var(--sans);font-weight:700;font-size:1.02rem;line-height:1;padding:15px 28px;border-radius:999px;border:0;cursor:pointer;text-decoration:none;transition:transform .12s ease,box-shadow .15s ease,background .15s}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:var(--prairie);color:#fff;box-shadow:0 8px 20px rgba(75,107,58,.28)}
+    .btn-primary:hover{background:var(--prairie-d);color:#fff}
+    .btn-wood{background:var(--wood);color:#fff}
+    .btn-wood:hover{background:var(--wood-d);color:#fff}
+    .btn-ghost{background:transparent;color:var(--ink);border:2px solid var(--line)}
+    .btn-lg{font-size:1.12rem;padding:17px 34px}
+
+    header.site{position:sticky;top:0;z-index:50;background:rgba(247,242,232,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:66px}
+    .brand{display:flex;flex-direction:column;line-height:1.05;text-decoration:none}
+    .brand b{font-family:var(--font);font-size:1.3rem;color:var(--ink);font-weight:700}
+    .brand span{font-size:.72rem;color:var(--wood);font-weight:700;letter-spacing:.04em}
+    .nav-links{display:flex;gap:18px;align-items:center;font-family:var(--sans);font-weight:600;font-size:.95rem}
+    .nav-links a{color:var(--body);text-decoration:none}
+    .nav-links a.back{color:var(--muted);font-size:.88rem}
+    @media(max-width:720px){.nav-links a:not(.cta):not(.back){display:none}}
+
+    .hero{position:relative;color:#fff;text-align:center}
+    .hero .bg{position:absolute;inset:0;overflow:hidden}
+    .hero .bg img{width:100%;height:100%;object-fit:cover}
+    .hero .scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,25,15,.35),rgba(30,25,15,.62))}
+    .hero .inner{position:relative;padding:clamp(70px,12vw,130px) 22px}
+    .hero h1{color:#fff;max-width:16ch;margin-left:auto;margin-right:auto;text-shadow:0 2px 20px rgba(0,0,0,.35)}
+    .hero .eyebrow{color:#ffe9b8}
+    .hero p{max-width:56ch;margin:14px auto 0;font-size:1.15rem;color:#f4eee2;text-shadow:0 1px 12px rgba(0,0,0,.4)}
+    .hero .cta-row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:26px}
+
+    .trust{background:var(--prairie-d);color:#eef3e8}
+    .trust .wrap{display:flex;flex-wrap:wrap;gap:10px 26px;justify-content:center;padding:16px 22px;font-size:.92rem;font-weight:600}
+    .trust span::before{content:"•";color:var(--gold);margin-right:8px}
+
+    .lead{font-size:1.18rem;color:var(--body)}
+    .callout{background:var(--marble);border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:12px;padding:20px 22px;box-shadow:var(--shadow)}
+    .callout.karma{background:#f3f6ee;border-left-color:var(--prairie)}
+
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+    .card{background:var(--marble);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+    .card .pad{padding:22px}
+    .card h3{margin-top:0}
+    .fig{position:relative;background:#e9e1cf}
+    .fig img{width:100%;aspect-ratio:3/2;object-fit:cover}
+    .concept-tag{position:absolute;left:10px;bottom:10px;background:rgba(43,43,47,.82);color:#fff;font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 10px;border-radius:6px}
+
+    .tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;align-items:stretch}
+    .tier{background:var(--marble);border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;display:flex;flex-direction:column;box-shadow:var(--shadow)}
+    .tier.soon{opacity:.92;background:#f4efe4}
+    .tier h3{margin:.1em 0}
+    .tier .price{font-family:var(--font);font-size:2rem;color:var(--ink);font-weight:700;line-height:1}
+    .tier .price small{display:block;font-family:var(--sans);font-size:.82rem;font-weight:600;color:var(--muted);margin-top:6px}
+    .tier ul{list-style:none;padding:0;margin:14px 0 20px}
+    .tier li{padding-left:24px;position:relative;margin-bottom:9px;font-size:.96rem}
+    .tier li::before{content:"✿";position:absolute;left:0;color:var(--prairie)}
+    .tier .btn{margin-top:auto;width:100%}
+    .pill{display:inline-block;font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:5px 11px;border-radius:999px;margin-bottom:8px}
+    .pill.now{background:#e5efdc;color:var(--prairie-d)}
+    .pill.soon{background:#f0e6cf;color:var(--wood-d)}
+
+    .steps{counter-reset:s;display:grid;gap:14px}
+    .step{display:flex;gap:16px;background:var(--marble);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+    .step::before{counter-increment:s;content:counter(s);flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:var(--prairie);color:#fff;font-weight:700;display:grid;place-items:center;font-family:var(--sans)}
+    .step h3{font-size:1.05rem;margin:.1em 0 .1em}
+    .step p{margin:0;font-size:.95rem;color:var(--muted)}
+
+    .warn{background:#fff4e5;border:1px solid #f0d29a;border-left:5px solid var(--wood);border-radius:12px;padding:18px 20px;color:#5a4423}
+    .warn strong{color:#5a3410}
+
+    .imgrow{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    @media(max-width:640px){.imgrow{grid-template-columns:1fr}}
+    figure{margin:0}
+    figcaption{font-size:.85rem;color:var(--muted);padding:8px 2px}
+
+    .disc{font-size:.9rem;color:var(--muted)}
+    .disc ul{padding-left:18px} .disc li{margin-bottom:8px}
+
+    footer.site{background:#2b2b2f;color:#cabfae;padding:40px 0;font-size:.92rem}
+    footer.site a{color:#fff}
+    .lockup b{color:#fff;font-family:var(--font);font-size:1.15rem}
+    .lockup span{display:block;color:var(--gold);font-size:.78rem;font-weight:700;letter-spacing:.04em}
+    .fineprint{color:#8f8676;font-size:.82rem;max-width:90ch;margin-top:14px}
+  </style>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap nav">
+      <a class="brand" href="gorungo-ranch.html">
+        <b>GoRunGo Ranch</b>
+        <span>A Truck Yeah Traders project</span>
+      </a>
+      <nav class="nav-links" aria-label="GoRunGo Ranch">
+        <a href="#choose">Memorials</a>
+        <a href="#how">How it works</a>
+        <a href="#cows">Cow care</a>
+        <a href="#progress">Progress</a>
+        <a class="btn btn-primary cta" href="gorungo-ranch-start.html">Start a Memorial</a>
+        <a class="back" href="index.html">&larr; TruckYeah Traders</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="bg"><img src="assets/ranch/hero-rainbow-farmhouse.jpg" alt="A full rainbow arching over the farmhouse and open pasture at the Truck Yeah Traders farm" /></div>
+    <div class="scrim"></div>
+    <div class="inner">
+      <p class="eyebrow">GoRunGo Ranch • at Truck Yeah Traders Farm</p>
+      <h1>Honor Their Life. Help Another Life Thrive.</h1>
+      <p>Create a permanent remembrance for a beloved dog, cat, or companion animal. Your memorial helps support food, shelter, veterinary care, pasture, and the future indoor sanctuary for GoRunGo, Shyami, Kanai, and Rukmini.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary btn-lg" href="gorungo-ranch-start.html">Start a Memorial</a>
+        <a class="btn btn-wood btn-lg" href="#cows">See How It Supports the Cows</a>
+        <a class="btn btn-ghost btn-lg" href="#progress" style="color:#fff;border-color:rgba(255,255,255,.6)">View Ranch Progress</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <div class="trust">
+    <div class="wrap">
+      <span>Secure payment</span><span>Individual memorial record</span><span>Tracked USPS process</span><span>Protected niche placement</span><span>Transparent cow-welfare impact</span>
+    </div>
+  </div>
+
+  <!-- STORY: memory becomes cow-seva -->
+  <section class="section">
+    <div class="wrap narrow">
+      <p class="eyebrow">Their memory becomes cow-seva</p>
+      <h2>A beloved animal's memory, turned into care for another</h2>
+      <p class="lead">When a companion animal passes, their love doesn't have to end. A GoRunGo Ranch memorial turns that love into lifelong care for cows who need shelter, food, and safety — one animal's memory helping sustain the peaceful life of another.</p>
+      <div class="callout karma" style="margin-top:22px">
+        For families who understand compassion through karma and seva, this memorial can be a loving offering: one animal's memory helps sustain the peaceful life of another. <strong>GoRunGo Ranch does not guarantee spiritual outcomes;</strong> it provides a transparent opportunity for compassionate action.
+      </div>
+    </div>
+  </section>
+
+  <!-- CHOOSE A MEMORIAL (rendered from ranch-config.js) -->
+  <section class="section" id="choose" style="background:#f1ece0">
+    <div class="wrap">
+      <div class="narrow" style="margin:0 auto 34px;text-align:center">
+        <p class="eyebrow">Choose a memorial</p>
+        <h2>Ways to remember &amp; give</h2>
+        <p class="lead">Two options are available today. Physical wall placements will open only after Elbert County land-use, insurance, and legal approvals are complete — no cremated remains are accepted before then.</p>
+      </div>
+      <div class="tiers" id="tier-grid"><!-- rendered by JS from ranch-config.js --></div>
+      <p style="text-align:center;color:var(--muted);margin-top:22px;font-size:.92rem">Secure payment by <strong>Stripe</strong> — we never see or store your card. Prices are launch recommendations and may change before physical placements open.</p>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section" id="how">
+    <div class="wrap">
+      <div class="narrow" style="margin:0 auto 30px"><p class="eyebrow">How it works</p><h2>A calm, guided process</h2></div>
+      <div class="steps">
+        <div class="step"><div><h3>Choose</h3><p>Select a digital tribute or a refundable founding reservation.</p></div></div>
+        <div class="step"><div><h3>Remember</h3><p>Enter your pet's name, dates, and a tribute, and upload a favorite photo.</p></div></div>
+        <div class="step"><div><h3>Review &amp; approve</h3><p>Confirm the package, terms, and privacy choice before anything is charged.</p></div></div>
+        <div class="step"><div><h3>Pay securely</h3><p>Complete checkout through Stripe. Your order is confirmed by our system, never by the browser alone.</p></div></div>
+        <div class="step"><div><h3>Receive authorization</h3><p><em>Physical memorials only, later:</em> we personally confirm eligibility and send your unique memorial ID and shipping steps.</p></div></div>
+        <div class="step"><div><h3>Ship securely</h3><p><em>Later:</em> use the USPS-compliant process with your memorial ID. Nothing is mailed before written approval.</p></div></div>
+        <div class="step"><div><h3>Confirm &amp; install</h3><p><em>Later:</em> we verify receipt, approve the plaque/photo proof, and place the memorial in its protected niche.</p></div></div>
+        <div class="step"><div><h3>Notify family</h3><p><em>Later:</em> you receive completion photos and visit information, and the memorial page is activated.</p></div></div>
+      </div>
+      <div class="warn" style="margin-top:22px">
+        <strong>Please do not mail ashes yet.</strong> Do not mail any cremated remains until GoRunGo Ranch sends your written intake approval and unique memorial ID. Packages sent without authorization may be refused or returned according to the customer agreement. USPS requires the special Priority Mail Express® Cremated Remains packaging — official instructions: <a href="https://about.usps.com/publications/pub139.pdf" target="_blank" rel="noopener">USPS Publication 139</a>.
+      </div>
+    </div>
+  </section>
+
+  <!-- COW CARE -->
+  <section class="section" id="cows" style="background:#eef2e6">
+    <div class="wrap">
+      <div class="narrow" style="margin:0 auto 30px"><p class="eyebrow">Meet the cows</p><h2>The animals your kindness protects</h2>
+        <p class="lead">Every memorial helps provide food, shelter, veterinary care, pasture, and — one day — a daylight-filled indoor sanctuary. The cows' welfare always comes before spectacle.</p>
+      </div>
+      <figure style="margin-bottom:26px">
+        <img src="assets/ranch/cows-deck-sunset.jpg" alt="Cows resting near the farmhouse deck at sunset" style="border-radius:var(--radius);box-shadow:var(--shadow)" />
+        <figcaption>Real photograph — cows in care at the Truck Yeah Traders farm.</figcaption>
+      </figure>
+      <!-- EDIT: add a real individual photo + one true sentence per cow when available. -->
+      <div class="cards">
+        <div class="card"><div class="pad"><h3>🐄 GoRunGo</h3><p>Cared for at the ranch that carries their name.</p></div></div>
+        <div class="card"><div class="pad"><h3>🐄 Shyami</h3><p>Part of the small herd your memorial helps sustain.</p></div></div>
+        <div class="card"><div class="pad"><h3>🐄 Kanai</h3><p>Given shelter, pasture, and steady daily care.</p></div></div>
+        <div class="card"><div class="pad"><h3>🐄 Rukmini</h3><p>Safe, fed, and looked after for life.</p></div></div>
+      </div>
+      <div class="imgrow" style="margin-top:26px">
+        <figure><img src="assets/ranch/mature-tree-shade.jpg" alt="Mature trees providing natural shade over the pasture" style="border-radius:12px" /><figcaption>Natural shade and open pasture — welfare-first land use.</figcaption></figure>
+        <figure><img src="assets/ranch/pasture-panorama.jpg" alt="Panorama of the open 35-acre pasture with fence line and trees" style="border-radius:12px" /><figcaption>Most of the 35 acres stays open pasture.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHERE FUNDS GO -->
+  <section class="section">
+    <div class="wrap narrow">
+      <p class="eyebrow">Where funds go</p>
+      <h2>Transparent by design</h2>
+      <p class="lead">Program support helps fund four areas of care. The exact percentage split is being finalized with our accountant and counsel, and will be published here once formally adopted.</p>
+      <div class="cards" style="margin-top:20px">
+        <div class="card"><div class="pad"><h3>Sanctuary construction &amp; operations</h3><p>Building, utilities, bedding, and equipment for a welfare-first indoor sanctuary.</p></div></div>
+        <div class="card"><div class="pad"><h3>Memorial perpetual-care reserve</h3><p>The wall, grounds, records, and long-term maintenance.</p></div></div>
+        <div class="card"><div class="pad"><h3>Cow-welfare reserve</h3><p>Feed, veterinary care, and emergency needs.</p></div></div>
+        <div class="card"><div class="pad"><h3>Administration</h3><p>Payment fees, support, records, and compliance.</p></div></div>
+      </div>
+      <p class="disc" style="margin-top:16px">Purchases are program support, not tax-deductible charitable donations, unless the legal entity and your receipt explicitly establish eligibility.</p>
+    </div>
+  </section>
+
+  <!-- SAFETY & PERMANENCE -->
+  <section class="section" style="background:#f1ece0">
+    <div class="wrap narrow">
+      <p class="eyebrow">Safety &amp; permanence</p>
+      <h2>Built on custody, care, and clear terms</h2>
+      <div class="cards">
+        <div class="card"><div class="pad"><h3>One memorial ID</h3><p>Photo, payment, and records connect through a single unique memorial ID — never a handwritten name alone.</p></div></div>
+        <div class="card"><div class="pad"><h3>Chain of custody</h3><p>When physical placement opens, receipt uses two-person verification, locked storage, and a documented custody log.</p></div></div>
+        <div class="card"><div class="pad"><h3>Maintained &amp; protected</h3><p>Defined maintenance, a perpetual-care reserve, and clear property-sale and relocation contingencies.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDZ PLANNING NOTE -->
+  <section class="section">
+    <div class="wrap narrow">
+      <p class="eyebrow">Land &amp; county planning</p>
+      <h2>A low-impact, land-respectful plan</h2>
+      <div class="callout">
+        <p style="margin-top:0">GoRunGo Ranch is being designed as a low-impact, land-respectful use of this 35-acre property, which the owner identifies as within Elbert County's Economic Development Zone. Its open-space preservation, agricultural character, thoughtful buffering, and phased development are intended to support a constructive Elbert County review.</p>
+        <p style="margin-bottom:0"><strong>County approval is pending, not guaranteed.</strong> Elbert County requires Board of County Commissioners approval of an EDZ Site Development Plan at a public hearing before this use begins, and other building, access, fire, and zoning requirements may apply. Physical-remains intake and public visits stay disabled until those approvals are issued.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRESS / VISION -->
+  <section class="section" id="progress" style="background:#eef2e6">
+    <div class="wrap">
+      <div class="narrow" style="margin:0 auto 30px"><p class="eyebrow">Ranch progress</p><h2>What exists today — and what we hope to build</h2>
+        <p class="lead">We begin with what already exists. The renderings below are architectural visions, not construction promises — each is clearly labeled a concept and paired with a real photo of the property as it is now.</p>
+      </div>
+
+      <div class="imgrow">
+        <figure><img src="assets/ranch/pasture-fence-path.jpg" alt="Existing farm access path and perimeter fencing across the pasture" style="border-radius:12px" /><figcaption>Today — real photograph of the property.</figcaption></figure>
+        <figure class="fig" style="border-radius:12px;overflow:hidden"><img src="assets/ranch/concept-dome-property.jpg" alt="Concept rendering of a daylight sanctuary dome placed on the property" /><span class="concept-tag">Conceptual rendering</span></figure>
+      </div>
+
+      <div class="imgrow" style="margin-top:22px">
+        <figure><img src="assets/ranch/property-aerial.jpg" alt="Aerial photograph of the open pasture and farm" style="border-radius:12px" /><figcaption>Today — real aerial of the acreage.</figcaption></figure>
+        <figure class="fig" style="border-radius:12px;overflow:hidden"><img src="assets/ranch/concept-sanctuary-interior.jpg" alt="Concept rendering of a daylight-filled indoor cow sanctuary interior" /><span class="concept-tag">Conceptual rendering</span></figure>
+      </div>
+
+      <div class="cards" style="margin-top:26px">
+        <div class="card"><figure class="fig"><img src="assets/ranch/concept-memorial-wall.jpg" alt="Concept rendering of a memorial wall gateway opening toward pasture" /><span class="concept-tag">Conceptual rendering</span></figure><div class="pad"><h3>Memorial wall gateway</h3><p>An outdoor memorial wall opening toward open pasture.</p></div></div>
+        <div class="card"><figure class="fig"><img src="assets/ranch/concept-urn-plaque.jpg" alt="Concept rendering of a sealed memorial urn and family photo plaque" /><span class="concept-tag">Conceptual rendering</span></figure><div class="pad"><h3>Urn &amp; photo plaque</h3><p>A dignified sealed urn and matching plaque for a protected niche.</p></div></div>
+        <div class="card"><figure class="fig"><img src="assets/ranch/concept-garden-masterplan.jpg" alt="Concept rendering of the memorial garden masterplan seen from above" /><span class="concept-tag">Conceptual rendering</span></figure><div class="pad"><h3>Memorial garden</h3><p>A planned garden woven through the grounds.</p></div></div>
+        <div class="card"><figure class="fig"><img src="assets/ranch/concept-entrance-rainbow.jpg" alt="Concept rendering of the GoRunGo Ranch entrance with rainbow identity" /><span class="concept-tag">Conceptual rendering</span></figure><div class="pad"><h3>Ranch entrance</h3><p>The GoRunGo Ranch arrival, carrying the rainbow identity.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DISCLOSURES -->
+  <section class="section">
+    <div class="wrap narrow disc">
+      <h2 style="font-size:1.3rem">Important disclosures</h2>
+      <ul>
+        <li>Concept images are architectural visions, not construction promises.</li>
+        <li>Memorial placement and visitor access are subject to weather, safety, maintenance, and posted hours, and to county and other approvals that are pending and not guaranteed.</li>
+        <li>Purchases are program support, not charitable donations, unless the legal entity and receipt explicitly establish tax eligibility.</li>
+        <li>Good-karma and cow-seva language expresses a family's compassionate intention; no spiritual result is guaranteed.</li>
+        <li>Refund, customization, shipping-exception, damage, relocation, and force-majeure terms are provided before payment.</li>
+        <li>No cremated remains are accepted before land-use approval, insurance, written agreements, and chain-of-custody procedures are operational.</li>
+      </ul>
+      <p>Questions? Email <a href="mailto:dispatch@truckyeahtraders.com">dispatch@truckyeahtraders.com</a>.</p>
+    </div>
+  </section>
+
+  <footer class="site">
+    <div class="wrap">
+      <div class="lockup"><b>GoRunGo Ranch</b><span>A Truck Yeah Traders project</span></div>
+      <p style="margin:.6rem 0 0"><a href="index.html">TruckYeah Traders</a> &middot; <a href="gorungo-ranch-start.html">Start a Memorial</a> &middot; <a href="mailto:dispatch@truckyeahtraders.com">Contact</a></p>
+      <p class="fineprint">GoRunGo Ranch is a pet-remembrance and cow-welfare program operated at the Truck Yeah Traders farm and hosted at truckyeahtraders.com. Program support helps fund animal care and a planned sanctuary. Physical memorial placement and any acceptance of cremated remains are subject to county, insurance, and legal approvals that are pending and not guaranteed. Nothing here is financial, legal, or tax advice, and purchases are not charitable donations unless expressly documented.</p>
+    </div>
+  </footer>
+
+  <script src="ranch-config.js"></script>
+  <script>
+    (function(){
+      var grid = document.getElementById('tier-grid');
+      if(!grid || !window.RANCH) return;
+      var money = function(n){ return '$' + Number(n).toLocaleString('en-US'); };
+      RANCH.packages.forEach(function(p){
+        var orderable = p.available && (!p.physical || RANCH.physicalEnabled);
+        var el = document.createElement('div');
+        el.className = 'tier' + (orderable ? '' : ' soon');
+        var pill = orderable
+          ? '<span class="pill now">Available now</span>'
+          : '<span class="pill soon">Pending approval</span>';
+        var sub = p.refundable ? 'Fully refundable deposit'
+                 : (p.physical ? 'Opens after county &amp; welfare approvals' : 'One-time');
+        var lis = (p.includes||[]).map(function(i){return '<li>'+i+'</li>';}).join('');
+        var cta = orderable
+          ? '<a class="btn btn-primary" href="gorungo-ranch-start.html?pkg='+encodeURIComponent(p.code)+'">Start a Memorial</a>'
+          : '<button class="btn btn-ghost" disabled title="Requires county, insurance, and legal approval" style="cursor:not-allowed;opacity:.7">Not yet available</button>';
+        el.innerHTML = pill +
+          '<h3>'+p.name+'</h3>' +
+          '<div class="price">'+money(p.price)+'<small>'+sub+'</small></div>' +
+          '<p style="color:var(--muted);font-size:.95rem">'+(p.blurb||'')+'</p>' +
+          '<ul>'+lis+'</ul>' + cta;
+        grid.appendChild(el);
+      });
+    })();
+  </script>
+</body>
+</html>
