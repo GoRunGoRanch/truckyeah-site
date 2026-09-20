@@ -87,7 +87,9 @@ function token(len = 24) {
 }
 
 function baseUrl() {
-  return (process.env.PUBLIC_BASE_URL || "https://truckyeahtraders.com").replace(/\/$/, "");
+  let u = (process.env.PUBLIC_BASE_URL || "https://truckyeahtraders.com").trim().replace(/\/$/, "");
+  if (!/^https?:\/\//i.test(u)) u = "https://" + u; // tolerate a value saved without the scheme
+  return u;
 }
 
 module.exports = {
