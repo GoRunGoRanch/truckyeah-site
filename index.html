@@ -88,6 +88,26 @@
     </div>
   </header>
 
+  <!-- Floating side rail: draws visitors to GoRunGo Ranch + Kids Tutoring (desktop only, dismissible) -->
+  <aside class="side-rail" id="side-rail" aria-label="Also from TruckYeah Traders">
+    <button class="side-rail__close" id="side-rail-close" type="button" aria-label="Hide these links">&times;</button>
+    <p class="side-rail__label">Also from us</p>
+    <a class="side-rail__card" href="gorungo-ranch.html">
+      <img src="assets/ranch/hero-rainbow-farmhouse.jpg" alt="A rainbow over the GoRunGo Ranch farmhouse and pasture" loading="lazy" />
+      <span class="t">🌈 GoRunGo Ranch</span>
+      <span class="s">Pet memorials &amp; cow care &rarr;</span>
+    </a>
+    <a class="side-rail__link" href="tutoring.html">🧠 Kids Tutoring &rarr;</a>
+  </aside>
+  <script>
+    (function(){
+      var r=document.getElementById('side-rail'), c=document.getElementById('side-rail-close');
+      if(!r) return;
+      try{ if(localStorage.getItem('tyt_siderail_hidden')==='1') r.style.display='none'; }catch(e){}
+      if(c) c.addEventListener('click',function(){ r.style.display='none'; try{localStorage.setItem('tyt_siderail_hidden','1');}catch(e){} });
+    })();
+  </script>
+
   <main id="main">
 
     <!-- =========================================================

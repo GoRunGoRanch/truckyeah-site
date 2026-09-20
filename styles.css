@@ -557,3 +557,40 @@ a:hover { text-decoration: underline; }
   color: var(--body); font-weight: 600;
 }
 .news-cta a { color: var(--green-text); font-weight: 700; }
+
+/* ===== Floating side rail: pulls visitors to Ranch + Tutoring (desktop) ===== */
+.side-rail {
+  position: fixed; right: 16px; top: 50%; transform: translateY(-50%);
+  z-index: 60; width: 186px; display: flex; flex-direction: column; gap: 10px;
+  background: rgba(21,25,34,.94); border: 1px solid var(--line);
+  border-radius: var(--radius); box-shadow: var(--shadow-lg);
+  padding: 12px; backdrop-filter: blur(6px);
+}
+.side-rail__close {
+  position: absolute; top: -10px; right: -10px; width: 26px; height: 26px;
+  border-radius: 50%; border: 1px solid var(--line); background: var(--bg-elev-2);
+  color: var(--muted); font-size: 16px; line-height: 1; cursor: pointer;
+  display: grid; place-items: center;
+}
+.side-rail__close:hover { color: #fff; }
+.side-rail__label {
+  font-size: .7rem; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--muted); font-weight: 700; text-align: center; margin: 2px 0 0;
+}
+.side-rail__card {
+  display: block; text-decoration: none; border-radius: var(--radius-sm);
+  overflow: hidden; background: var(--bg-elev-2); border: 1px solid var(--line);
+  transition: transform .14s ease, box-shadow .14s ease;
+}
+.side-rail__card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.side-rail__card img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; }
+.side-rail__card .t { display: block; padding: 8px 10px 2px; color: #fff; font-weight: 800; font-size: .95rem; }
+.side-rail__card .s { display: block; padding: 0 10px 10px; color: var(--green-text); font-size: .8rem; font-weight: 600; }
+.side-rail__link {
+  display: block; text-decoration: none; text-align: center; padding: 11px 10px;
+  border-radius: var(--radius-sm); background: linear-gradient(135deg,#2f6bff,#8b5cf6);
+  color: #fff; font-weight: 800; font-size: .9rem; transition: transform .14s ease;
+}
+.side-rail__link:hover { transform: translateY(-2px); }
+@media (max-width: 1180px) { .side-rail { display: none; } }
+@media (prefers-reduced-motion: reduce) { .side-rail__card, .side-rail__link { transition: none; } }
