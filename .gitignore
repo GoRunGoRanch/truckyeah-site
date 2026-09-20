@@ -1,5 +1,26 @@
-node_modules/
-.vercel
-.env
-.env.*
+# OS / editor cruft
 .DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Node / serverless deps (installed by Vercel on deploy)
+node_modules/
+
+# Local env / secrets
+.env
+.env.local
+.env.*
+.env.*.local
+
+# Vercel
+.vercel
+
+# Local scratch / unrelated build artifacts (do not publish)
+Claude outputs/
