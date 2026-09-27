@@ -104,6 +104,9 @@
 
     .imgrow{display:grid;grid-template-columns:1fr 1fr;gap:18px}
     @media(max-width:640px){.imgrow{grid-template-columns:1fr}}
+    .cowfeat{display:grid;grid-template-columns:minmax(0,440px) 1fr;gap:38px;align-items:center}
+    .cowfeat video{display:block;width:100%;max-width:420px;margin:0 auto;max-height:720px;border-radius:var(--radius);box-shadow:var(--shadow);background:#000}
+    @media(max-width:760px){.cowfeat{grid-template-columns:1fr}}
     figure{margin:0}
     figcaption{font-size:.85rem;color:var(--muted);padding:8px 2px}
 
@@ -174,6 +177,29 @@
     </div>
   </section>
 
+  <!-- FEATURED COW VIDEO -->
+  <section class="section" id="cows-video" style="background:#eef2e6">
+    <div class="wrap">
+      <div class="cowfeat">
+        <figure style="margin:0">
+          <video controls muted playsinline preload="metadata" poster="assets/ranch/cows-poster.jpg">
+            <source src="assets/ranch/cows.mp4" type="video/mp4" />
+            Your browser doesn&rsquo;t support embedded video.
+          </video>
+        </figure>
+        <div>
+          <p class="eyebrow">Meet the cows</p>
+          <h2>The lives your kindness protects</h2>
+          <p class="lead">This is GoRunGo Ranch today — real cows, curious and cared for, on the open pasture your memorial helps sustain. Every remembrance provides food, shelter, veterinary care, and works toward a future indoor sanctuary.</p>
+          <p style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap">
+            <a class="btn btn-primary btn-lg" href="#choose">Start a memorial &rarr;</a>
+            <a class="btn btn-ghost btn-lg" href="#cows">More about cow care</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- STORY: memory becomes cow-seva -->
   <section class="section">
     <div class="wrap narrow">
@@ -225,20 +251,10 @@
       <div class="narrow" style="margin:0 auto 30px"><p class="eyebrow">Meet the cows</p><h2>The animals your kindness protects</h2>
         <p class="lead">Every memorial helps provide food, shelter, veterinary care, pasture, and — one day — a daylight-filled indoor sanctuary. The cows' welfare always comes before spectacle.</p>
       </div>
-      <div class="imgrow" style="margin-bottom:26px;align-items:start">
-        <figure style="margin:0">
-          <video controls muted playsinline preload="metadata" poster="assets/ranch/cows-poster.jpg"
-                 style="display:block;margin:0 auto;max-width:100%;max-height:560px;border-radius:var(--radius);box-shadow:var(--shadow);background:#000">
-            <source src="assets/ranch/cows.mp4" type="video/mp4" />
-            Your browser doesn&rsquo;t support embedded video.
-          </video>
-          <figcaption>Our cows, up close &mdash; real footage from the farm.</figcaption>
-        </figure>
-        <figure style="margin:0">
-          <img src="assets/ranch/cows-deck-sunset.jpg" alt="Cows resting near the farmhouse deck at sunset" style="border-radius:var(--radius);box-shadow:var(--shadow)" />
-          <figcaption>Cows in care at the Truck Yeah Traders farm.</figcaption>
-        </figure>
-      </div>
+      <figure style="margin-bottom:26px">
+        <img src="assets/ranch/cows-deck-sunset.jpg" alt="Cows resting near the farmhouse deck at sunset" style="border-radius:var(--radius);box-shadow:var(--shadow)" />
+        <figcaption>Cows in care at the Truck Yeah Traders farm.</figcaption>
+      </figure>
       <!-- EDIT: add a real individual photo + one true sentence per cow when available. -->
       <div class="cards">
         <div class="card"><div class="pad"><h3>🐄 GoRunGo</h3><p>Cared for at the ranch that carries their name.</p></div></div>
