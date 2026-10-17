@@ -558,6 +558,11 @@ a:hover { text-decoration: underline; }
 }
 .news-cta a { color: var(--green-text); font-weight: 700; }
 
+/* Brand tagline under the logo */
+.brand-text { display: flex; flex-direction: column; line-height: 1.08; }
+.brand-tagline { font-size: .64rem; letter-spacing: .04em; color: var(--muted); font-weight: 600; text-transform: uppercase; }
+@media (max-width: 640px) { .brand-tagline { display: none; } }
+
 /* ===== Floating side rail: pulls visitors to Ranch + Tutoring (desktop) ===== */
 .side-rail {
   position: fixed; right: 16px; top: 50%; transform: translateY(-50%);
