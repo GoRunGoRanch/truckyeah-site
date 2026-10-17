@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 660" role="img" aria-label="Cross-section of the living greenhouse: sunlight passes through clear growing floors down to the enclosed cow level">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#eaf4ff"/><stop offset="1" stop-color="#fbf7ee"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe27a" stop-opacity=".75"/><stop offset="1" stop-color="#ffe27a" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d7eeff" stop-opacity=".85"/><stop offset="1" stop-color="#eaf6ff" stop-opacity=".5"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="920" height="660" fill="url(#sky)"/>
+
+  <!-- sun + rays -->
+  <circle cx="815" cy="78" r="40" fill="#ffd23f"/>
+  <g stroke="#ffd23f" stroke-width="5" stroke-linecap="round">
+    <line x1="815" y1="12" x2="815" y2="30"/><line x1="880" y1="78" x2="862" y2="78"/>
+    <line x1="862" y1="32" x2="850" y2="44"/><line x1="768" y1="32" x2="780" y2="44"/>
+  </g>
+
+  <!-- light beams passing through the whole structure -->
+  <g>
+    <polygon points="300,120 470,120 540,600 250,600" fill="url(#beam)"/>
+    <polygon points="520,120 660,120 690,600 470,600" fill="url(#beam)"/>
+    <polygon points="150,150 250,150 300,600 120,600" fill="url(#beam)" opacity=".7"/>
+  </g>
+
+  <!-- future expandable floors (dashed outline above) -->
+  <rect x="150" y="60" width="610" height="56" fill="none" stroke="#8a5a2b" stroke-width="2.5" stroke-dasharray="9 7" rx="6"/>
+  <text x="455" y="94" text-anchor="middle" font-family="Georgia, serif" font-size="19" fill="#8a5a2b">Future growing floors — added over time ↑</text>
+
+  <!-- building shell -->
+  <g stroke="#5a4a36" stroke-width="2.5">
+    <!-- peaked glass roof -->
+    <polygon points="150,120 455,96 760,120 760,150 150,150" fill="url(#glass)"/>
+    <!-- growing floor 2 -->
+    <rect x="150" y="150" width="610" height="130" fill="url(#glass)"/>
+    <!-- growing floor 1 -->
+    <rect x="150" y="280" width="610" height="130" fill="url(#glass)"/>
+    <!-- enclosed cow level -->
+    <rect x="150" y="410" width="610" height="190" fill="#f3ead8"/>
+  </g>
+  <!-- glass mullions -->
+  <g stroke="#9fc4e6" stroke-width="1.4" opacity=".8">
+    <line x1="252" y1="150" x2="252" y2="410"/><line x1="354" y1="150" x2="354" y2="410"/>
+    <line x1="456" y1="150" x2="456" y2="410"/><line x1="558" y1="150" x2="558" y2="410"/>
+    <line x1="660" y1="150" x2="660" y2="410"/>
+  </g>
+
+  <!-- plant rows on the two growing floors -->
+  <g fill="#4b6b3a">
+    <g transform="translate(0,0)">
+      <rect x="180" y="238" width="90" height="10" rx="4"/><rect x="300" y="238" width="90" height="10" rx="4"/>
+      <rect x="420" y="238" width="90" height="10" rx="4"/><rect x="540" y="238" width="90" height="10" rx="4"/><rect x="650" y="238" width="80" height="10" rx="4"/>
+      <g fill="#6a8a4f"><circle cx="200" cy="230" r="7"/><circle cx="240" cy="230" r="7"/><circle cx="330" cy="230" r="7"/><circle cx="470" cy="230" r="7"/><circle cx="600" cy="230" r="7"/><circle cx="690" cy="230" r="7"/></g>
+    </g>
+    <g transform="translate(0,130)">
+      <rect x="180" y="238" width="90" height="10" rx="4"/><rect x="300" y="238" width="90" height="10" rx="4"/>
+      <rect x="420" y="238" width="90" height="10" rx="4"/><rect x="540" y="238" width="90" height="10" rx="4"/><rect x="650" y="238" width="80" height="10" rx="4"/>
+      <g fill="#6a8a4f"><circle cx="210" cy="230" r="7"/><circle cx="360" cy="230" r="7"/><circle cx="500" cy="230" r="7"/><circle cx="640" cy="230" r="7"/></g>
+    </g>
+  </g>
+
+  <!-- memorial-brick base walls (left & right columns) -->
+  <g fill="#c9956a" stroke="#a9794c" stroke-width="1">
+    <g>
+      <rect x="150" y="410" width="26" height="190"/>
+      <g fill="#b9825a"><rect x="150" y="420" width="26" height="14"/><rect x="150" y="450" width="26" height="14"/><rect x="150" y="480" width="26" height="14"/><rect x="150" y="510" width="26" height="14"/><rect x="150" y="540" width="26" height="14"/><rect x="150" y="570" width="26" height="14"/></g>
+    </g>
+    <g>
+      <rect x="734" y="410" width="26" height="190"/>
+      <g fill="#b9825a"><rect x="734" y="420" width="26" height="14"/><rect x="734" y="450" width="26" height="14"/><rect x="734" y="480" width="26" height="14"/><rect x="734" y="510" width="26" height="14"/><rect x="734" y="540" width="26" height="14"/><rect x="734" y="570" width="26" height="14"/></g>
+    </g>
+  </g>
+
+  <!-- openable vent doors on the enclosed level -->
+  <g stroke="#5a4a36" stroke-width="2" fill="#e3d4ba">
+    <rect x="176" y="500" width="60" height="100"/><rect x="674" y="500" width="60" height="100"/>
+  </g>
+  <g stroke="#8a5a2b" stroke-width="2" stroke-linecap="round">
+    <path d="M176,500 l-34,-16" /><path d="M734,500 l34,-16" />
+  </g>
+
+  <!-- cows -->
+  <g fill="#2b2b2f">
+    <g transform="translate(300,548)"><ellipse cx="0" cy="0" rx="34" ry="18"/><rect x="26" y="-22" width="20" height="18" rx="4"/><rect x="-28" y="12" width="6" height="18"/><rect x="18" y="12" width="6" height="18"/><circle cx="46" cy="-18" r="3" fill="#fff"/></g>
+    <g transform="translate(470,556)"><ellipse cx="0" cy="0" rx="34" ry="18"/><rect x="26" y="-22" width="20" height="18" rx="4"/><rect x="-28" y="12" width="6" height="18"/><rect x="18" y="12" width="6" height="18"/><circle cx="46" cy="-18" r="3" fill="#fff"/></g>
+    <g transform="translate(620,548)"><ellipse cx="0" cy="0" rx="30" ry="16"/><rect x="22" y="-20" width="18" height="16" rx="4"/><rect x="-24" y="10" width="6" height="16"/><rect x="16" y="10" width="6" height="16"/></g>
+  </g>
+
+  <!-- labels -->
+  <g font-family="system-ui, sans-serif" font-size="16" fill="#2b2b2f">
+    <text x="455" y="139" text-anchor="middle" fill="#2b6089" font-weight="700">Removable glass roof</text>
+    <text x="455" y="205" text-anchor="middle">Clear growing floor — light passes through</text>
+    <text x="455" y="335" text-anchor="middle">Clear growing floor — light passes through</text>
+    <text x="455" y="452" text-anchor="middle" font-weight="700">Cow sanctuary — enclosed &amp; warm in winter</text>
+    <text x="455" y="474" text-anchor="middle" font-size="14" fill="#5a4a36">openable doors let the breeze through on fine days</text>
+    <text x="95" y="470" text-anchor="middle" font-size="13" fill="#8a5a2b" transform="rotate(-90 95 470)">Memorial-brick walls</text>
+  </g>
+</svg>

@@ -129,6 +129,7 @@
       </a>
       <nav class="nav-links" aria-label="GoRunGo Ranch">
         <a href="#choose">Memorials</a>
+        <a href="#bricks">Sponsor</a>
         <a href="#how">How it works</a>
         <a href="#cows">Cow care</a>
         <a href="#progress">Progress</a>
@@ -222,6 +223,57 @@
       </div>
       <div class="tiers" id="tier-grid"><!-- rendered by JS from ranch-config.js --></div>
       <p style="text-align:center;color:var(--muted);margin-top:22px;font-size:.92rem">Secure payment by <strong>Stripe</strong> — we never see or store your card. Prices are launch recommendations and may change before physical placements open.</p>
+    </div>
+  </section>
+
+  <!-- SPONSOR A MEMORIAL BRICK -->
+  <section class="section" id="bricks">
+    <div class="wrap">
+      <div class="narrow" style="margin:0 auto 34px;text-align:center">
+        <p class="eyebrow">Be a founding sponsor</p>
+        <h2>Sponsor a memorial brick</h2>
+        <p class="lead">Each memorial brick holds the sealed cremated remains of a beloved pet or person, set into the living greenhouse sanctuary and bathed in devotional and yogic hymns for the life of the building. Reserve your place now with a fully refundable deposit — your sponsorship helps raise the sanctuary.</p>
+      </div>
+      <div class="tiers">
+        <div class="tier">
+          <span class="pill soon">Founding · reserve now</span>
+          <h3>🐾 Pet Memorial Brick</h3>
+          <div class="price">$250<small>sealed pet remains · $250 refundable deposit</small></div>
+          <ul><li>One memorial brick for a beloved pet</li><li>Set into the sanctuary walls</li><li>Bathed in devotional hymns</li></ul>
+          <a class="btn btn-wood" href="gorungo-ranch-start.html?pkg=FOUNDING_RESERVATION&amp;for=PET_BRICK">Reserve — $250 refundable</a>
+        </div>
+        <div class="tier pop">
+          <span class="flag">Most meaningful</span>
+          <h3>🕊️ Loved-One Memorial Brick</h3>
+          <div class="price">$1,000<small>sealed human remains · $250 refundable deposit</small></div>
+          <ul><li>A memorial brick for a beloved person</li><li>A permanent place in the sanctuary</li><li>Bathed in devotional &amp; yogic hymns</li><li>Named in the memorial library</li></ul>
+          <a class="btn btn-primary" href="gorungo-ranch-start.html?pkg=FOUNDING_RESERVATION&amp;for=LOVED_ONE_BRICK">Reserve — $250 refundable</a>
+        </div>
+        <div class="tier">
+          <span class="pill soon">Founding · reserve now</span>
+          <h3>🌿 Founding Sanctuary Sponsor</h3>
+          <div class="price">$5,000<small>name a section · $250 refundable deposit</small></div>
+          <ul><li>Sponsor a section of the sanctuary</li><li>Multiple memorial bricks</li><li>Founding recognition in the library</li></ul>
+          <a class="btn btn-wood" href="gorungo-ranch-start.html?pkg=FOUNDING_RESERVATION&amp;for=FOUNDING_SPONSOR">Reserve — $250 refundable</a>
+        </div>
+      </div>
+      <p style="text-align:center;color:var(--muted);margin-top:22px;font-size:.92rem">Your $250 reservation is fully refundable and applied to your sponsorship. Secure payment by <strong>Stripe</strong>.</p>
+    </div>
+  </section>
+
+  <!-- STAY CONNECTED (email capture) -->
+  <section class="section" id="join" style="background:#eef2e6">
+    <div class="wrap narrow" style="text-align:center">
+      <p class="eyebrow">Stay connected</p>
+      <h2>Follow the sanctuary as it grows</h2>
+      <p class="lead">Be first to hear as we open memorial sponsorships, break ground on the greenhouse, and share the cows' journey. No spam — just the story.</p>
+      <form id="subscribe-form" class="subscribe-form" style="max-width:460px;margin:22px auto 0;display:flex;flex-direction:column;gap:12px;text-align:left">
+        <label for="sub-email" style="font-weight:600;color:var(--ink)">Email address</label>
+        <input id="sub-email" name="email" type="email" required placeholder="you@example.com" style="padding:13px 15px;border:1px solid var(--line);border-radius:10px;font:inherit;background:#fff" />
+        <label style="display:flex;gap:10px;align-items:flex-start;font-size:.92rem;color:var(--body)"><input id="sub-consent" type="checkbox" style="margin-top:4px" /> <span>Yes, email me updates about GoRunGo Ranch. I can unsubscribe anytime.</span></label>
+        <button type="submit" class="btn btn-primary btn-lg">Keep me posted</button>
+        <p id="subscribe-status" hidden style="margin:0;font-size:.95rem"></p>
+      </form>
     </div>
   </section>
 
@@ -325,8 +377,13 @@
       </figure>
       <div class="callout" style="margin-bottom:30px">
         <h3 style="margin-top:0">The Living Memorial Greenhouse &amp; Cow Sanctuary</h3>
-        <p>A living greenhouse where <strong>cows shelter and graze on the enclosed ground level</strong> — warm and protected through winter, with doors that open so fresh air can blow through on fine days — while <strong>clear upper floors let sunlight in to grow gardens</strong>. The frame is <strong>modular</strong>, so growing levels are added over time. Its walls are built from <strong>memorial bricks</strong>, each holding the sealed cremated remains of a beloved pet or person, surrounding a quiet place for reflection, a library, and seva. Most of the 35 acres stays open pasture.</p>
+        <p>A living greenhouse where <strong>cows shelter and graze on the enclosed ground level</strong> — warm and protected through winter, with doors that open so fresh air can blow through on fine days — while <strong>clear upper floors let sunlight reach every level</strong> to grow gardens. The frame is <strong>modular</strong>, so growing levels are added over time. Its walls are built from <strong>memorial bricks</strong>, each holding the sealed cremated remains of a beloved pet or person, around a library, a place of learning, and a space for seva. Most of the 35 acres stays open pasture.</p>
+        <p style="margin-bottom:0">The cremated remains are <strong>never used to grow anything</strong> — they are kept memorialized within the structure itself, which is continuously filled with <strong>devotional and yogic hymns</strong>, so the sanctuary is bathed in sacred sound for the life of the building.</p>
       </div>
+      <figure style="margin:0 0 30px">
+        <img src="assets/ranch/greenhouse-light-diagram.svg" alt="Cross-section diagram: sunlight passing through the removable glass roof and clear growing floors down to the enclosed, openable cow level, with memorial-brick walls" style="width:100%;border-radius:var(--radius);border:1px solid var(--line);background:#fff" />
+        <figcaption>How light reaches every level — from the removable glass roof, through the clear growing floors, down to the sheltered cows. <span style="color:var(--muted)">Diagram.</span></figcaption>
+      </figure>
 
       <div class="imgrow">
         <figure><img src="assets/ranch/pasture-fence-path.jpg" alt="Existing farm access path and perimeter fencing across the pasture" style="border-radius:12px" /><figcaption>Today — real photograph of the property.</figcaption></figure>
@@ -372,6 +429,7 @@
   </footer>
 
   <script src="ranch-config.js"></script>
+  <script src="subscribe.js" defer></script>
   <script>
     (function(){
       var grid = document.getElementById('tier-grid');
