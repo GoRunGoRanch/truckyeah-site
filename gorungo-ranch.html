@@ -16,108 +16,120 @@
 
   <script defer src="/_vercel/insights/script.js"></script>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap');
     :root{
-      --cream:#f7f2e8; --marble:#fffdf8; --ink:#2b2b2f; --body:#443f39; --muted:#7a7168;
-      --wood:#8a5a2b; --wood-d:#6f461f; --prairie:#4b6b3a; --prairie-d:#3a5530; --gold:#c9a227; --line:#e6ddcb;
-      --radius:16px; --shadow:0 10px 30px rgba(60,45,20,.10);
-      --font:'Georgia','Times New Roman',serif; --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+      --cream:#f6f1e8; --marble:#fffefb; --stone:#efe7d8; --ink:#262219; --body:#4c453a; --muted:#8a8070;
+      --wood:#8a5a2b; --wood-d:#6f461f; --prairie:#3f5d34; --prairie-d:#2d4526; --gold:#bd9a3a; --gold-d:#9c7f2d; --line:#e7dcc8;
+      --radius:18px; --radius-lg:26px;
+      --shadow:0 16px 44px rgba(60,45,20,.11); --shadow-sm:0 6px 20px rgba(60,45,20,.08);
+      --font:'Fraunces', Georgia, 'Times New Roman', serif;
+      --sans:'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     }
     *,*::before,*::after{box-sizing:border-box}
-    body{margin:0;font-family:var(--sans);color:var(--body);background:var(--cream);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
+    body{margin:0;font-family:var(--sans);color:var(--body);background:var(--cream);line-height:1.68;font-size:17px;-webkit-font-smoothing:antialiased}
     img{max-width:100%;height:auto;display:block}
     a{color:var(--prairie-d)}
-    h1,h2,h3{font-family:var(--font);color:var(--ink);line-height:1.18;margin:0 0 .4em;font-weight:700;letter-spacing:-.005em}
-    h1{font-size:clamp(2.2rem,5vw,3.4rem)}
-    h2{font-size:clamp(1.7rem,3.4vw,2.4rem)}
-    h3{font-size:1.28rem}
-    .wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 22px}
+    h1,h2,h3{font-family:var(--font);color:var(--ink);line-height:1.16;margin:0 0 .4em;font-weight:600;letter-spacing:-.01em}
+    h1{font-size:clamp(2.4rem,5.4vw,3.8rem);font-weight:500}
+    h2{font-size:clamp(1.8rem,3.6vw,2.6rem)}
+    h3{font-size:1.3rem;font-weight:600}
+    .wrap{width:100%;max-width:1140px;margin:0 auto;padding:0 24px}
     .narrow{max-width:760px}
-    .section{padding:clamp(48px,7vw,84px) 0}
-    .eyebrow{font-family:var(--sans);text-transform:uppercase;letter-spacing:.14em;font-size:.8rem;font-weight:700;color:var(--wood)}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font-family:var(--sans);font-weight:700;font-size:1.02rem;line-height:1;padding:15px 28px;border-radius:999px;border:0;cursor:pointer;text-decoration:none;transition:transform .12s ease,box-shadow .15s ease,background .15s}
-    .btn:hover{transform:translateY(-2px)}
-    .btn-primary{background:var(--prairie);color:#fff;box-shadow:0 8px 20px rgba(75,107,58,.28)}
-    .btn-primary:hover{background:var(--prairie-d);color:#fff}
-    .btn-wood{background:var(--wood);color:#fff}
-    .btn-wood:hover{background:var(--wood-d);color:#fff}
-    .btn-ghost{background:transparent;color:var(--ink);border:2px solid var(--line)}
-    .btn-lg{font-size:1.12rem;padding:17px 34px}
+    .section{padding:clamp(54px,8vw,96px) 0}
+    .eyebrow{font-family:var(--sans);text-transform:uppercase;letter-spacing:.18em;font-size:.76rem;font-weight:700;color:var(--wood)}
 
-    header.site{position:sticky;top:0;z-index:50;background:rgba(247,242,232,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:66px}
-    .brand{display:flex;flex-direction:column;line-height:1.05;text-decoration:none}
-    .brand b{font-family:var(--font);font-size:1.3rem;color:var(--ink);font-weight:700}
-    .brand span{font-size:.72rem;color:var(--wood);font-weight:700;letter-spacing:.04em}
-    .nav-links{display:flex;gap:18px;align-items:center;font-family:var(--sans);font-weight:600;font-size:.95rem}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font-family:var(--sans);font-weight:600;font-size:1rem;line-height:1;padding:15px 28px;border-radius:12px;border:0;cursor:pointer;text-decoration:none;transition:transform .14s ease,box-shadow .18s ease,background .18s}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:var(--prairie);color:#fff;box-shadow:0 10px 24px rgba(63,93,52,.3)}
+    .btn-primary:hover{background:var(--prairie-d);color:#fff;box-shadow:0 14px 30px rgba(63,93,52,.38)}
+    .btn-wood{background:var(--wood);color:#fff;box-shadow:0 10px 24px rgba(138,90,43,.26)}
+    .btn-wood:hover{background:var(--wood-d);color:#fff}
+    .btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+    .btn-ghost:hover{border-color:var(--muted)}
+    .btn-lg{font-size:1.08rem;padding:17px 34px}
+
+    header.site{position:sticky;top:0;z-index:50;background:rgba(246,241,232,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:70px}
+    .brand{display:flex;flex-direction:column;line-height:1.08;text-decoration:none}
+    .brand b{font-family:var(--font);font-size:1.4rem;font-weight:600;color:var(--ink)}
+    .brand span{font-size:.68rem;color:var(--wood);font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+    .nav-links{display:flex;gap:22px;align-items:center;font-family:var(--sans);font-weight:500;font-size:.95rem}
     .nav-links a{color:var(--body);text-decoration:none}
-    .nav-links a.back{color:var(--muted);font-size:.88rem}
-    @media(max-width:720px){.nav-links a:not(.cta):not(.back){display:none}}
+    .nav-links a:hover{color:var(--ink)}
+    .nav-links a.back{color:var(--muted);font-size:.86rem}
+    @media(max-width:760px){.nav-links a:not(.cta):not(.back){display:none}}
 
     .hero{position:relative;color:#fff;text-align:center}
     .hero .bg{position:absolute;inset:0;overflow:hidden}
     .hero .bg img{width:100%;height:100%;object-fit:cover}
-    .hero .scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,25,15,.35),rgba(30,25,15,.62))}
-    .hero .inner{position:relative;padding:clamp(70px,12vw,130px) 22px}
-    .hero h1{color:#fff;max-width:16ch;margin-left:auto;margin-right:auto;text-shadow:0 2px 20px rgba(0,0,0,.35)}
-    .hero .eyebrow{color:#ffe9b8}
-    .hero p{max-width:56ch;margin:14px auto 0;font-size:1.15rem;color:#f4eee2;text-shadow:0 1px 12px rgba(0,0,0,.4)}
-    .hero .cta-row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:26px}
+    .hero .scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,21,12,.42),rgba(26,21,12,.68))}
+    .hero .inner{position:relative;padding:clamp(80px,13vw,150px) 22px}
+    .hero h1{color:#fff;max-width:17ch;margin-left:auto;margin-right:auto;text-shadow:0 2px 28px rgba(0,0,0,.4)}
+    .hero .eyebrow{color:#ffe6ad}
+    .hero p{max-width:58ch;margin:16px auto 0;font-size:1.18rem;color:#f6f1e6;text-shadow:0 1px 14px rgba(0,0,0,.45)}
+    .hero .cta-row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:30px}
+    .hero-flag{display:inline-block;background:rgba(189,154,58,.22);border:1px solid rgba(255,230,173,.5);color:#ffe6ad;font-family:var(--sans);font-weight:600;font-size:.86rem;letter-spacing:.02em;padding:7px 16px;border-radius:999px;margin-bottom:20px;backdrop-filter:blur(4px)}
 
     .trust{background:var(--prairie-d);color:#eef3e8}
-    .trust .wrap{display:flex;flex-wrap:wrap;gap:10px 26px;justify-content:center;padding:16px 22px;font-size:.92rem;font-weight:600}
-    .trust span::before{content:"•";color:var(--gold);margin-right:8px}
+    .trust .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:center;padding:17px 22px;font-size:.9rem;font-weight:500}
+    .trust span::before{content:"✦";color:var(--gold);margin-right:9px;font-size:.8em}
 
-    .lead{font-size:1.18rem;color:var(--body)}
-    .callout{background:var(--marble);border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:12px;padding:20px 22px;box-shadow:var(--shadow)}
-    .callout.karma{background:#f3f6ee;border-left-color:var(--prairie)}
+    .lead{font-size:1.2rem;color:var(--body)}
+    .callout{background:var(--marble);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:14px;padding:24px 26px;box-shadow:var(--shadow-sm)}
+    .callout.karma{background:#f2f5ec;border-left-color:var(--prairie)}
 
     .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
-    .card{background:var(--marble);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
-    .card .pad{padding:22px}
+    .card{background:var(--marble);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;transition:transform .15s ease,box-shadow .2s ease}
+    .card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+    .card .pad{padding:24px}
     .card h3{margin-top:0}
-    .fig{position:relative;background:#e9e1cf}
+    .fig{position:relative;background:var(--stone)}
     .fig img{width:100%;aspect-ratio:3/2;object-fit:cover}
-    .concept-tag{position:absolute;left:10px;bottom:10px;background:rgba(43,43,47,.82);color:#fff;font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 10px;border-radius:6px}
+    .concept-tag{position:absolute;left:12px;bottom:12px;background:rgba(38,34,25,.82);color:#fff;font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 11px;border-radius:7px;backdrop-filter:blur(3px)}
 
-    .tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;align-items:stretch}
-    .tier{background:var(--marble);border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;display:flex;flex-direction:column;box-shadow:var(--shadow)}
-    .tier.soon{opacity:.92;background:#f4efe4}
-    .tier h3{margin:.1em 0}
-    .tier .price{font-family:var(--font);font-size:2rem;color:var(--ink);font-weight:700;line-height:1}
-    .tier .price small{display:block;font-family:var(--sans);font-size:.82rem;font-weight:600;color:var(--muted);margin-top:6px}
-    .tier ul{list-style:none;padding:0;margin:14px 0 20px}
-    .tier li{padding-left:24px;position:relative;margin-bottom:9px;font-size:.96rem}
-    .tier li::before{content:"✿";position:absolute;left:0;color:var(--prairie)}
+    .tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));gap:24px;align-items:stretch}
+    .tier{background:var(--marble);border:1px solid var(--line);border-radius:var(--radius-lg);padding:30px 26px;display:flex;flex-direction:column;box-shadow:var(--shadow-sm);position:relative;transition:transform .15s,box-shadow .2s}
+    .tier:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+    .tier.soon{background:#f3ede1}
+    .tier.pop{border:2px solid transparent;background:linear-gradient(var(--marble),var(--marble)) padding-box,linear-gradient(135deg,var(--prairie),var(--gold)) border-box;box-shadow:var(--shadow)}
+    .tier .flag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--prairie),var(--gold-d));color:#fff;font-family:var(--sans);font-weight:700;font-size:.74rem;letter-spacing:.04em;padding:6px 16px;border-radius:999px;white-space:nowrap}
+    .tier .ic{font-size:2rem}
+    .tier h3{margin:.15em 0}
+    .tier .price{font-family:var(--font);font-size:2.3rem;color:var(--ink);font-weight:600;line-height:1}
+    .tier .price small{display:block;font-family:var(--sans);font-size:.82rem;font-weight:500;color:var(--muted);margin-top:8px}
+    .tier ul{list-style:none;padding:0;margin:16px 0 22px}
+    .tier li{padding-left:26px;position:relative;margin-bottom:10px;font-size:.96rem}
+    .tier li::before{content:"✦";position:absolute;left:0;color:var(--gold-d)}
     .tier .btn{margin-top:auto;width:100%}
-    .pill{display:inline-block;font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:5px 11px;border-radius:999px;margin-bottom:8px}
-    .pill.now{background:#e5efdc;color:var(--prairie-d)}
-    .pill.soon{background:#f0e6cf;color:var(--wood-d)}
+    .pill{display:inline-block;font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:10px}
+    .pill.now{background:#e4efda;color:var(--prairie-d)}
+    .pill.soon{background:#efe4cc;color:var(--wood-d)}
 
     .steps{counter-reset:s;display:grid;gap:14px}
-    .step{display:flex;gap:16px;background:var(--marble);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
-    .step::before{counter-increment:s;content:counter(s);flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:var(--prairie);color:#fff;font-weight:700;display:grid;place-items:center;font-family:var(--sans)}
-    .step h3{font-size:1.05rem;margin:.1em 0 .1em}
+    .step{display:flex;gap:18px;background:var(--marble);border:1px solid var(--line);border-radius:14px;padding:18px 20px;box-shadow:var(--shadow-sm)}
+    .step::before{counter-increment:s;content:counter(s);flex:0 0 auto;width:36px;height:36px;border-radius:50%;background:var(--prairie);color:#fff;font-weight:700;display:grid;place-items:center;font-family:var(--sans)}
+    .step h3{font-size:1.08rem;margin:.1em 0}
     .step p{margin:0;font-size:.95rem;color:var(--muted)}
 
-    .warn{background:#fff4e5;border:1px solid #f0d29a;border-left:5px solid var(--wood);border-radius:12px;padding:18px 20px;color:#5a4423}
-    .warn strong{color:#5a3410}
+    .warn{background:#faf3e4;border:1px solid #ead9b2;border-left:4px solid var(--gold-d);border-radius:14px;padding:20px 22px;color:#5a4a23}
+    .warn strong{color:#473710}
 
-    .imgrow{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .imgrow{display:grid;grid-template-columns:1fr 1fr;gap:20px}
     @media(max-width:640px){.imgrow{grid-template-columns:1fr}}
-    .cowfeat{display:grid;grid-template-columns:minmax(0,440px) 1fr;gap:38px;align-items:center}
+    .cowfeat{display:grid;grid-template-columns:minmax(0,440px) 1fr;gap:40px;align-items:center}
     .cowfeat video{display:block;width:100%;max-width:420px;margin:0 auto;max-height:720px;border-radius:var(--radius);box-shadow:var(--shadow);background:#000}
     @media(max-width:760px){.cowfeat{grid-template-columns:1fr}}
     figure{margin:0}
-    figcaption{font-size:.85rem;color:var(--muted);padding:8px 2px}
+    figcaption{font-size:.85rem;color:var(--muted);padding:9px 2px}
 
     .disc{font-size:.9rem;color:var(--muted)}
     .disc ul{padding-left:18px} .disc li{margin-bottom:8px}
 
-    footer.site{background:#2b2b2f;color:#cabfae;padding:40px 0;font-size:.92rem}
+    footer.site{background:#201d16;color:#c9bfac;padding:48px 0;font-size:.92rem}
     footer.site a{color:#fff}
-    .lockup b{color:#fff;font-family:var(--font);font-size:1.15rem}
-    .lockup span{display:block;color:var(--gold);font-size:.78rem;font-weight:700;letter-spacing:.04em}
-    .fineprint{color:#8f8676;font-size:.82rem;max-width:90ch;margin-top:14px}
+    .lockup b{color:#fff;font-family:var(--font);font-size:1.25rem;font-weight:600}
+    .lockup span{display:block;color:var(--gold);font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-top:2px}
+    .fineprint{color:#8f8571;font-size:.82rem;max-width:92ch;margin-top:16px;line-height:1.65}
   </style>
 </head>
 <body>
@@ -144,6 +156,7 @@
     <div class="bg"><img src="assets/ranch/hero-rainbow-farmhouse.jpg" alt="A full rainbow arching over the farmhouse and open pasture at the Truck Yeah Traders farm" /></div>
     <div class="scrim"></div>
     <div class="inner">
+      <span class="hero-flag">✦ Now accepting memorial ashes — pets &amp; people</span>
       <p class="eyebrow">GoRunGo Ranch • at Truck Yeah Traders Farm</p>
       <h1>Honor Their Life. Help Another Life Thrive.</h1>
       <p>Create a permanent remembrance for a beloved pet — or person — in a living greenhouse sanctuary. Each memorial helps shelter and feed GoRunGo, Shyami, Kanai, Rukmini, and other cows, and grows the gardens, library, and spiritual sanctuary at its heart.</p>
@@ -219,10 +232,10 @@
       <div class="narrow" style="margin:0 auto 34px;text-align:center">
         <p class="eyebrow">Choose a memorial</p>
         <h2>Ways to remember &amp; give</h2>
-        <p class="lead">Two options are available today. Physical wall placements will open only after Elbert County land-use, insurance, and legal approvals are complete — no cremated remains are accepted before then.</p>
+        <p class="lead">We're now accepting sealed cremated remains — for beloved pets and people — to be memorialized at the ranch. Begin below, and we'll be in touch with your memorial ID and simple next steps.</p>
       </div>
       <div class="tiers" id="tier-grid"><!-- rendered by JS from ranch-config.js --></div>
-      <p style="text-align:center;color:var(--muted);margin-top:22px;font-size:.92rem">Secure payment by <strong>Stripe</strong> — we never see or store your card. Prices are launch recommendations and may change before physical placements open.</p>
+      <p style="text-align:center;color:var(--muted);margin-top:22px;font-size:.92rem">Secure payment by <strong>Stripe</strong> — we never see or store your card. Prices are launch pricing and may change as the sanctuary grows.</p>
     </div>
   </section>
 
@@ -232,32 +245,32 @@
       <div class="narrow" style="margin:0 auto 34px;text-align:center">
         <p class="eyebrow">Be a founding sponsor</p>
         <h2>Sponsor a memorial brick</h2>
-        <p class="lead">Each memorial brick holds the sealed cremated remains of a beloved pet or person, set into the living greenhouse sanctuary and bathed in devotional and yogic hymns for the life of the building. Reserve your place now with a fully refundable deposit — your sponsorship helps raise the sanctuary.</p>
+        <p class="lead">Each memorial brick holds the sealed cremated remains of a beloved pet or person, set into the living greenhouse sanctuary and bathed in devotional and yogic hymns for the life of the building. Begin a memorial today — your sponsorship helps raise the sanctuary, and your contribution is fully refundable if plans change.</p>
       </div>
       <div class="tiers">
         <div class="tier">
-          <span class="pill soon">Founding · reserve now</span>
+          <span class="pill now">Now accepting</span>
           <h3>🐾 Pet Memorial Brick</h3>
-          <div class="price">$250<small>sealed pet remains · $250 refundable deposit</small></div>
+          <div class="price">$250<small>sealed pet remains · $250 to begin</small></div>
           <ul><li>One memorial brick for a beloved pet</li><li>Set into the sanctuary walls</li><li>Bathed in devotional hymns</li></ul>
-          <a class="btn btn-wood" href="gorungo-ranch-start.html?pkg=FOUNDING_RESERVATION&amp;for=PET_BRICK">Reserve — $250 refundable</a>
+          <a class="btn btn-wood" href="gorungo-ranch-start.html?pkg=FOUNDING_RESERVATION&amp;for=PET_BRICK">Begin a memorial — $250</a>
         </div>
         <div class="tier pop">
           <span class="flag">Most meaningful</span>
           <h3>🕊️ Loved-One Memorial Brick</h3>
-          <div class="price">$1,000<small>sealed human remains · $250 refundable deposit</small></div>
+          <div class="price">$1,000<small>sealed human remains · $250 to begin</small></div>
           <ul><li>A memorial brick for a beloved person</li><li>A permanent place in the sanctuary</li><li>Bathed in devotional &amp; yogic hymns</li><li>Named in the memorial library</li></ul>
-          <a class="btn btn-primary" href="gorungo-ranch-start.html?pkg=FOUNDING_RESERVATION&amp;for=LOVED_ONE_BRICK">Reserve — $250 refundable</a>
+          <a class="btn btn-primary" href="gorungo-ranch-start.html?pkg=FOUNDING_RESERVATION&amp;for=LOVED_ONE_BRICK">Begin a memorial — $250</a>
         </div>
         <div class="tier">
-          <span class="pill soon">Founding · reserve now</span>
+          <span class="pill now">Now accepting</span>
           <h3>🌿 Founding Sanctuary Sponsor</h3>
-          <div class="price">$5,000<small>name a section · $250 refundable deposit</small></div>
+          <div class="price">$5,000<small>name a section · $250 to begin</small></div>
           <ul><li>Sponsor a section of the sanctuary</li><li>Multiple memorial bricks</li><li>Founding recognition in the library</li></ul>
-          <a class="btn btn-wood" href="gorungo-ranch-start.html?pkg=FOUNDING_RESERVATION&amp;for=FOUNDING_SPONSOR">Reserve — $250 refundable</a>
+          <a class="btn btn-wood" href="gorungo-ranch-start.html?pkg=FOUNDING_RESERVATION&amp;for=FOUNDING_SPONSOR">Begin a memorial — $250</a>
         </div>
       </div>
-      <p style="text-align:center;color:var(--muted);margin-top:22px;font-size:.92rem">Your $250 reservation is fully refundable and applied to your sponsorship. Secure payment by <strong>Stripe</strong>.</p>
+      <p style="text-align:center;color:var(--muted);margin-top:22px;font-size:.92rem">Your $250 begins your memorial and is fully refundable if plans change. Secure payment by <strong>Stripe</strong>.</p>
     </div>
   </section>
 
@@ -282,17 +295,17 @@
     <div class="wrap">
       <div class="narrow" style="margin:0 auto 30px"><p class="eyebrow">How it works</p><h2>A calm, guided process</h2></div>
       <div class="steps">
-        <div class="step"><div><h3>Choose</h3><p>Select a digital tribute or a refundable founding reservation.</p></div></div>
-        <div class="step"><div><h3>Remember</h3><p>Enter your pet's name, dates, and a tribute, and upload a favorite photo.</p></div></div>
+        <div class="step"><div><h3>Choose</h3><p>Select a memorial brick, tribute, or sanctuary sponsorship.</p></div></div>
+        <div class="step"><div><h3>Remember</h3><p>Enter your pet's or loved one's name, dates, and a tribute, and upload a favorite photo.</p></div></div>
         <div class="step"><div><h3>Review &amp; approve</h3><p>Confirm the package, terms, and privacy choice before anything is charged.</p></div></div>
         <div class="step"><div><h3>Pay securely</h3><p>Complete checkout through Stripe. Your order is confirmed by our system, never by the browser alone.</p></div></div>
-        <div class="step"><div><h3>Receive authorization</h3><p><em>Physical memorials only, later:</em> we personally confirm eligibility and send your unique memorial ID and shipping steps.</p></div></div>
-        <div class="step"><div><h3>Ship securely</h3><p><em>Later:</em> use the USPS-compliant process with your memorial ID. Nothing is mailed before written approval.</p></div></div>
-        <div class="step"><div><h3>Confirm &amp; install</h3><p><em>Later:</em> we verify receipt, approve the plaque/photo proof, and place the memorial in its protected niche.</p></div></div>
-        <div class="step"><div><h3>Notify family</h3><p><em>Later:</em> you receive completion photos and visit information, and the memorial page is activated.</p></div></div>
+        <div class="step"><div><h3>Receive your memorial ID</h3><p>We personally confirm your memorial and send your unique memorial ID with simple, USPS-compliant shipping steps.</p></div></div>
+        <div class="step"><div><h3>Send the ashes</h3><p>Use the USPS-compliant process with your memorial ID. We confirm receipt with a documented, two-person custody log.</p></div></div>
+        <div class="step"><div><h3>Set &amp; place</h3><p>We approve the plaque/photo proof and set the sealed remains into their memorial brick within the sanctuary.</p></div></div>
+        <div class="step"><div><h3>Notify family</h3><p>You receive completion photos and visit information, and the memorial page is activated.</p></div></div>
       </div>
       <div class="warn" style="margin-top:22px">
-        <strong>Please do not mail ashes yet.</strong> Do not mail any cremated remains until GoRunGo Ranch sends your written intake approval and unique memorial ID. Packages sent without authorization may be refused or returned according to the customer agreement. USPS requires the special Priority Mail Express® Cremated Remains packaging — official instructions: <a href="https://about.usps.com/publications/pub139.pdf" target="_blank" rel="noopener">USPS Publication 139</a>.
+        <strong>Please contact us before sending any ashes.</strong> Begin a memorial above and we'll send your unique memorial ID and simple handling instructions first, so everything is tracked from the start. USPS requires the special Priority Mail Express® Cremated Remains packaging — official instructions: <a href="https://about.usps.com/publications/pub139.pdf" target="_blank" rel="noopener">USPS Publication 139</a>. We accept sealed cremated remains only — never animal or human bodies, and no cremation takes place on site.
       </div>
     </div>
   </section>
@@ -420,7 +433,7 @@
         <li>Purchases are program support, not charitable donations, unless the legal entity and receipt explicitly establish tax eligibility.</li>
         <li>Good-karma and cow-seva language expresses a family's compassionate intention; no spiritual result is guaranteed.</li>
         <li>Refund, customization, shipping-exception, damage, relocation, and force-majeure terms are provided before payment.</li>
-        <li>No cremated remains are accepted before land-use approval, insurance, written agreements, and chain-of-custody procedures are operational.</li>
+        <li>We accept sealed cremated remains only — never animal or human bodies — and no cremation takes place on site. Every memorial is handled under a documented chain-of-custody process.</li>
       </ul>
       <p>Questions? Email <a href="mailto:dispatch@truckyeahtraders.com">dispatch@truckyeahtraders.com</a>.</p>
     </div>
@@ -450,17 +463,17 @@
         el.className = 'tier' + (orderable ? '' : ' soon');
         var pill = orderable
           ? '<span class="pill now">Available now</span>'
-          : (reserveMode ? '<span class="pill soon">Reserve now · opens after approval</span>'
+          : (reserveMode ? '<span class="pill now">Now accepting</span>'
                          : '<span class="pill soon">Pending approval</span>');
         var sub = p.refundable ? 'Fully refundable deposit'
-                 : (p.physical ? 'Full price · reserve for $250 today' : 'One-time');
+                 : (p.physical ? 'Full price · $250 to begin' : 'One-time');
         var lis = (p.includes||[]).map(function(i){return '<li>'+i+'</li>';}).join('');
         var cta;
         if (orderable) {
           cta = '<a class="btn btn-primary" href="gorungo-ranch-start.html?pkg='+encodeURIComponent(p.code)+'">Start a Memorial</a>';
         } else if (reserveMode) {
-          cta = '<p style="font-size:.85rem;color:var(--muted);margin:0 0 12px">Your <strong>$250 deposit is fully refundable</strong> and applied to this niche once placements open. No ashes are accepted yet.</p>' +
-                '<a class="btn btn-wood" href="gorungo-ranch-start.html?pkg=FOUNDING_RESERVATION&for='+encodeURIComponent(p.code)+'">Reserve your place — $250</a>';
+          cta = '<p style="font-size:.85rem;color:var(--muted);margin:0 0 12px">Begin with <strong>$250</strong> toward this memorial &mdash; fully refundable if plans change. We\\'ll send your memorial ID and simple next steps.</p>' +
+                '<a class="btn btn-wood" href="gorungo-ranch-start.html?pkg=FOUNDING_RESERVATION&for='+encodeURIComponent(p.code)+'">Begin a memorial — $250</a>';
         } else {
           cta = '<button class="btn btn-ghost" disabled title="Requires county, insurance, and legal approval" style="cursor:not-allowed;opacity:.7">Not yet available</button>';
         }
