@@ -8,17 +8,17 @@ const { supa, send } = require("./_lib");
 const STEP_LABELS = {
   DRAFT: "Draft started",
   PHOTO_SUBMITTED: "Photo submitted",
-  AGREEMENT_ACCEPTED: "Agreement accepted",
+  AGREEMENT_ACCEPTED: "Dedication accepted",
   PAYMENT_PENDING: "Awaiting payment",
   PAID: "Payment received",
-  INTAKE_REVIEW: "Intake under review",
-  INTAKE_APPROVED: "Intake approved",
-  KIT_SENT: "Shipping kit sent",
-  REMAINS_IN_TRANSIT: "In transit",
-  REMAINS_RECEIVED: "Safely received",
-  PROOF_APPROVED: "Plaque/photo proof approved",
-  NICHE_READY: "Niche prepared",
-  INSTALLED: "Placed in the memorial",
+  INTAKE_REVIEW: "Dedication under review",
+  INTAKE_APPROVED: "Dedication approved",
+  KIT_SENT: "Tribute scheduled",
+  REMAINS_IN_TRANSIT: "In preparation",
+  REMAINS_RECEIVED: "Ready to plant",
+  PROOF_APPROVED: "Name plaque approved",
+  NICHE_READY: "Planting prepared",
+  INSTALLED: "Planted & named",
   FAMILY_NOTIFIED: "Complete — family notified"
 };
 

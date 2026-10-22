@@ -52,11 +52,11 @@
   <script>
   (function(){
     var STEPS = [
-      ["DRAFT","Draft started"],["PHOTO_SUBMITTED","Photo submitted"],["AGREEMENT_ACCEPTED","Agreement accepted"],
-      ["PAYMENT_PENDING","Awaiting payment"],["PAID","Payment received"],["INTAKE_REVIEW","Intake under review"],
-      ["INTAKE_APPROVED","Intake approved"],["KIT_SENT","Shipping kit sent"],["REMAINS_IN_TRANSIT","In transit"],
-      ["REMAINS_RECEIVED","Safely received"],["PROOF_APPROVED","Proof approved"],["NICHE_READY","Niche prepared"],
-      ["INSTALLED","Placed in the memorial"],["FAMILY_NOTIFIED","Complete — family notified"]
+      ["DRAFT","Draft started"],["PHOTO_SUBMITTED","Photo submitted"],["AGREEMENT_ACCEPTED","Dedication accepted"],
+      ["PAYMENT_PENDING","Awaiting payment"],["PAID","Payment received"],["INTAKE_REVIEW","Dedication under review"],
+      ["INTAKE_APPROVED","Dedication approved"],["KIT_SENT","Tribute scheduled"],["REMAINS_IN_TRANSIT","In preparation"],
+      ["REMAINS_RECEIVED","Ready to plant"],["PROOF_APPROVED","Name plaque approved"],["NICHE_READY","Planting prepared"],
+      ["INSTALLED","Planted &amp; named"],["FAMILY_NOTIFIED","Complete — family notified"]
     ];
     var params = new URLSearchParams(location.search);
     var id = params.get('id'), t = params.get('t'), paid = params.get('paid');
@@ -98,7 +98,7 @@
           '</div>' +
           '<div class="card"><h2>Your order</h2>'+orders+'</div>' +
           '<div class="card"><h2>Progress</h2><ul class="timeline">'+tl+'</ul>' +
-            '<div class="warn"><strong>Do not mail any cremated remains yet.</strong> If your memorial later includes physical placement, we will send written intake approval and shipping steps first. No remains are accepted before approvals are complete.</div>' +
+            '<div class="warn"><strong>A living, growing tribute.</strong> Your memorial is a living planting tended within the greenhouse in their honor. You\\'re welcome to visit and watch it grow — we\\'ll share updates as it does.</div>' +
           '</div>';
       })
       .catch(function(){

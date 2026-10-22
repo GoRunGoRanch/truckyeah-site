@@ -53,7 +53,7 @@
   <main class="wrap">
     <div class="card">
       <h1>Start a memorial</h1>
-      <p>Tell us about your companion animal. After you review and pay, you'll get a private status page with your unique memorial ID. <strong>Please do not mail any cremated remains</strong> — nothing is shipped until we send written approval later.</p>
+      <p>Tell us about your beloved pet or person. After you review and pay, you'll get a private status page with your unique memorial ID, and we'll add a <strong>living tribute</strong> — a plant, a tree, or a garden — in their honor within the greenhouse.</p>
 
       <form id="memorial-form" novalidate>
         <label class="req" for="pkg">Choose a memorial</label>
@@ -96,7 +96,7 @@
           <option value="public">Public — may appear on the ranch site</option>
         </select>
 
-        <label class="consent"><input type="checkbox" id="consent" /> <span>I confirm I own this photo or have permission to use it, and I understand this is program support (not a tax-deductible donation) with no cremated remains accepted at this stage. I agree to the terms and disclosures on the <a href="gorungo-ranch.html#choose" target="_blank" rel="noopener">GoRunGo Ranch page</a>.</span></label>
+        <label class="consent"><input type="checkbox" id="consent" /> <span>I confirm I own this photo or have permission to use it, and I understand this is program support (not a tax-deductible donation) for a living memorial tribute. I agree to the terms and disclosures on the <a href="gorungo-ranch.html#choose" target="_blank" rel="noopener">GoRunGo Ranch page</a>.</span></label>
 
         <div style="margin-top:22px"><button class="btn" type="submit" id="submit-btn">Review &amp; pay securely</button></div>
         <div class="status" id="status" role="status" aria-live="polite"></div>
@@ -138,9 +138,9 @@
       priceEl.textContent = '$'+Number(p.price).toLocaleString('en-US');
       var txt = p.blurb + (p.refundable ? ' This deposit is fully refundable.' : '');
       if(sel.value==='FOUNDING_RESERVATION' && reservingFor && allByCode[reservingFor]){
-        txt = 'Reserving your place toward the ' + allByCode[reservingFor].name +
+        txt = 'Beginning your living tribute toward the ' + allByCode[reservingFor].name +
               ' ($' + Number(allByCode[reservingFor].price).toLocaleString('en-US') + '). ' + txt +
-              ' It is applied to that niche once placements open. No ashes are accepted at this stage.';
+              ' It is applied to your dedication and is fully refundable if plans change.';
       }
       blurbEl.textContent = txt;
     }

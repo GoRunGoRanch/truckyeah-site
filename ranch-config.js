@@ -6,7 +6,7 @@
    "Prices ... must be editable in one configuration file ... Claude
    must not hard-code dollar amounts across multiple components").
 
-   `available:true`  -> orderable now (Phase A: no ashes accepted).
+   `available:true`  -> orderable now (a living memorial dedication).
    `physical:true`   -> requires county/insurance/legal approval; stays
                         OFF until the SERVER feature flag is enabled too
                         (RANCH_PHYSICAL_ENABLED=true in Vercel env). The
@@ -38,57 +38,57 @@
       },
       {
         code: "FOUNDING_RESERVATION",
-        name: "Founding Wall Reservation",
+        name: "Founding Memorial Dedication",
         price: 250,
         physical: false,
         available: true,
         refundable: true,
-        blurb: "A fully refundable deposit that holds a priority selection window for an approved niche later. No ashes are accepted at this stage.",
+        blurb: "A fully refundable deposit that begins your living memorial tribute — applied to your dedication.",
         includes: [
-          "Priority selection window",
-          "Applied to an approved niche later",
-          "Fully refundable — clear refund terms"
+          "Begins your living tribute",
+          "Applied to your dedication",
+          "Fully refundable — clear terms"
         ]
       },
       {
         code: "STANDARD_NICHE",
-        name: "Standard Individual Niche",
+        name: "Memorial Planting",
         price: 995,
         physical: true,
         available: false,
         refundable: false,
-        blurb: "Protected niche with a cream-marble face, standard urn system, photo plaque, installation, and memorial page.",
-        includes: ["Protected individual niche", "Cream-marble front & photo plaque", "Standard urn system", "Installation + memorial page"]
+        blurb: "A living plant dedicated to a pet or person, with a name plaque, tended in the greenhouse.",
+        includes: ["A dedicated living plant", "A name plaque beside it", "Tended within the greenhouse", "Online memorial page"]
       },
       {
         code: "PREMIUM_NICHE",
-        name: "Premium Eye-Level Niche",
+        name: "Memorial Tree",
         price: 1295,
         physical: true,
         available: false,
         refundable: false,
-        blurb: "The standard cream-marble package with preferred eye-level placement.",
-        includes: ["Everything in Standard", "Preferred eye-level placement"]
+        blurb: "A living tree dedicated to a loved one, in a prime spot within the greenhouse.",
+        includes: ["A dedicated living tree", "A prime place in the greenhouse", "Name plaque + memorial page"]
       },
       {
         code: "COMPANION_NICHE",
-        name: "Companion Niche",
+        name: "Companion Planting",
         price: 1795,
         physical: true,
         available: false,
         refundable: false,
-        blurb: "Placement for two companion animals with a shared plaque.",
-        includes: ["Placement for two companions", "Shared memorial plaque"]
+        blurb: "A shared living planting for two companions, with a shared plaque.",
+        includes: ["A planting for two companions", "Shared name plaque", "Online memorial page"]
       },
       {
         code: "FAMILY_NICHE",
-        name: "Family Niche",
+        name: "Family Garden",
         price: 2995,
         physical: true,
         available: false,
         refundable: false,
-        blurb: "Placement for up to four companion animals, subject to size limits.",
-        includes: ["Placement for up to four animals", "Subject to size limits"]
+        blurb: "A garden bed grown in honor of up to four loved ones.",
+        includes: ["A garden for up to four", "Name plaques for each", "Online memorial page"]
       }
     ],
 
