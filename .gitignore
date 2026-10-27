@@ -24,3 +24,7 @@ node_modules/
 
 # Local scratch / unrelated build artifacts (do not publish)
 Claude outputs/
+
+# local python venv for stripe tooling (do not commit)
+.stripe-venv/
+scripts/stripe_payment_links_*.csv

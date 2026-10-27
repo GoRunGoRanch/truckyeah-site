@@ -57,6 +57,7 @@
         physical: true,
         available: false,
         refundable: false,
+        payUrl: "https://buy.stripe.com/9B68wP1nIfjKfTT0LL3oA07",
         blurb: "A living plant dedicated to a pet or person, with a name plaque, tended in the greenhouse.",
         includes: ["A dedicated living plant", "A name plaque beside it", "Tended within the greenhouse", "Online memorial page"]
       },
@@ -67,6 +68,7 @@
         physical: true,
         available: false,
         refundable: false,
+        payUrl: "https://buy.stripe.com/8x23cv6I23B2233cut3oA08",
         blurb: "A living tree dedicated to a loved one, in a prime spot within the greenhouse.",
         includes: ["A dedicated living tree", "A prime place in the greenhouse", "Name plaque + memorial page"]
       },
@@ -77,6 +79,7 @@
         physical: true,
         available: false,
         refundable: false,
+        payUrl: "https://buy.stripe.com/cNi3cv7M6b3ufTT9ih3oA09",
         blurb: "A shared living planting for two companions, with a shared plaque.",
         includes: ["A planting for two companions", "Shared name plaque", "Online memorial page"]
       },
@@ -87,6 +90,7 @@
         physical: true,
         available: false,
         refundable: false,
+        payUrl: "https://buy.stripe.com/00w3cv8QafjKfTTfGF3oA0a",
         blurb: "A garden bed grown in honor of up to four loved ones.",
         includes: ["A garden for up to four", "Name plaques for each", "Online memorial page"]
       }

@@ -251,26 +251,26 @@
         <div class="tier">
           <span class="pill now">Now dedicating</span>
           <h3>🐾 Pet Memorial Planting</h3>
-          <div class="price">$250<small>a living plant · $250 to begin</small></div>
+          <div class="price">$250<small>a living plant · one-time</small></div>
           <ul><li>A living plant dedicated to a beloved pet</li><li>A name plaque beside it</li><li>Bathed in devotional hymns</li></ul>
-          <a class="btn btn-wood" href="gorungo-ranch-start.html?pkg=FOUNDING_RESERVATION&amp;for=PET_PLANTING">Begin a tribute — $250</a>
+          <a class="btn btn-wood" href="https://buy.stripe.com/dRm7sL2rM2wY8rr2TT3oA04" target="_blank" rel="noopener">Dedicate this planting — $250</a>
         </div>
         <div class="tier pop">
           <span class="flag">Most meaningful</span>
           <h3>🕊️ Loved-One Memorial Tree</h3>
-          <div class="price">$1,000<small>a living tree · $250 to begin</small></div>
+          <div class="price">$1,000<small>a living tree · one-time</small></div>
           <ul><li>A living tree dedicated to a beloved person</li><li>A permanent place in the greenhouse</li><li>Bathed in devotional &amp; yogic hymns</li><li>Named in the memorial library</li></ul>
-          <a class="btn btn-primary" href="gorungo-ranch-start.html?pkg=FOUNDING_RESERVATION&amp;for=LOVED_ONE_TREE">Begin a tribute — $250</a>
+          <a class="btn btn-primary" href="https://buy.stripe.com/aFa9AT3vQ5JabDDdyx3oA05" target="_blank" rel="noopener">Dedicate this tree — $1,000</a>
         </div>
         <div class="tier">
           <span class="pill now">Now dedicating</span>
           <h3>🌿 Founding Garden Sponsor</h3>
-          <div class="price">$5,000<small>a whole garden · $250 to begin</small></div>
+          <div class="price">$5,000<small>a whole garden · one-time</small></div>
           <ul><li>Sponsor a garden within the greenhouse</li><li>Many living dedications</li><li>Founding recognition in the library</li></ul>
-          <a class="btn btn-wood" href="gorungo-ranch-start.html?pkg=FOUNDING_RESERVATION&amp;for=FOUNDING_GARDEN">Begin a tribute — $250</a>
+          <a class="btn btn-wood" href="https://buy.stripe.com/fZuaEX8Qa8VmfTT5213oA06" target="_blank" rel="noopener">Sponsor this garden — $5,000</a>
         </div>
       </div>
-      <p style="text-align:center;color:var(--muted);margin-top:22px;font-size:.92rem">Your $250 begins your living tribute and is fully refundable if plans change. Secure payment by <strong>Stripe</strong>.</p>
+      <p style="text-align:center;color:var(--muted);margin-top:22px;font-size:.92rem">Each dedication is a one-time contribution toward your living tribute and the greenhouse it grows in. Secure payment by <strong>Stripe</strong>.</p>
     </div>
   </section>
 
@@ -467,21 +467,24 @@
       if(!grid || !window.RANCH) return;
       var money = function(n){ return '$' + Number(n).toLocaleString('en-US'); };
       RANCH.packages.forEach(function(p){
+        // A package with payUrl is dedicatable now via a one-time Stripe payment link.
+        var payable = !!p.payUrl;
         var orderable = p.available && (!p.physical || RANCH.physicalEnabled);
-        // Full pricing is shown for physical dedications now; you begin with a deposit
-        // (refundable) until placements open after county approval.
-        var reserveMode = p.physical && !RANCH.physicalEnabled;
+        var reserveMode = !payable && p.physical && !RANCH.physicalEnabled;
         var el = document.createElement('div');
-        el.className = 'tier' + (orderable ? '' : ' soon');
-        var pill = orderable
+        el.className = 'tier' + ((payable || orderable) ? '' : ' soon');
+        var pill = (payable || orderable)
           ? '<span class="pill now">Available now</span>'
           : (reserveMode ? '<span class="pill now">Now accepting</span>'
                          : '<span class="pill soon">Pending approval</span>');
-        var sub = p.refundable ? 'Fully refundable deposit'
-                 : (p.physical ? 'Full price · $250 to begin' : 'One-time');
+        var sub = payable ? 'One-time'
+                 : (p.refundable ? 'Fully refundable deposit'
+                 : (p.physical ? 'Full price · $250 to begin' : 'One-time'));
         var lis = (p.includes||[]).map(function(i){return '<li>'+i+'</li>';}).join('');
         var cta;
-        if (orderable) {
+        if (payable) {
+          cta = '<a class="btn btn-primary" href="'+p.payUrl+'" target="_blank" rel="noopener">Dedicate — '+money(p.price)+'</a>';
+        } else if (orderable) {
           cta = '<a class="btn btn-primary" href="gorungo-ranch-start.html?pkg='+encodeURIComponent(p.code)+'">Start a Memorial</a>';
         } else if (reserveMode) {
           cta = '<p style="font-size:.85rem;color:var(--muted);margin:0 0 12px">Begin with <strong>$250</strong> toward this memorial &mdash; fully refundable if plans change. We\\'ll send your memorial ID and simple next steps.</p>' +
