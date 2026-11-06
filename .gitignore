@@ -28,3 +28,4 @@ Claude outputs/
 # local python venv for stripe tooling (do not commit)
 .stripe-venv/
 scripts/stripe_payment_links_*.csv
+scripts/stripe_patties_link_*.csv
